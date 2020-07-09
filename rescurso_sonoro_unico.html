@@ -1,0 +1,37 @@
+  <div class="memoria-visualizador my-0 py-0 mx-2 mx-md-3 mx-lg-4">
+    <!-- Insertar dentro de div con clase "memoria-visualizador" -->
+    <div class="container px-0 px-md-5">
+      <div class="row px-3 px-md-5 pb-3 pb-md-5">
+        <div class="col-12 col-md-4 px-5 px-sm-3">
+          <!-- Reemplazar por portadilla de audio si la hubiera -->
+          <img alt="cover" class="img-fluid" src="/work/models/memorica/recursos/img/no-audio.jpg" />
+        </div>
+
+        <div class="col-12 col-md-8 my-3 my-md-0 py-0 py-md-0 d-flex flex-column justify-content-between">
+          <div class="mb-3">
+            <!-- Reemplazar por título de audio -->
+            <h5 class="audio-title">Título de audio</h5>
+
+            <!-- Reemplazar por autor de audio -->
+            <p class="audio-author">Autor de audio</p>
+
+            <div class="col-1 mt-0" style="height: 4px; background-color: #FF026A;"></div>
+          </div>
+
+          <audio id="audio" ontimeupdate="updateTime()" preload="metadata" style="width: 100%;">
+            <!-- Reemplazar src con url del audio -->
+            <source src="https://mexicana.cultura.gob.mx/multimedia/FONOTECA/FN17040044960_21.mp3" type="audio/mpeg" /> Your browser does not support the audio tag.
+          </audio>
+
+          <div class="d-flex flex-row align-items-center" id="player">
+            <button class="play" id="pButton" onclick="playAudio()"></button>
+            <div id="songTime">&nbsp;</div>
+            <div id="time-line">
+              <div id="playhead">&nbsp;</div>
+            </div>
+            <button class="unmute" id="mButton" onclick="muteAudio()"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

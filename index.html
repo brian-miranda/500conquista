@@ -10,9 +10,6 @@
 
   <!-- reserved for styles, don't forget to remove the / from the thing -->
   <link href="expo_style.css" type="text/css" rel="stylesheet">
-  <style type="text/css">
-
-  </style>
 
   <RESOURCE TYPE="JSPEditor" STYPE="OpenGraphTags" />
   <meta property="og:image" content="work/models/memorica/recursos/img/miniatura_500anos.jpg">
@@ -31,15 +28,14 @@
   <header>
     <nav class="navbar fixed-top navbar-light">
       <a class="navbar-brand" href="https://memoricamexico.gob.mx/es/memorica/Exposiciones">
-        <img type="image/svg+xml" src="work/models/memorica/recursos/img/500anos/logui.svg" alt="" class="logo" width="50px" height="50px">
+        <img type="image/svg+xml" src="work/models/memorica/recursos/img/500anos/logui.svg" alt="" class="logo" width="100%" height="100%">
       </a>
       <a href="" data-toggle="modal" data-target="#modalbotonescompartir" title="Compartir" class="share">
-        <img type="image/svg+xml" alt="Compartir en redes sociales" src="work/models/memorica/recursos/img/500anos/share.svg" title="Compartir en redes Sociales" width="35px" height="35px">
+        <img type="image/svg+xml" alt="Compartir en redes sociales" src="work/models/memorica/recursos/img/500anos/share.svg" title="Compartir en redes Sociales" width="100%" height="100%">
       </a>
-      <a href="work/models/memorica/recursos/img/plan_ayala/PlanDeAyala_GuiaDidactica.pdf" class="down">
-        <img type="image/svg+xml" alt="Descargar guía didactica" src="work/models/memorica/recursos/img/500anos/down.svg" title="Descargar guía didactica" width="35px" height="35px">
+      <a href="" class="down">
+        <img type="image/svg+xml" alt="Descargar guía didactica" src="work/models/memorica/recursos/img/500anos/down.svg" title="Descargar guía didactica" width="100%" height="100%">
       </a>
-
     </nav>
   </header>
   <div class="button_container" id="toggle">
@@ -53,7 +49,7 @@
     <nav class="overlay-menu">
       <ul>
         <li><a class="go" href="/{user@getLanguage}/{topic@getWebSiteId}/500anos">Inicio</a></li>
-        <li><a class="go" href="/{user@getLanguage}/{topic@getWebSiteId}/500textos">Textos</a></li>
+        <li><a class="go" href="textos.html">Textos</a></li>
         <li><a class="go" href="/{user@getLanguage}/{topic@getWebSiteId}/500hechos">Hechos</a></li>
         <li><a class="go" href="/{user@getLanguage}/{topic@getWebSiteId}/500imagenes">Imágenes</a></li>
         <li><a class="go" href="/{user@getLanguage}/{topic@getWebSiteId}/500interpretes">Somos intérpretes</a></li>
@@ -79,10 +75,17 @@
     </div>
   </div>
 
+  <!-- Inicia Home -->
   <!-- Portada -->
   <div id="cover" class="container-fluid">
-    <div class="splash pt-5 col-sm-12 d-flex flex-column align-items-center justify-content-center">
-      <div id="shiva" class="align-self-center"><span class="count" data-value="2021">2021</span></div>
+    <div class="splash col-sm-12 d-flex flex-column align-items-center justify-content-center">
+      <!--<div id="year-count" class="align-self-between">
+        <span class="count" data-value="2021">2021</span>
+      </div>-->
+      <video autoplay muted id="introVideo">
+        <source src="work/models/memorica/recursos/img/500anos/video/NUMEROS_COLOR_HOME.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
       <a href="#section-textos" class="scroll d-flex">
         <img src="work/models/memorica/recursos/img/500anos/scroll.svg" alt="">
       </a>
@@ -90,16 +93,21 @@
   </div>
 
   <!-- Textos -->
-  <div id="section-textos" class="container-fluid py-5 sala">
-    <div id="cover-textos" class="cover">
-      <img class="img-fluid my-5 px-5" src="work/models/memorica/recursos/img/500anos/01.jpg" alt="">
+  <div id="section-textos" class="container-fluid py-5">
+    <div id="cover-textos" class="row cover">
+      <div class="col-lg-1 px-0"></div>
+      <div class="col-12 col-lg-10 px-0">
+        <img class="img-fluid my-5" src="work/models/memorica/recursos/img/500anos/01.jpg" alt="">
+      </div>
+      <div class="col-lg-1 px-0"></div>
     </div>
     <div class="row my-5 py-5">
       <div class="col-lg-4"></div>
-      <div class="col-12 col-lg-4 px-5 d-flex flex-column justify-content-center" style="background-color: white; height: 500px;">
-        <h2 class="pb-2" style="color: #63281e;">Tex<br>tos</h2>
+      <div class="col-12 col-lg-4 px-5 d-flex flex-column justify-content-center caja" style="height: 530px;">
+        <img type="image/svg+xml" src="work/models/memorica/recursos/img/500anos/textos.svg">
+        <h2 class="pb-2" style="color: #63281e;">Textos</h2>
         <div class="d-flex justify-content-center">
-          <h3 class="goto"><a href="textos.html" style="color: #63281e;">Ir a sala</a></h3>
+          <h3 class="goto link-textos"><a href="textos.html">Ir a sala</a></h3>
           <div class="pleca" style="background-color: rgba(99, 40, 30, 0.5);"></div>
         </div>
       </div>
@@ -109,35 +117,43 @@
 
   <!-- Hechos -->
 
-  <div id="section-hechos" class="container-fluid py-5 sala" style="margin-top: 1000px;">
-    <div id="cover-hechos" class="cover">
-      <img class="img-fluid my-5 ml-5" src="work/models/memorica/recursos/img/500anos/02.jpg" alt="">
+  <div id="section-hechos" class="container-fluid py-5 sala">
+    <div id="cover-hechos" class="row cover">
+      <div class="col-lg-2 px-0"></div>
+      <div class="col-12 col-lg-10 px-0">
+        <img class="img-fluid my-5" src="work/models/memorica/recursos/img/500anos/02.jpg" alt="">
+      </div>
     </div>
     <div class="row my-5 py-5">
-      <div class="col-lg-7"></div>
-      <div class="col-12 col-lg-4 px-5 d-flex flex-column justify-content-center" style="background-color: white; height: 500px;">
-        <h2 class="pb-2" style="color: #715f51;">He<br>chos</h2>
+      <div class="col-lg-1"></div>
+      <div class="col-12 col-lg-4 px-5 d-flex flex-column justify-content-center caja" style="height: 525px;">
+        <img type="image/svg+xml" src="work/models/memorica/recursos/img/500anos/hechos.svg">
+        <h2 class="pb-2" style="color: #715f51;">Hechos</h2>
         <div class="d-flex justify-content-center">
-          <h3 class="goto"><a href="#" style="color: #715f51;">Ir a sala</a></h3>
+          <h3 class="goto link-hechos"><a href="#">Ir a sala</a></h3>
           <div class="pleca" style="background-color: rgba(113, 95, 81, 0.5);"></div>
         </div>
       </div>
-      <div class="col-lg-1"></div>
+      <div class="col-lg-6"></div>
     </div>
   </div>
 
   <!-- Imágenes -->
 
-  <div id="section-imagenes" class="container-fluid py-5 sala" style="margin-top: 1000px;">
-    <div id="cover-imagenes" class="cover">
-      <img class="img-fluid my-5 ml-0 pl-0" src="work/models/memorica/recursos/img/500anos/03.jpg" alt="">
+  <div id="section-imagenes" class="container-fluid py-5 sala">
+    <div id="cover-imagenes" class="row cover">
+      <div class="col-12 col-lg-10 px-0">
+        <img class="img-fluid my-5" src="work/models/memorica/recursos/img/500anos/03.jpg" alt="">
+      </div>
+      <div class="col-lg-2 px-0"></div>
     </div>
-    <div class="row">
+    <div class="row my-5 py-5">
       <div class="col-lg-6"></div>
-      <div class="col-12 col-lg-4 px-5 d-flex flex-column justify-content-center" style="background-color: white; height: 500px;">
-        <h2 class="pb-2" style="color: #194b54;">I<br>má<br>ge<br>nes</h2>
+      <div class="col-12 col-lg-4 px-5 d-flex flex-column justify-content-center caja" style="height: 710px;">
+        <img type="image/svg+xml" src="work/models/memorica/recursos/img/500anos/imagenes.svg">
+        <h2 class="pb-2" style="color: #194b54;">Imágenes</h2>
         <div class="d-flex justify-content-center">
-          <h3 class="goto"><a href="#" style="color: #194b54;">Ir a sala</a></h3>
+          <h3 class="goto link-imagenes"><a href="#">Ir a sala</a></h3>
           <div class="pleca" style="background-color: rgba(25, 75, 84, 0.5);"></div>
         </div>
       </div>
@@ -147,16 +163,21 @@
 
   <!-- Somos interpretes -->
 
-  <div id="section-interpretes" class="container-fluid py-5 sala" style="margin-top: 1000px;">
-    <div id="cover-interpretes" class="cover">
-      <img class="img-fluid my-5 px-5" src="work/models/memorica/recursos/img/500anos/04.jpg" alt="">
+  <div id="section-interpretes" class="container-fluid pt-5 sala">
+    <div id="cover-interpretes" class="row cover">
+      <div class="col-lg-1 px-0"></div>
+      <div class="col-12 col-lg-10 px-0">
+        <img class="img-fluid my-5" src="work/models/memorica/recursos/img/500anos/04.jpg" alt="">
+      </div>
+      <div class="col-lg-1 px-0"></div>
     </div>
-    <div class="row">
+    <div class="row my-5 py-5">
       <div class="col-lg-4"></div>
-      <div class="col-12 col-lg-4 px-5 d-flex flex-column justify-content-center" style="background-color: white; height: 500px; margin-bottom: 300px;">
-        <h2 class="pb-2" style="color: #1b2e52;">So<br>mos<br>intér<br>pretes</h2>
+      <div class="col-12 col-lg-4 px-5 d-flex flex-column justify-content-center caja" style="height: 525px; margin-bottom: 300px;">
+        <img class="" type="image/svg+xml" src="work/models/memorica/recursos/img/500anos/interpretes.svg">
+        <h2 class="pb-2" style="color: #1b2e52;">Somos<br>intérpretes</h2>
         <div class="d-flex justify-content-center">
-          <h3 class="goto"><a href="#" style="color: #1b2e52;">Ir a sala</a></h3>
+          <h3 class="goto link-interpretes"><a href="#">Ir a sala</a></h3>
           <div class="pleca" style="background-color: rgba(27, 46, 82, 0.5);"></div>
         </div>
       </div>
@@ -164,8 +185,23 @@
     </div>
   </div>
 
-  <footer>
-    hey
+  <footer style="z-index: 1;">
+    <div class="row">
+      <div class="col-lg-4"></div>
+      <div class="col-12 col-lg-4 px-5 d-flex flex-column justify-content-start align-items-center" style="height: 900px;">
+        <h2 class="mb-0">Créditos</h2>
+        <img class="mb-5" type="image/svg+xml" src="work/models/memorica/recursos/img/500anos/creditos.svg">
+        <p><span class="bold">Presentación: </span>Fernando Equis</p>
+        <p><span class="bold">Investigación y curaduría: </span>Amairani Equis</p>
+        <p><span class="bold">Cuidado editorial: </span>Rebeca Equis</p>
+        <p><span class="bold">Programación: </span>Frida Miranda</p>
+        <p><span class="bold">Diseño: </span>Lizeth Castro</p>
+        <a href="#cover" class="scroll-up d-flex">
+          <img src="work/models/memorica/recursos/img/500anos/scroll-up.svg" alt="">
+        </a>
+      </div>
+      <div class="col-lg-4"></div>
+    </div>
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
@@ -232,7 +268,7 @@
     var sceneTextos = new ScrollMagic.Scene({
       triggerElement: "#cover-textos",
       triggerHook: 0.1,
-      duration: "110%"
+      duration: "130%"
     })
     .setPin("#cover-textos", {pushFollowers: false})
     .addTo(controller);
@@ -241,7 +277,7 @@
     var sceneHechos = new ScrollMagic.Scene({
       triggerElement: "#cover-hechos",
       triggerHook: 0.1,
-      duration: "110%"
+      duration: "130%"
     })
     .setPin("#cover-hechos", {pushFollowers: false})
     .addTo(controller);
@@ -250,7 +286,7 @@
     var sceneImagenes = new ScrollMagic.Scene({
       triggerElement: "#cover-imagenes",
       triggerHook: 0.1,
-      duration: "110%"
+      duration: "135%"
     })
     .setPin("#cover-imagenes", {pushFollowers: false})
     .addTo(controller);
@@ -259,7 +295,7 @@
     var sceneImagenes = new ScrollMagic.Scene({
       triggerElement: "#cover-interpretes",
       triggerHook: 0.1,
-      duration: "110%"
+      duration: "70%"
     })
     .setPin("#cover-interpretes", {pushFollowers: false})
     .addTo(controller);

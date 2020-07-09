@@ -1,0 +1,76 @@
+  <div class="memoria-visualizador my-0 py-0 mx-2 mx-md-3 mx-lg-4">
+    <!-- Insertar dentro de div con clase "memoria-visualizador" -->
+    <div class="container px-0 px-md-5">
+      <div class="row px-3 px-md-5 pb-3 pb-md-5">
+        <div class="col-12 col-md-4 px-5 px-sm-3">
+          <!-- Reemplazar por portadilla de audio si la hubiera -->
+          <img alt="cover" class="img-fluid" src="/work/models/memorica/recursos/img/no-audio.jpg" />
+        </div>
+
+        <div class="col-12 col-md-8 my-3 my-md-0 py-0 py-md-0 d-flex flex-column justify-content-between">
+          <div class="mb-3">
+            <!-- Reemplazar por título de audio -->
+            <h5 class="audio-title">Título de audio</h5>
+
+            <!-- Reemplazar por autor de audio -->
+            <p class="audio-author">Autor de audio</p>
+
+            <div class="col-1 mt-0" style="height: 4px; background-color: #FF026A;"></div>
+          </div>
+
+          <audio id="audio" ontimeupdate="updateTime()" preload="metadata" style="width: 100%;">
+            <!-- Reemplazar src con url del audio. En caso de tener más de un audio el primer data-url va aquí. -->
+            <source src="https://mexicana.cultura.gob.mx/multimedia/FONOTECA/FN17040044960_21.mp3" type="audio/mpeg" /> Your browser does not support the audio tag.
+          </audio>
+
+          <div class="d-flex flex-row align-items-center" id="player">
+            <button class="play" id="pButton" onclick="playAudio()"></button>
+            <div id="songTime">&nbsp;</div>
+            <div id="time-line">
+              <div id="playhead">&nbsp;</div>
+            </div>
+            <button class="unmute" id="mButton" onclick="muteAudio()"></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- esta lista solo aparece cuando hay más de un audio por objeto -->
+      <!-- llenar con un nuevo <tr> por audio, y un <a> dentro, reemplazando sus atributos de data-url y data-index como en estos ejemplos, así como el título que debe de ir dentro del audio -->
+      <!-- el primer <a> debe llevar un <span class="prepended unmute"></span> antes de su título -->
+      <!-- el data-url del primer <a> también va dentro del source del audio de la sección de arriba -->
+      <!-- ver último objeto en la fila para un ejemplo -->
+      <div class="row px-3 px-md-5">
+        <table class="table table-hover" id="playlist">
+          <tbody style="cursor: pointer;">
+            <tr class="table-active">
+              <td class="p-0"><a class="track-selector d-flex align-items-center" data-index="1" data-url="https://mexicana.cultura.gob.mx/multimedia/FONOTECA/FN17040044960_21.mp3"><span class="prepended unmute"></span>Audio 1</a></td>
+            </tr>
+            <tr>
+              <td class="p-0"><a class="track-selector d-flex align-items-center" data-index="2" data-url="https://mexicana.cultura.gob.mx/multimedia/FONOTECA/FN17040044960_24.mp3">Audio 2</a></td>
+            </tr>
+            <tr>
+              <td class="p-0"><a class="track-selector d-flex align-items-center" data-index="3" data-url="https://mexicana.cultura.gob.mx/multimedia/FONOTECA/FN17040044960_25.mp3">Audio 3</a></td>
+            </tr>
+            <tr>
+              <td class="p-0"><a class="track-selector d-flex align-items-center" data-index="4" data-url="https://mexicana.cultura.gob.mx/multimedia/FONOTECA/FN17040044960_26.mp3">Audio 4</a></td>
+            </tr>
+            <tr>
+              <td class="p-0"><a class="track-selector d-flex align-items-center" data-index="5" data-url="https://mexicana.cultura.gob.mx/multimedia/FONOTECA/FN17040044960_27.mp3">Audio 5</a></td>
+            </tr>
+            <tr>
+              <td class="p-0"><a class="track-selector d-flex align-items-center" data-index="6" data-url="https://mexicana.cultura.gob.mx/multimedia/FONOTECA/FN17040044960_28.mp3">Audio 6</a></td>
+            </tr>
+            <tr>
+              <td class="p-0"><a class="track-selector d-flex align-items-center" data-index="7" data-url="https://mexicana.cultura.gob.mx/multimedia/FONOTECA/FN17040044960_29.mp3">Audio 7</a></td>
+            </tr>
+            <tr>
+              <td class="p-0"><a class="track-selector d-flex align-items-center" data-index="8" data-url="https://mexicana.cultura.gob.mx/multimedia/FONOTECA/FN17040044960_30.mp3">Audio 8</a></td>
+            </tr>
+            <tr>
+              <td class="p-0"><a class="track-selector d-flex align-items-center" data-index="AQUÍ VA EL NÚMERO DEL AUDIO, EN ORDEN" data-url="URL DEL AUDIO">TÍTULO DEL AUDIO</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

@@ -23,42 +23,42 @@
 @font-face {
   font-family: "Raleway-Medium";
   src: url(work/models/memorica/recursos/Type/Raleway-Medium.ttf) format("truetype");
-  font-style: italic;
+  font-style: normal;
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
 @font-face {
   font-family: "Raleway-MediumItalic";
   src: url(work/models/memorica/recursos/Type/Raleway-MediumItalic.ttf) format("truetype");
-  font-style: italic;
+  font-style: normal;
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
 @font-face {
   font-family: "Raleway-Regular";
   src: url(work/models/memorica/recursos/Type/Raleway-Regular.ttf) format("truetype");
-  font-style: italic;
+  font-style: normal;
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
 @font-face {
   font-family: "Raleway-SemiBold";
   src: url(work/models/memorica/recursos/Type/Raleway-SemiBold.ttf) format("truetype");
-  font-style: italic;
+  font-style: normal;
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
 @font-face {
   font-family: "Raleway-Bold";
   src: url(work/models/memorica/recursos/Type/Raleway-Bold.ttf) format("truetype");
-  font-style: italic;
+  font-style: normal;
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
 @font-face {
   font-family: "Raleway-BoldItalic";
   src: url(work/models/memorica/recursos/Type/Raleway-BoldItalic.ttf) format("truetype");
-  font-style: italic;
+  font-style: normal;
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
@@ -76,42 +76,21 @@ body {
   padding: 0px;
 }
 
-h1 {
-  color: #C33426;
-  font-family: "IMFellEnglish_Regular";
-  font-size: 4.3rem;
-  text-align: center;
-}
-
 h2 {
   font-family: "IMFellEnglish_Regular";
-  font-size: 3rem;
+  font-size: 3.5rem;
   text-align: center;
-}
-
-h3 {
-  font-family: "IMFellEnglish_Regular";
-  font-size: 2rem;
-  text-align: left;
-}
-
-h4 {
-  font-family: "IMFellEnglish_Regular";
-  font-size: 1.5rem;
-  text-align: left;
 }
 
 p, a, li {
   color: #42170E;
-  font-family: "Roboto_Condensed";
-  font-style: normal;
+  font-family: "Raleway-Regular";
   text-align: justify;
 }
 
 a {
   font-size: 20px;
-  font-family: "Roboto_Condensed_Bold";
-  font-style: normal;
+  font-family: "Raleway-Regular";
 }
 
 .logo {
@@ -122,59 +101,6 @@ a {
 .navbar {
   background-color: rgba(0, 0, 0, 0.0);
   z-index: 2;
-}
-
-h1 {
-  font-family: "IMFellEnglish_Italic";
-  text-align: left;
-  color: white;
-}
-
-.sala h2, .sala h3 {
-  text-align: center;
-}
-
-.sala h2 {
-  font-family: "IMFellEnglishSC_Regular";
-  font-size: 4rem;
-}
-
-h3.goto a {
-  font-family: "IMFellEnglish_Italic";
-  font-size: 1.8rem;
-}
-
-h3.goto a:hover {
-  font-family: "IMFellEnglish_Italic";
-  font-size: 1.8rem;
-  color: black;
-}
-
-.pleca {
-  width: 300px;
-  height: 10px;
-  margin-top: 25px;
-  position: absolute;
-}
-
-.goto {
-  z-index: 2;
-  width: 300px;
-  height: 10px;
-  padding-top: 10px;
-}
-
-.cover img  {
-  width: 100%;
-  height: auto;
-}
-
-.barra-textos {
-  background-color: #13182c;
-}
-
-footer {
-  background-color: #13182c;
 }
 
 /* ----------------------- PORTADA ----------------------- */
@@ -193,6 +119,8 @@ footer {
 .count {
   font-family: "IMFellEnglish_Regular";
   font-size: 35rem;
+  text-align: center;
+  letter-spacing: normal;
   color: #715E50;
 }
 
@@ -202,29 +130,171 @@ footer {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  height: 4%;
+  height: 10%;
   transition: all 0.5s ease;
   margin-bottom: 10px;
 }
 
-.scroll:hover {
-  height: 6%;
+.scroll:hover, .scroll-up:hover {
+  height: 15%;
 }
 
-.scroll img {
-  height: 100%;
-  width: 100%;
+.scroll img, .scroll-up img {
+  height: 130%;
+  width: 130%;
   transform-origin: bottom;
 }
 
-a.scroll {
+a.scroll, a.scroll-up {
   text-decoration: none;
   cursor: pointer;
 }
 
-.scroll p {
-  color: #42170E;
-  margin-bottom: 1rem;
+#introVideo {
+  width: 100%;
+}
+
+/* ----------------------- HOME ----------------------- */
+
+.sala {
+  margin-top: 1000px;
+}
+
+.caja h2, .caja h3 {
+  text-align: center;
+}
+
+.caja h2 {
+  font-family: "IMFellEnglishSC_Regular";
+  font-size: 5rem;
+}
+
+h3.goto a {
+  font-family: "IMFellEnglish_Italic";
+  font-size: 1.8rem;
+}
+
+h3.goto a:hover {
+  font-family: "IMFellEnglish_Italic";
+  text-decoration: none;
+}
+
+h3.link-textos a {
+  color: #63281e;
+  opacity: 0.5;
+}
+
+h3.link-hechos a {
+  color: #715f51;
+  opacity: 0.5;
+}
+
+h3.link-imagenes a {
+  color: #194b54;
+  opacity: 0.5;
+}
+
+h3.link-interpretes a {
+  color: #1b2e52;
+  opacity: 0.5;
+}
+
+h3.link-textos a:hover, h3.link-hechos a:hover, h3.link-imagenes a:hover, h3.link-interpretes a:hover {
+  transition: all 0.5 ease;
+  opacity: 1;
+}
+
+.pleca {
+  width: 250px;
+  height: 10px;
+  margin-top: 29px;
+  position: absolute;
+}
+
+.goto {
+  z-index: 2;
+  width: 300px;
+  height: 10px;
+  padding-top: 10px;
+}
+
+.cover img {
+  width: 100%;
+  height: auto;
+}
+
+.barra-textos {
+  background-color: #13182c;
+}
+
+.caja {
+  background-color: #F9F9F7;
+}
+
+.caja img {
+  height: 40px;
+}
+
+/* ----------------------- CREDITOS ----------------------- */
+
+footer {
+  background-color: #F9F9F7;
+}
+
+footer p {
+  color: #715f51;
+  line-height: 1rem;
+}
+
+footer img {
+  height: 10px;
+}
+
+.bold {
+  font-family: "Raleway-SemiBold";
+  color: #13182c;
+}
+
+.scroll-up {
+  position: absolute;
+  bottom: 0;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 10%;
+  transition: all 0.5s ease;
+  margin-bottom: 0;
+}
+
+/* ----------------------- SALA LOS TEXTOS ----------------------- */
+
+.hover-textos {
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.hover-textos:hover {
+  background-color: #000000;
+}
+
+.hover-textos h3:hover {
+  color: #FFFFFF;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ----------------------- LOADING SCREEN ----------------------- */
+
+#loader {
+  z-index: 5;
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  margin: 0;
 }
 
 /* ----------------------- NAVBAR ----------------------- */
@@ -272,9 +342,9 @@ a.scroll {
 }
 
 .button_container span {
-  background: #000;
+  background: #0f1323;
   border: none;
-  height: 5px;
+  height: 3px;
   width: 100%;
   position: absolute;
   top: 0;
@@ -292,7 +362,7 @@ a.scroll {
 }
 
 .overlay {
-  z-index: 2;
+  z-index: 3;
   position: fixed;
   background: #000;
   top: 0;
@@ -356,7 +426,9 @@ a.scroll {
 }
 
 .overlay ul li {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 10%;
   min-height: 50px;
   position: relative;
@@ -367,7 +439,7 @@ a.scroll {
   font-family: "IMFellEnglishSC_Regular";
   font-size: 2.5rem;
   text-align: center;
-  display: block;
+  display: inline-block;
   position: relative;
   color: #FFF;
   text-decoration: none;
@@ -400,37 +472,6 @@ a.scroll {
     opacity: 1;
     left: 0;
   }
-}
-
-/* ----------------------- Los Textos ----------------------- */
-
-.hover-textos {
-  width: 100%;
-  height: 100%;
-  background-color: #FFFFFF;
-  margin: 0;
-  transition: all 0.3s ease-in-out;
-}
-
-.hover-textos:hover {
-  background-color: #000000;
-}
-
-.hover-textos h3:hover {
-  color: #FFFFFF;
-  transition: all 0.3s ease-in-out;
-}
-
-/* ----------------------- LOADING SCREEN ----------------------- */
-
-#loader {
-  z-index: 5;
-  display: block;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-color: #000000;
-  margin: 0;
 }
 
 /* ----------------------- MEDIA QUERIES ----------------------- */
