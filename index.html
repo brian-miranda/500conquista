@@ -11,12 +11,12 @@
   <!-- reserved for styles, don't forget to remove the / from the thing -->
   <link href="expo_style.css" type="text/css" rel="stylesheet">
 
-  <RESOURCE TYPE="JSPEditor" STYPE="OpenGraphTags" />
+  <!-- <RESOURCE TYPE="JSPEditor" STYPE="OpenGraphTags" />
   <meta property="og:image" content="work/models/memorica/recursos/img/miniatura_500anos.jpg">
   <meta property="og:image:type" content="image/svg">
   <meta property="og:image:width" content="1024">
   <meta property="og:image:height" content="1024">
-  <meta name="twitter:image:src" content="https://memoricamexico.gob.mxwork/models/memorica/recursos/img/miniatura_500anos.jpg">
+  <meta name="twitter:image:src" content="https://memoricamexico.gob.mxwork/models/memorica/recursos/img/miniatura_500anos.jpg"> -->
 </head>
 
 <body>
@@ -79,13 +79,18 @@
   <!-- Portada -->
   <div id="cover" class="container-fluid">
     <div class="splash col-sm-12 d-flex flex-column align-items-center justify-content-center">
-      <!--<div id="year-count" class="align-self-between">
-        <span class="count" data-value="2021">2021</span>
-      </div>-->
-      <video autoplay muted id="introVideo">
+      <div id="year-count" class="align-self-between">
+        <h1 class="count monospace" data-value="2021">2021</h1>
+      </div>
+
+      <div id="intro-text" class="align-self-between">
+        <h1 class="">Textos, voces e imágenes de la Conquista</h1>
+      </div>
+
+      <!--<video autoplay muted id="introVideo">
         <source src="work/models/memorica/recursos/img/500anos/video/NUMEROS_COLOR_HOME.mp4" type="video/mp4">
         Your browser does not support HTML5 video.
-      </video>
+      </video>-->
       <a href="#section-textos" class="scroll d-flex">
         <img src="work/models/memorica/recursos/img/500anos/scroll.svg" alt="">
       </a>
@@ -101,17 +106,17 @@
       </div>
       <div class="col-lg-1 px-0"></div>
     </div>
-    <div class="row my-5 py-5">
-      <div class="col-lg-4"></div>
-      <div class="col-12 col-lg-4 px-5 d-flex flex-column justify-content-center caja" style="height: 530px;">
-        <img type="image/svg+xml" src="work/models/memorica/recursos/img/500anos/textos.svg">
+    <div id="primer" class="row mb-5 pb-5">
+      <div class="col-2 col-lg-4"></div>
+      <div class="col-8 col-lg-4 px-5 d-flex flex-column justify-content-center caja" style="height: 530px;">
+        <img class="icon" type="image/svg+xml" src="work/models/memorica/recursos/img/500anos/textos.svg">
         <h2 class="pb-2" style="color: #63281e;">Textos</h2>
         <div class="d-flex justify-content-center">
           <h3 class="goto link-textos"><a href="textos.html">Ir a sala</a></h3>
           <div class="pleca" style="background-color: rgba(99, 40, 30, 0.5);"></div>
         </div>
       </div>
-      <div class="col-lg-4"></div>
+      <div class="col-2 col-lg-4"></div>
     </div>
   </div>
 
@@ -125,16 +130,16 @@
       </div>
     </div>
     <div class="row my-5 py-5">
-      <div class="col-lg-1"></div>
-      <div class="col-12 col-lg-4 px-5 d-flex flex-column justify-content-center caja" style="height: 525px;">
-        <img type="image/svg+xml" src="work/models/memorica/recursos/img/500anos/hechos.svg">
+      <div class="col-2 col-lg-1"></div>
+      <div class="col-8 col-lg-4 px-5 d-flex flex-column justify-content-center caja" style="height: 525px;">
+        <img class="icon" type="image/svg+xml" src="work/models/memorica/recursos/img/500anos/hechos.svg">
         <h2 class="pb-2" style="color: #715f51;">Hechos</h2>
         <div class="d-flex justify-content-center">
           <h3 class="goto link-hechos"><a href="#">Ir a sala</a></h3>
           <div class="pleca" style="background-color: rgba(113, 95, 81, 0.5);"></div>
         </div>
       </div>
-      <div class="col-lg-6"></div>
+      <div class="col-2 col-lg-7"></div>
     </div>
   </div>
 
@@ -148,16 +153,16 @@
       <div class="col-lg-2 px-0"></div>
     </div>
     <div class="row my-5 py-5">
-      <div class="col-lg-6"></div>
-      <div class="col-12 col-lg-4 px-5 d-flex flex-column justify-content-center caja" style="height: 710px;">
-        <img type="image/svg+xml" src="work/models/memorica/recursos/img/500anos/imagenes.svg">
+      <div class="col-2 col-lg-6"></div>
+      <div class="col-8 col-lg-4 px-5 d-flex flex-column justify-content-center caja" style="height: 710px;">
+        <img class="icon" type="image/svg+xml" src="work/models/memorica/recursos/img/500anos/imagenes.svg">
         <h2 class="pb-2" style="color: #194b54;">Imágenes</h2>
         <div class="d-flex justify-content-center">
           <h3 class="goto link-imagenes"><a href="#">Ir a sala</a></h3>
           <div class="pleca" style="background-color: rgba(25, 75, 84, 0.5);"></div>
         </div>
       </div>
-      <div class="col-lg-2"></div>
+      <div class="col-2 col-lg-2"></div>
     </div>
   </div>
 
@@ -172,23 +177,23 @@
       <div class="col-lg-1 px-0"></div>
     </div>
     <div class="row my-5 py-5">
-      <div class="col-lg-4"></div>
-      <div class="col-12 col-lg-4 px-5 d-flex flex-column justify-content-center caja" style="height: 525px; margin-bottom: 300px;">
-        <img class="" type="image/svg+xml" src="work/models/memorica/recursos/img/500anos/interpretes.svg">
+      <div class="col-2 col-lg-4"></div>
+      <div class="col-8 col-lg-4 px-5 d-flex flex-column justify-content-center caja" style="height: 525px; margin-bottom: 300px;">
+        <img class="icon" type="image/svg+xml" src="work/models/memorica/recursos/img/500anos/interpretes.svg">
         <h2 class="pb-2" style="color: #1b2e52;">Somos<br>intérpretes</h2>
         <div class="d-flex justify-content-center">
           <h3 class="goto link-interpretes"><a href="#">Ir a sala</a></h3>
           <div class="pleca" style="background-color: rgba(27, 46, 82, 0.5);"></div>
         </div>
       </div>
-      <div class="col-lg-4"></div>
+      <div class="col-2 col-lg-4"></div>
     </div>
   </div>
 
-  <footer style="z-index: 1;">
+  <footer class="container-fluid" style="z-index: 1;">
     <div class="row">
-      <div class="col-lg-4"></div>
-      <div class="col-12 col-lg-4 px-5 d-flex flex-column justify-content-start align-items-center" style="height: 900px;">
+      <div class="col-lg-2 px-0"></div>
+      <div class="col-12 col-lg-8 px-5 d-flex flex-column justify-content-start align-items-center" style="height: 600px;">
         <h2 class="mb-0">Créditos</h2>
         <img class="mb-5" type="image/svg+xml" src="work/models/memorica/recursos/img/500anos/creditos.svg">
         <p><span class="bold">Presentación: </span>Fernando Equis</p>
@@ -200,7 +205,7 @@
           <img src="work/models/memorica/recursos/img/500anos/scroll-up.svg" alt="">
         </a>
       </div>
-      <div class="col-lg-4"></div>
+      <div class="col-lg-2 px-0"></div>
     </div>
   </footer>
 
@@ -218,7 +223,6 @@
         opacity: 0,
         zIndex: -1
       })
-
       console.log("done");
     });
 
@@ -248,17 +252,48 @@
     });
 
     //intro year count animation
+    $('#intro-text').fadeOut(1);
+
     $('.count').each(function () {
-        $(this).prop('Counter',1521).animate({
-            Counter: $(this).text()
-        }, {
-            duration: 7000,
-            easing: 'swing',
-            step: function (now) {
-                $(this).text(Math.ceil(now));
-            }
-        });
+      $(this).prop('Counter',1521).animate({
+        Counter: $(this).text()
+      }, {
+        duration: 6000,
+        easing: 'swing',
+        step: function (now) {
+          $(this).text(Math.ceil(now));
+          wrap_letters(document.querySelectorAll('.count')[0]);
+        }
+      });
     });
+
+    function wrap_letters($element) {
+      for (var i = 0; i < $element.childNodes.length; i++) {
+        var $child = $element.childNodes[i];
+
+        if ($child.nodeType === Node.TEXT_NODE) {
+          var $wrapper = document.createDocumentFragment();
+
+          for (var i = 0; i < $child.nodeValue.length; i++) {
+              var $char = document.createElement('span');
+              $char.className = 'char';
+              $char.textContent = $child.nodeValue.charAt(i);
+
+              $wrapper.appendChild($char);
+          }
+          $element.replaceChild($wrapper, $child);
+        } else if ($child.nodeType === Node.ELEMENT_NODE) {
+          wrap_letters($child);
+        }
+      }
+    };
+
+    function showIntroText() {
+      $('.count').fadeOut(1000);
+      $('#intro-text').fadeIn(1000);
+    };
+
+     setTimeout(showIntroText, 7000);
 
     //ScrollMagic
     // init controller
@@ -277,7 +312,7 @@
     var sceneHechos = new ScrollMagic.Scene({
       triggerElement: "#cover-hechos",
       triggerHook: 0.1,
-      duration: "130%"
+      duration: "135%"
     })
     .setPin("#cover-hechos", {pushFollowers: false})
     .addTo(controller);
@@ -286,7 +321,7 @@
     var sceneImagenes = new ScrollMagic.Scene({
       triggerElement: "#cover-imagenes",
       triggerHook: 0.1,
-      duration: "135%"
+      duration: "149%"
     })
     .setPin("#cover-imagenes", {pushFollowers: false})
     .addTo(controller);
