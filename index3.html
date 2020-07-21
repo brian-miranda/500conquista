@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, user-scalable=no">
-  <title><TOPIC METHOD="getDisplayName" LANGUAGE="{user@getLanguage}"/> - Memórica</title>
+  <title>prueba index 3</title>
 
   <link rel="icon" type="image/ico" href="work/models/memorica/recursos/img/favicon/favicon.ico"/>
   <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -102,15 +102,15 @@
   </div>
 
   <!-- Textos -->
-  <div id="section-textos" class="container-fluid py-5">
-    <div id="cover-textos" class="row cover">
+  <div id="section-textos" class="container-fluid py-5" style="width: 100%; height: 100%; position: relative;">
+    <div id="cover-textos" class="row cover" >
       <div class="col-lg-1 px-0"></div>
       <div class="col-12 col-lg-10 px-0">
         <img class="img-fluid my-5" src="work/models/memorica/recursos/img/500anos/01.jpg" alt="">
       </div>
       <div class="col-lg-1 px-0"></div>
     </div>
-    <div id="primer" class="row mb-5 pb-5">
+    <div class="row mb-5 pb-5" style="top: 50%; width: 100%; height: 100%; position: absolute;">
       <div class="col-2 col-lg-4"></div>
       <div class="col-8 col-lg-4 px-5 d-flex flex-column justify-content-center caja" style="height: 530px;">
         <img class="icon" type="image/svg+xml" src="work/models/memorica/recursos/img/500anos/textos.svg" width="100%" height="100%">
@@ -305,47 +305,6 @@
 
     setTimeout(showTitle, 9000);
     setTimeout(showIntroText, 12000);
-
-
-    //ScrollMagic
-    // init controller
-    var controller = new ScrollMagic.Controller();
-
-    //pin cover textos
-    var sceneTextos = new ScrollMagic.Scene({
-      triggerElement: "#cover-textos",
-      triggerHook: 0.1,
-      duration: "130%"
-    })
-    .setPin("#cover-textos", {pushFollowers: false})
-    .addTo(controller);
-
-    //pin cover hechos
-    var sceneHechos = new ScrollMagic.Scene({
-      triggerElement: "#cover-hechos",
-      triggerHook: 0.1,
-      duration: "135%"
-    })
-    .setPin("#cover-hechos", {pushFollowers: false})
-    .addTo(controller);
-
-    //pin cover imagenes
-    var sceneImagenes = new ScrollMagic.Scene({
-      triggerElement: "#cover-imagenes",
-      triggerHook: 0.1,
-      duration: "149%"
-    })
-    .setPin("#cover-imagenes", {pushFollowers: false})
-    .addTo(controller);
-
-    //pin cover interpretes
-    var sceneImagenes = new ScrollMagic.Scene({
-      triggerElement: "#cover-interpretes",
-      triggerHook: 0.1,
-      duration: "70%"
-    })
-    .setPin("#cover-interpretes", {pushFollowers: false})
-    .addTo(controller);
 
   </script>
 </body>
