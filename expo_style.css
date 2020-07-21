@@ -65,7 +65,7 @@
 /* ----------------------- GENERAL ----------------------- */
 html {
   height: 100%;
-  font-size: 18px;
+  font-size: 19px;
   background-color: #F9F9F7;
 }
 
@@ -262,7 +262,6 @@ h3.link-textos a:hover, h3.link-hechos a:hover, h3.link-imagenes a:hover, h3.lin
 }
 
 .caja {
-  width: 530px;
   background-color: #F9F9F7;
 }
 
@@ -550,21 +549,12 @@ footer img {
   }
 }
 
-/* MURO BERLIN */
-/*
-	NORMALIZE
-*/
-
-* {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-*:before, *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+/* ----------------------- MURO BERLIN ----------------------- */
+.contenido {
+  padding: 1.25rem;
+  overflow: hidden;
+  margin-bottom: 3rem;
+  max-width: 100%;
 }
 
 .galeria {
@@ -610,11 +600,10 @@ footer img {
   min-height: 100vh;
   align-items: center;
   justify-content: center;
-  padding: 1.25rem;
+
 }
 
 .galeria_foto {
-  /*width: 100%;*/
   max-width: 61.25rem;
   margin-left: auto;
   margin-right: auto;
@@ -622,6 +611,22 @@ footer img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.galeria_foto.right {
+  margin-right: 0;
+}
+
+.galeria_foto.left {
+  margin-left: 0;
+}
+
+.galeria_elemento_izquierda .galeria_texto {
+  right: calc(50% + (30.625rem - 10.31rem));
+  left: auto;
+  transform: translateX(50%);
+  right: auto;
+  left: 0.25rem;
 }
 
 .galeria_elemento-expandido .galeria_foto {
@@ -638,19 +643,12 @@ footer img {
   background: #F9F9F7;
   padding: 1.25rem;
   text-align: left;
-  width: 100%;
-  max-width: 21.3rem;
+  height: 525px;
+  width: 530px;
   position: absolute;
   top: 100vh;
   left: 50%;
   transform: translateX(-50%);
-}
-
-.galeria_texto p {
-  font-weight: 300;
-  font-size: 0.9375rem;
-  line-height: 140%;
-  text-align: left;
 }
 
 .bajar {
@@ -672,8 +670,12 @@ footer img {
 }
 
 @media (min-width:48rem){ /* 768PX */
+  .contenido {
+    padding-top: 4.5rem;
+  }
+
   .galeria_texto {
-    max-width: 14.6rem;
+    /* max-width: 14.6rem; */
   }
 
 }
@@ -687,7 +689,6 @@ footer img {
     margin-bottom: 125vh;
   }
 
-
   .galeria_elemento-vertical .galeria_texto {
     right: auto;
     left: 0.25rem;
@@ -695,12 +696,12 @@ footer img {
 
   .galeria_texto {
     left: calc(50% + (30.625rem - 10.3rem));
-    max-width: 20.6rem;
+    /* max-width: 20.6rem; */
   }
 
   .galeria_elemento-expandido .galeria_texto,
   .galeria_elemento-vertical .galeria_texto {
-    max-width: 20rem;
+    /* max-width: 20rem; */
   }
 
   .galeria_elemento-expandido .galeria_texto {
@@ -731,7 +732,6 @@ footer img {
   .bajar {
     bottom: -130px;
   }
-
 }
 
 @media (min-width:90rem){ /* 1440PX */
