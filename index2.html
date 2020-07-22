@@ -26,15 +26,15 @@
 
   <!-- Header -->
   <header>
-    <nav class="navbar fixed-top navbar-light">
+    <nav class="navbar fixed-top">
       <a class="navbar-brand" href="https://memoricamexico.gob.mx/es/memorica/Exposiciones">
-        <img type="image/svg+xml" src="work/models/memorica/recursos/img/500anos/logui.svg" alt="" class="logo" width="100%" height="100%">
+        <img type="image/svg+xml" src="work/models/memorica/recursos/img/500anos/logui.svg" alt="" class="logo" width="50px" height="50px">
       </a>
       <a href="" data-toggle="modal" data-target="#modalbotonescompartir" title="Compartir" class="share">
-        <img type="image/svg+xml" alt="Compartir en redes sociales" src="work/models/memorica/recursos/img/500anos/share.svg" title="Compartir en redes Sociales" width="100%" height="100%">
+        <img type="image/svg+xml" alt="Compartir en redes sociales" src="work/models/memorica/recursos/img/500anos/share.svg" title="Compartir en redes Sociales" width="35px" height="35px">
       </a>
       <a href="" class="down">
-        <img type="image/svg+xml" alt="Descargar guía didactica" src="work/models/memorica/recursos/img/500anos/down.svg" title="Descargar guía didactica" width="100%" height="100%">
+        <img type="image/svg+xml" alt="Descargar guía didactica" src="work/models/memorica/recursos/img/500anos/down.svg" title="Descargar guía didactica" width="35px" height="100%">
       </a>
     </nav>
   </header>
@@ -90,8 +90,8 @@
       <div id="intro-text" class="align-self-between">
         <h1 class="">Textos, voces e imágenes<br>de la Conquista</h1>
       </div>
-      <a href="#start" class="scroll d-flex">
-        <img src="work/models/memorica/recursos/img/500anos/scroll.svg" alt="" width="100%" height="100%">
+      <a href="#start" class="scroll d-flex animated bounce">
+        <img src="work/models/memorica/recursos/img/500anos/scroll.svg" alt="" width="35px" height="35px">
       </a>
     </div>
   </div>
@@ -166,10 +166,10 @@
         </div>
       </div>
 
-      <footer class="container-fluid" style="z-index: 1;">
+      <footer class="container-fluid mt-5" style="z-index: 1;">
         <div class="row">
           <div class="col-lg-2 px-0"></div>
-          <div class="col-12 col-lg-8 px-5 d-flex flex-column justify-content-start align-items-center" style="height: 600px;">
+          <div class="col-12 col-lg-8 px-5 d-flex flex-column justify-content-start align-items-center" style="height: 500px;">
             <h2 class="mb-0">Créditos</h2>
             <img class="mb-5" type="image/svg+xml" src="work/models/memorica/recursos/img/500anos/creditos.svg" width="100%" height="100%">
             <p><span class="bold">Presentación: </span>Fernando Equis</p>
@@ -177,8 +177,8 @@
             <p><span class="bold">Cuidado editorial: </span>Rebeca Equis</p>
             <p><span class="bold">Programación: </span>Frida Miranda</p>
             <p><span class="bold">Diseño: </span>Lizeth Castro</p>
-            <a href="#cover" class="scroll-up d-flex">
-              <img src="work/models/memorica/recursos/img/500anos/scroll-up.svg" alt="">
+            <a href="#cover" class="scroll-up d-flex  animated bounce">
+              <img src="work/models/memorica/recursos/img/500anos/scroll-up.svg" alt="" width="35px" height="35px">
             </a>
           </div>
           <div class="col-lg-2 px-0"></div>
@@ -231,18 +231,19 @@
     $('#intro-title').fadeOut(1);
     $('#intro-text').fadeOut(1);
 
-    $('.count').each(function () {
-      $(this).prop('Counter',1521).animate({
-        Counter: $(this).text()
-      }, {
-        duration: 8000,
-        easing: 'swing',
-        step: function (now) {
-          $(this).text(Math.ceil(now));
-          wrap_letters(document.querySelectorAll('.count')[0]);
-        }
-      });
-    });
+    setTimeout(
+      $('.count').each(function() {
+        $(this).prop('Counter',1521).animate({
+          Counter: $(this).text()
+        }, {
+          duration: 8000,
+          easing: 'swing',
+          step: function (now) {
+            $(this).text(Math.ceil(now));
+            wrap_letters(document.querySelectorAll('.count')[0]);
+          }
+        })
+      }), 4000);
 
     function wrap_letters($element) {
       for (var i = 0; i < $element.childNodes.length; i++) {
@@ -335,7 +336,6 @@
         });
 
       } else {
-
         $('.galeria_elemento').each(function(index) {
           $(this).removeClass('fijo').css({
             'top': 'auto',
@@ -343,17 +343,12 @@
             'marginBottom': '0'
           });
         });
-
       }
 
-      if (scroller >= ($('#cita').offset().top - $(window).height() * 0.5)) {
-        $('#cita').addClass('activo');
-      } else {
-        $('#cita').removeClass('activo');
-      }
     });
 
   </script>
+  <script type="text/javascript" src="lazyload.min.js"></script>
 </body>
 
 </html>

@@ -127,8 +127,6 @@ a {
   color: #715E51;
 }
 
-
-
 .monospace .char {
   display: inline-block; /* Enable widths */
   width: 250px;          /* Set width across all characters */
@@ -179,6 +177,27 @@ a.scroll, a.scroll-up {
 #introVideo {
   width: 100%;
 }
+
+.animated {
+  animation: bounce 1s infinite alternate;
+  -webkit-animation: bounce 1s infinite alternate;
+}
+
+.bounce {
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+}
+
+@keyframes bounce {
+  from {
+    height: 3rem;
+  }
+  to {
+    height: 4rem;
+  }
+}
+
+
 
 /* ----------------------- HOME ----------------------- */
 
@@ -397,7 +416,7 @@ footer img {
 .overlay {
   z-index: 3;
   position: fixed;
-  background: #000;
+  background: #13182c;
   top: 0;
   left: 0;
   width: 100%;
@@ -442,7 +461,7 @@ footer img {
 .overlay nav {
   position: relative;
   height: 70%;
-  top: 60%;
+  top: 50%;
   transform: translateY(-50%);
   font-size: 50px;
   font-weight: 400;
@@ -462,7 +481,7 @@ footer img {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 10%;
+  height: 15%;
   min-height: 50px;
   position: relative;
   opacity: 0;
@@ -470,7 +489,7 @@ footer img {
 
 .overlay ul li a {
   font-family: "IMFellEnglishSC_Regular";
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   text-align: center;
   display: inline-block;
   position: relative;
@@ -484,7 +503,6 @@ footer img {
 }
 
 .overlay ul li a:after {
-  content: '';
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -549,7 +567,7 @@ footer img {
   }
 }
 
-/* ----------------------- MURO BERLIN ----------------------- */
+/* ----------------------- BERLIN ----------------------- */
 .contenido {
   padding: 1.25rem;
   overflow: hidden;
