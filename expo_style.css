@@ -127,6 +127,13 @@ a {
   color: #715E51;
 }
 
+.fake-count {
+  font-family: "IMFellEnglish_Regular";
+  font-size: 30rem;
+  text-align: center;
+  color: #715E51;
+}
+
 .monospace .char {
   display: inline-block; /* Enable widths */
   width: 250px;          /* Set width across all characters */
@@ -160,12 +167,10 @@ a {
 }
 
 .scroll:hover, .scroll-up:hover {
-  height: 4rem;
+
 }
 
 .scroll img, .scroll-up img {
-  height: 100%;
-  width: 100%;
   transform-origin: bottom;
 }
 
@@ -190,10 +195,10 @@ a.scroll, a.scroll-up {
 
 @keyframes bounce {
   from {
-    height: 3rem;
+    margin-bottom: 10px;
   }
   to {
-    height: 4rem;
+    margin-bottom: 25px;
   }
 }
 
@@ -276,10 +281,6 @@ h3.link-textos a:hover, h3.link-hechos a:hover, h3.link-imagenes a:hover, h3.lin
   height: auto;
 }
 
-.barra-textos {
-  background-color: #13182c;
-}
-
 .caja {
   background-color: #F9F9F7;
 }
@@ -320,22 +321,102 @@ footer img {
 }
 
 /* ----------------------- SALA LOS TEXTOS ----------------------- */
+.tit-textos {
+  height: 40px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0)
+}
 
-.hover-textos {
+.texto {
   width: 100%;
   height: 100%;
-  background-color: #FAF9F8;
-  margin: 0;
   transition: all 0.3s ease-in-out;
 }
 
-.hover-textos:hover {
-  background-color: #000000;
+.outer {
+  background-color: rgba(192, 118, 79, .10);
 }
 
-.hover-textos h3:hover {
+.outer-light {
+  background-color: #faf9f8;
+}
+
+.outer:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  opacity: 0;
+  transition: all 0.8s;
+}
+
+.outer:hover:before {
+  opacity: 1;
+}
+
+.inner{
+  position: relative;
+}
+
+#texto-1:before {
+  background-image: url(work/models/memorica/recursos/img/500anos/texto-1.jpg);
+}
+
+#texto-2:before {
+  background-image: url(work/models/memorica/recursos/img/500anos/texto-2.jpg);
+}
+
+#texto-3:before {
+  background-image: url(work/models/memorica/recursos/img/500anos/texto-3.jpg);
+}
+
+#texto-4:before {
+  background-image: url(work/models/memorica/recursos/img/500anos/texto-4.jpg);
+}
+
+.inner h4 {
+  font-family: "IMFellEnglish_Regular";
+  font-size: 2.5rem;
+  color: #63281e;
+}
+
+.inner a {
+  font-family: "IMFellEnglish_Regular";
+  font-size: 0.9rem;
+}
+
+.inner .pleca {
+  width: 90px;
+  height: 8px;
+  margin-top: 9px;
+  position: absolute;
+}
+
+.inner img {
+  background-image: url(work/models/memorica/recursos/img/500anos/textos-divisor.svg);
+}
+
+.vermas {
+  margin-left: 8px;
+  z-index: 1;
+}
+
+.lista-texto {
+  font-size: 0.9rem;
+  color: #63281e;
+}
+
+.lista-texto span {
+  color: #c0764f;
+}
+
+.outer:hover h4, .outer:hover li, .outer:hover span, .outer:hover a {
   color: #FAF9F8;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.8s;
 }
 
 /* ----------------------- LOADING SCREEN ----------------------- */
@@ -353,19 +434,19 @@ footer img {
 /* ----------------------- NAVBAR ----------------------- */
 .share {
   position: fixed;
-  top: 2.7%;
+  top: 1.8%;
   right: 8%;
 }
 
 .down {
   position: fixed;
-  top: 2.7%;
+  top: 1.8%;
   right: 5%;
 }
 
 .button_container {
   position: fixed;
-  top: 3.2%;
+  top: 2.2%;
   right: 2%;
   height: 27px;
   width: 35px;
@@ -523,6 +604,14 @@ footer img {
     opacity: 1;
     left: 0;
   }
+}
+
+.dark nav {
+  background-color: #13182c;
+}
+
+.button_container span.dark {
+  background: #F9F9F7;
 }
 
 /* ----------------------- MEDIA QUERIES ----------------------- */

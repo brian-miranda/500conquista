@@ -80,6 +80,7 @@
   <div id="cover" class="container-fluid">
     <div class="splash col-sm-12 d-flex flex-column align-items-center justify-content-center">
       <div id="year-count" classx="align-self-between">
+        <h1 class="fake-count monospace"><span class="char">1</span><span class="char">5</span><span class="char">2</span><span class="char">1</span></h1>
         <h1 class="count monospace" data-value="2021">2021</h1>
       </div>
 
@@ -91,7 +92,7 @@
         <h1 class="">Textos, voces e imágenes<br>de la Conquista</h1>
       </div>
       <a href="#start" class="scroll d-flex animated bounce">
-        <img src="work/models/memorica/recursos/img/500anos/scroll.svg" alt="" width="35px" height="35px">
+        <img src="work/models/memorica/recursos/img/500anos/scroll.svg" alt="" width="40px" height="40px">
       </a>
     </div>
   </div>
@@ -177,8 +178,8 @@
             <p><span class="bold">Cuidado editorial: </span>Rebeca Equis</p>
             <p><span class="bold">Programación: </span>Frida Miranda</p>
             <p><span class="bold">Diseño: </span>Lizeth Castro</p>
-            <a href="#cover" class="scroll-up d-flex  animated bounce">
-              <img src="work/models/memorica/recursos/img/500anos/scroll-up.svg" alt="" width="35px" height="35px">
+            <a href="#cover" class="scroll-up d-flex animated bounce">
+              <img src="work/models/memorica/recursos/img/500anos/scroll-up.svg" alt="" width="40px" height="40px">
             </a>
           </div>
           <div class="col-lg-2 px-0"></div>
@@ -199,6 +200,11 @@
         opacity: 0,
         zIndex: -1
       })
+      $('.count').fadeOut(1);
+      $('#intro-title').fadeOut(1);
+      $('#intro-text').fadeOut(1);
+      $('.scroll').removeClass('d-flex');
+      $('.scroll').fadeOut(1);
       console.log("done");
     });
 
@@ -228,22 +234,6 @@
     });
 
     //intro year count animation
-    $('#intro-title').fadeOut(1);
-    $('#intro-text').fadeOut(1);
-
-    setTimeout(
-      $('.count').each(function() {
-        $(this).prop('Counter',1521).animate({
-          Counter: $(this).text()
-        }, {
-          duration: 8000,
-          easing: 'swing',
-          step: function (now) {
-            $(this).text(Math.ceil(now));
-            wrap_letters(document.querySelectorAll('.count')[0]);
-          }
-        })
-      }), 4000);
 
     function wrap_letters($element) {
       for (var i = 0; i < $element.childNodes.length; i++) {
@@ -266,6 +256,24 @@
       }
     };
 
+    function counter() {
+      console.log("hey, asshole");
+      $('.fake-count').hide();
+      $('.count').show();
+      $('.count').each(function() {
+        $(this).prop('Counter',1521).animate({
+          Counter: $(this).text()
+        }, {
+          duration: 6500,
+          easing: 'swing',
+          step: function (now) {
+            $(this).text(Math.ceil(now));
+            wrap_letters(document.querySelectorAll('.count')[0]);
+          }
+        })
+      });
+    };
+
     function showTitle() {
       $('.count').fadeOut(1000);
       $('#intro-title').fadeIn(1000);
@@ -274,8 +282,11 @@
     function showIntroText() {
       $('#intro-title').fadeOut(1000);
       $('#intro-text').fadeIn(1000);
+      $('.scroll').addClass('d-flex');
+      $('.scroll').fadeIn(1);
     };
 
+    setTimeout(counter, 1500);
     setTimeout(showTitle, 9000);
     setTimeout(showIntroText, 12000);
 
