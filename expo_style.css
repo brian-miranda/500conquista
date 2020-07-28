@@ -166,10 +166,6 @@ a {
   margin-bottom: 10px;
 }
 
-.scroll:hover, .scroll-up:hover {
-
-}
-
 .scroll img, .scroll-up img {
   transform-origin: bottom;
 }
@@ -202,12 +198,11 @@ a.scroll, a.scroll-up {
   }
 }
 
-
-
 /* ----------------------- HOME ----------------------- */
 
 .sala {
-  margin-top: 1000px;
+  /* margin-top: 1000px; */
+  position: relative;
 }
 
 .caja h2, .caja h3 {
@@ -289,6 +284,17 @@ h3.link-textos a:hover, h3.link-hechos a:hover, h3.link-imagenes a:hover, h3.lin
   height: 30px;
 }
 
+/* ----------------------- HOME ESTATICO ----------------------- */
+.overbox{
+  position: absolute;
+  top: 0;
+  left:0;
+  z-index:1;
+  bottom:0;
+  right:0;
+  height:100%;
+}
+
 /* ----------------------- CREDITOS ----------------------- */
 
 footer {
@@ -300,7 +306,7 @@ footer p {
   line-height: 1rem;
 }
 
-footer img {
+.credit-line {
   height: 10px;
 }
 
@@ -315,9 +321,9 @@ footer img {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  height: 10%;
+  height: 3rem;
   transition: all 0.5s ease;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 /* ----------------------- SALA LOS TEXTOS ----------------------- */
