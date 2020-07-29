@@ -78,8 +78,6 @@ body {
 
 h2 {
   font-family: "IMFellEnglish_Regular";
-  font-size: 3.5rem;
-  text-align: center;
 }
 
 p, a, li {
@@ -122,21 +120,21 @@ a {
 
 .count {
   font-family: "IMFellEnglish_Regular";
-  font-size: 30rem;
+  font-size: 25rem;
   text-align: center;
   color: #715E51;
 }
 
 .fake-count {
   font-family: "IMFellEnglish_Regular";
-  font-size: 30rem;
+  font-size: 25rem;
   text-align: center;
   color: #715E51;
 }
 
 .monospace .char {
   display: inline-block; /* Enable widths */
-  width: 250px;          /* Set width across all characters */
+  width: 200px;          /* Set width across all characters */
   text-align: center;    /* Even out spacing */
 }
 
@@ -202,6 +200,7 @@ a.scroll, a.scroll-up {
 
 .sala {
   /* margin-top: 1000px; */
+  width: 100%;
   position: relative;
 }
 
@@ -277,6 +276,7 @@ h3.link-textos a:hover, h3.link-hechos a:hover, h3.link-imagenes a:hover, h3.lin
 }
 
 .caja {
+  height: 530px;
   background-color: #F9F9F7;
 }
 
@@ -288,11 +288,9 @@ h3.link-textos a:hover, h3.link-hechos a:hover, h3.link-imagenes a:hover, h3.lin
 .overbox{
   position: absolute;
   top: 0;
-  left:0;
   z-index:1;
-  bottom:0;
-  right:0;
   height:100%;
+  width: 100%;
 }
 
 /* ----------------------- CREDITOS ----------------------- */
@@ -304,6 +302,11 @@ footer {
 footer p {
   color: #715f51;
   line-height: 1rem;
+}
+
+footer h2 {
+  font-size: 3.5rem;
+  text-align: center;
 }
 
 .credit-line {
@@ -621,20 +624,10 @@ footer p {
 }
 
 /* ----------------------- MEDIA QUERIES ----------------------- */
-/* Small devices (landscape phones, 576px and up) */
-@media only screen and (max-width: 576px) {}
-
-/* Medium devices (tablets, 768px and up) */
-@media only screen and (max-width: 768px) {}
-
-/* Large devices (desktops, 992px and up) */
-@media only screen and (max-width: 992px) {
-
-}
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media only screen and (max-width: 1200px) {
-  .count {
+  /*.count {
     font-size: 15rem;
   }
 
@@ -659,6 +652,153 @@ footer p {
 
   .cover img {
     height: 500px;
+  }*/
+}
+
+/* Large devices (desktops, 992px and up) */
+@media only screen and (max-width: 992px) {}
+
+/* Medium devices (tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  #intro-text h1 {
+    font-size: 4rem;
+  }
+
+  #intro-title h1 {
+    font-size: 10rem;
+  }
+
+  .count, .fake-count {
+    font-size: 15rem;
+  }
+
+  .monospace .char {
+    width: 160px;
+  }
+
+  .share {
+    right: 14%;
+  }
+
+  .down {
+    right: 8%;
+  }
+
+  .caja {
+    height: 20rem;
+  }
+
+  .caja h2 {
+    font-size: 4rem;
+    text-align: center;
+  }
+
+  .caja img {
+    height: 20px;
+  }
+
+  #section-interpretes h2 {
+    font-size: 3rem;
+  }
+
+  #section-interpretes .icon {
+    height: 1.5rem;
+  }
+
+  .goto {
+    padding-top: 0;
+  }
+
+  h3.goto a {
+    font-size: 1.5rem;
+  }
+
+  .pleca {
+    width: 150px;
+    height: 8px;
+    margin-top: 22px;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media only screen and (max-width: 576px) {
+  #intro-text h1 {
+    font-size: 2.5rem;
+  }
+
+  #intro-title h1 {
+    font-size: 5rem;
+  }
+
+  .count, .fake-count {
+    font-size: 6rem;
+  }
+
+  .monospace .char {
+    width: 55px;
+  }
+
+  .share {
+    top: 4.5%;
+    right: 26%;
+  }
+
+  .down {
+    top: 4.5%;
+    right: 14%;
+  }
+
+  .button_container {
+    top: 5.5%;
+    right: 2%;
+  }
+
+  .caja {
+    height: 190px;
+  }
+
+  .caja h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .caja img {
+    height: 10px;
+  }
+
+  #section-interpretes h2 {
+    font-size: 1.5rem;
+  }
+
+  #section-interpretes .icon {
+    height: 10px;
+  }
+
+  .goto {
+    padding-top: 0;
+  }
+
+  h3.goto a {
+    font-size: 1rem;
+  }
+
+  .pleca {
+    width: 100px;
+    height: 5px;
+    margin-top: 25px;
+  }
+
+  footer h2 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  footer p {
+    font-size: 0.8rem;
+  }
+
+  .credit-line {
+    height: 0.4rem;
   }
 }
 
