@@ -220,36 +220,34 @@ a.scroll, a.scroll-up {
 h3.goto a {
   font-family: "IMFellEnglish_Italic";
   font-size: 1.8rem;
+  transition: all 0.5 ease;
+  text-decoration: none;
 }
 
 h3.goto a:hover {
-  font-family: "IMFellEnglish_Italic";
   text-decoration: none;
+  transition: all 0.5 ease;
 }
 
 h3.link-textos a {
   color: #63281e;
-  opacity: 0.5;
 }
 
 h3.link-hechos a {
   color: #715f51;
-  opacity: 0.5;
 }
 
 h3.link-imagenes a {
   color: #194b54;
-  opacity: 0.5;
 }
 
 h3.link-interpretes a {
   color: #1b2e52;
-  opacity: 0.5;
 }
 
 h3.link-textos a:hover, h3.link-hechos a:hover, h3.link-imagenes a:hover, h3.link-interpretes a:hover {
+  font-size: 1.9rem;
   transition: all 0.5 ease;
-  opacity: 1;
 }
 
 .pleca {
