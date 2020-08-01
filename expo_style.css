@@ -114,10 +114,6 @@ a {
   width: 100%;
 }
 
-#cover video {
-  max-height: 768px;
-}
-
 .count {
   font-family: "IMFellEnglish_Regular";
   font-size: 25rem;
@@ -144,7 +140,7 @@ a {
 
 #intro-text h1, #intro-title h1 {
   font-family: "IMFellEnglishSC_Regular";
-  font-size: 6.5rem;
+  font-size: 6rem;
   text-align: center;
   color: #715E51;
 }
@@ -329,105 +325,6 @@ footer h2 {
   margin-bottom: 10px;
 }
 
-/* ----------------------- SALA LOS TEXTOS ----------------------- */
-.tit-textos {
-  height: 40px;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0)
-}
-
-.texto {
-  width: 100%;
-  height: 100%;
-  transition: all 0.3s ease-in-out;
-}
-
-.outer {
-  background-color: rgba(192, 118, 79, .10);
-}
-
-.outer-light {
-  background-color: #faf9f8;
-}
-
-.outer:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  opacity: 0;
-  transition: all 0.8s;
-}
-
-.outer:hover:before {
-  opacity: 1;
-}
-
-.inner{
-  position: relative;
-}
-
-#texto-1:before {
-  background-image: url(work/models/memorica/recursos/img/500anos/texto-1.jpg);
-}
-
-#texto-2:before {
-  background-image: url(work/models/memorica/recursos/img/500anos/texto-2.jpg);
-}
-
-#texto-3:before {
-  background-image: url(work/models/memorica/recursos/img/500anos/texto-3.jpg);
-}
-
-#texto-4:before {
-  background-image: url(work/models/memorica/recursos/img/500anos/texto-4.jpg);
-}
-
-.inner h4 {
-  font-family: "IMFellEnglish_Regular";
-  font-size: 2.5rem;
-  color: #63281e;
-}
-
-.inner a {
-  font-family: "IMFellEnglish_Regular";
-  font-size: 0.9rem;
-}
-
-.inner .pleca {
-  width: 90px;
-  height: 8px;
-  margin-top: 9px;
-  position: absolute;
-}
-
-.inner img {
-  background-image: url(work/models/memorica/recursos/img/500anos/textos-divisor.svg);
-}
-
-.vermas {
-  margin-left: 8px;
-  z-index: 1;
-}
-
-.lista-texto {
-  font-size: 0.9rem;
-  color: #63281e;
-}
-
-.lista-texto span {
-  color: #c0764f;
-}
-
-.outer:hover h4, .outer:hover li, .outer:hover span, .outer:hover a {
-  color: #FAF9F8;
-  transition: all 0.8s;
-}
-
 /* ----------------------- LOADING SCREEN ----------------------- */
 
 #loader {
@@ -443,19 +340,19 @@ footer h2 {
 /* ----------------------- NAVBAR ----------------------- */
 .share {
   position: fixed;
-  top: 1.8%;
+  top: 25px;
   right: 8%;
 }
 
 .down {
   position: fixed;
-  top: 1.8%;
+  top: 25px;
   right: 5%;
 }
 
 .button_container {
   position: fixed;
-  top: 2.2%;
+  top: 29px;
   right: 2%;
   height: 27px;
   width: 35px;
@@ -623,18 +520,228 @@ footer h2 {
   background: #F9F9F7;
 }
 
+/* ----------------------- SALA LOS TEXTOS ----------------------- */
+.tit-textos {
+  height: 40px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0)
+}
+
+.texto-box {
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.outer {
+  background-color: rgba(192, 118, 79, .10);
+}
+
+.outer-light {
+  background-color: #faf9f8;
+}
+
+.outer:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  opacity: 0;
+  transition: all 0.8s;
+}
+
+.outer:hover:before {
+  opacity: 1;
+}
+
+.inner{
+  position: relative;
+}
+
+#texto-1:before {
+  background-image: url(work/models/memorica/recursos/img/500anos/texto-1.jpg);
+}
+
+#texto-2:before {
+  background-image: url(work/models/memorica/recursos/img/500anos/texto-2.jpg);
+}
+
+#texto-3:before {
+  background-image: url(work/models/memorica/recursos/img/500anos/texto-3.jpg);
+}
+
+#texto-4:before {
+  background-image: url(work/models/memorica/recursos/img/500anos/texto-4.jpg);
+}
+
+.inner h4 {
+  font-family: "IMFellEnglish_Regular";
+  font-size: 2.5rem;
+  color: #63281e;
+}
+
+.inner a {
+  font-family: "IMFellEnglish_Regular";
+  font-size: 0.9rem;
+}
+
+.inner .d-flex .pleca {
+  width: 90px;
+  height: 8px;
+  margin-top: 9px;
+  position: absolute;
+}
+
+.inner img {
+  background-image: url(work/models/memorica/recursos/img/500anos/textos-divisor.svg);
+}
+
+.vermas {
+  margin-left: 8px;
+  z-index: 1;
+}
+
+.lista-texto li {
+  font-family: "Raleway-SemiBold";
+  font-size: 0.9rem;
+  color: #63281e;
+}
+
+.lista-texto li span {
+  font-family: "Raleway-Regular";
+}
+
+.lista-texto span {
+  color: #c0764f;
+}
+
+.outer:hover h4, .outer:hover li, .outer:hover span, .outer:hover a {
+  color: #FAF9F8;
+  transition: all 0.8s;
+}
+
+/* ----------------------- TEXTO 1 ----------------------- */
+.texto {
+  padding-top: 81px;
+  background-color: #faf9f8;
+}
+
+
+.texto h1 {
+  color: #63281e;
+  font-family: "IMFellEnglishSC_Regular";
+  font-size: 4.5rem;
+  line-height: 4.5rem;
+  text-align: left;
+}
+
+.texto h2 {
+  color: #63281e;
+  font-family: "IMFellEnglishSC_Regular";
+  font-size: 2.5rem;
+  text-align: left;
+}
+
+.texto h3 {
+  color: #63281e;
+  font-family: "IMFellEnglish_Regular";
+  font-size: 2rem;
+  text-align: left;
+  /* margin-left: 250px; */
+}
+
+.texto .pleca {
+  height: 5px;
+  margin-top: 20px;
+}
+
+.texto h5 {
+  color: #c0764f;
+  font-family: "Raleway-Bold";
+  font-size: 1rem;
+  text-align: left;
+}
+
+.texto h6 {
+  color: #c0764f;
+  font-family: "Raleway-SemiBold";
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.texto p {
+  color: #13182c;
+  font-family: "Raleway-Regular";
+  font-size: 1rem;
+  text-align: justify;
+}
+
+.glifo {
+  font-family: "IMFellEnglishSC_Regular";
+}
+
+#sidenavbar {
+  background-color: #faf9f8;
+}
+
+.nav-pills {
+  position: fixed;
+  z-index: 1;
+}
+
+.nav-pills a {
+  font-size: 1rem;
+}
+
+.nav-pills a:hover {
+  color: #c0764f;
+}
+
+.nav-pills a:active {
+  color: #c0764f;
+}
+
+.overbox-texto {
+  position: absolute;
+  top: 0;
+  z-index:1;
+
+}
+
 /* ----------------------- MEDIA QUERIES ----------------------- */
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media only screen and (max-width: 1200px) {
-  /*.count {
-    font-size: 15rem;
+  #intro-text h1 {
+    font-size: 4.5rem;
+  }
+
+  #intro-title h1 {
+    font-size: 13rem;
+  }
+
+  .count, .fake-count {
+    font-size: 18rem;
   }
 
   .monospace .char {
-    display: inline-block;
-    width: 150px;
-    text-align: center;
+    width: 160px;
+  }
+
+  .share {
+    right: 12%;
+  }
+
+  .down {
+    right: 7%;
+  }
+
+  .caja {
+    height: 18rem;
   }
 
   .caja h2 {
@@ -642,21 +749,95 @@ footer h2 {
     font-size: 3.5rem;
   }
 
+  .caja img {
+    height: 1rem;
+  }
+
   #section-interpretes h2 {
     font-size: 3rem;
   }
 
   #section-interpretes .icon {
-    height: 2rem;
+    height: 1.5rem;
   }
 
-  .cover img {
-    height: 500px;
-  }*/
+
 }
 
-/* Large devices (desktops, 992px and up) */
-@media only screen and (max-width: 992px) {}
+/* Large devices (desktops, 769px to 1024px) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  #intro-text h1 {
+    font-size: 4.5rem;
+  }
+
+  #intro-title h1 {
+    font-size: 13rem;
+  }
+
+  .count, .fake-count {
+    font-size: 18rem;
+  }
+
+  .monospace .char {
+    width: 160px;
+  }
+
+  .share {
+    right: 12%;
+  }
+
+  .down {
+    right: 7%;
+  }
+
+  .caja {
+    height: 18rem;
+  }
+
+  .caja h2 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .caja img {
+    height: 1rem;
+  }
+
+  #section-interpretes h2 {
+    font-size: 3rem;
+  }
+
+  #section-interpretes .icon {
+    height: 1.5rem;
+  }
+
+  .goto {
+    padding-top: 0;
+  }
+
+  h3.goto a {
+    font-size: 1.2rem;
+  }
+
+  .pleca {
+    width: 150px;
+    height: 6px;
+    margin-top: 24px;
+  }
+
+  footer h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  footer p {
+    font-size: 0.9rem;
+  }
+
+  .credit-line {
+    height: 0.3rem;
+  }
+}
 
 /* Medium devices (tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
@@ -718,6 +899,19 @@ footer h2 {
     height: 8px;
     margin-top: 22px;
   }
+
+  footer h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  footer p {
+    font-size: 0.9rem;
+  }
+
+  .credit-line {
+    height: 0.3rem;
+  }
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -739,17 +933,17 @@ footer h2 {
   }
 
   .share {
-    top: 4.5%;
+    top: 25px;
     right: 26%;
   }
 
   .down {
-    top: 4.5%;
+    top: 25px;
     right: 14%;
   }
 
   .button_container {
-    top: 5.5%;
+    top: 29px;
     right: 2%;
   }
 

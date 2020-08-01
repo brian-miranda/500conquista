@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <title><TOPIC METHOD="getDisplayName" LANGUAGE="{user@getLanguage}"/> - Memórica</title>
+
+  <link rel="icon" type="image/ico" href="work/models/memorica/recursos/img/favicon/favicon.ico"/>
+  <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- reserved for styles, don't forget to remove the / from the thing -->
+  <link href="expo_style.css" type="text/css" rel="stylesheet">
+  <style type="text/css">
+
+  </style>
+
+  <!-- <RESOURCE TYPE="JSPEditor" STYPE="OpenGraphTags" />
+  <meta property="og:image" content="work/models/memorica/recursos/img/miniatura_500anos.jpg">
+  <meta property="og:image:type" content="image/svg">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="1024">
+  <meta name="twitter:image:src" content="https://memoricamexico.gob.mxwork/models/memorica/recursos/img/miniatura_500anos.jpg"> -->
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar fixed-top" style="background-color: #faf9f8">
+      <a class="navbar-brand" href="https://memoricamexico.gob.mx/es/memorica/Exposiciones">
+        <img type="image/svg+xml" src="work/models/memorica/recursos/img/500anos/logui.svg" alt="" class="logo" width="50px" height="50px">
+      </a>
+      <img class="tit-textos d-none d-sm-block" src="work/models/memorica/recursos/img/500anos/tit-texto1.png" alt="">
+      <a href="" data-toggle="modal" data-target="#modalbotonescompartir" title="Compartir" class="share">
+        <img type="image/svg+xml" alt="Compartir en redes sociales" src="work/models/memorica/recursos/img/500anos/share.svg" title="Compartir en redes Sociales" width="35px" height="35px">
+      </a>
+      <a href="" class="down">
+        <img type="image/svg+xml" alt="Descargar guía didactica" src="work/models/memorica/recursos/img/500anos/down.svg" title="Descargar guía didactica" width="35px" height="100%">
+      </a>
+    </nav>
+  </header>
+  <div class="button_container" id="toggle">
+    <span class="top"></span>
+    <span class="middle"></span>
+    <span class="bottom"></span>
+  </div>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay">
+    <nav class="overlay-menu">
+      <ul>
+        <li><a class="go" href="/{user@getLanguage}/{topic@getWebSiteId}/500anos">Inicio</a></li>
+        <li><a class="go" href="textos.html">Textos</a></li>
+        <li><a class="go" href="/{user@getLanguage}/{topic@getWebSiteId}/500hechos">Hechos</a></li>
+        <li><a class="go" href="/{user@getLanguage}/{topic@getWebSiteId}/500imagenes">Imágenes</a></li>
+        <li><a class="go" href="/{user@getLanguage}/{topic@getWebSiteId}/500interpretes">Somos intérpretes</a></li>
+        <li><a class="go" href="/{user@getLanguage}/{topic@getWebSiteId}/500infos">Info</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="modal fade" id="modalbotonescompartir" tabindex="-1" role="dialog" aria-labelledby="modalbotonescompartir" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5>Compartir</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body d-flex justify-content-around">
+          <RESOURCE TYPE="JSPEditor" STYPE="FBShareButton" />
+          <RESOURCE TYPE="JSPEditor" STYPE="TWShareButton" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Inicia Contenido -->
+  <div data-spy="scroll" data-target="#sidenavbar" data-offset="0" class="texto container-fluid" style="position: relative; overflow-y: scroll;">
+
+    <div id="1st-text" class="row py-5">
+      <div class="col-1 col-lg-3 px-5 py-5">
+        <nav id="sidenavbar" class="nav nav-pills flex-column">
+          <a class="nav-link" href="#1st-text">•<span class="d-none d-sm-inline-block">Texto 1</span> </a>
+          <a class="nav-link" href="#2nd-text">•Texto 2</a>
+          <a class="nav-link" href="#3rd-text">•Texto 3</a>
+          <a class="nav-link" href="#4th-text">•Texto 4</a>
+        </nav>
+      </div>
+      <div class="col-11 col-lg-7 px-5 py-5" style="background-color: #faf9f8; z-index: 1;">
+        <img src="work/models/memorica/recursos/img/500anos/diagonal.svg" style="float: right;" width="300px">
+        <h1 class="pb-3">Historia General de las cosas de Nueva España</h1>
+
+        <div class="d-flex justify-content-start pb-3">
+          <h3>Fray Bernardino de Sahagún</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2); width: 270px;"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/where.svg" height="28px" class="px-1">
+            </div>
+            <div class="col-11 px-0">
+              <h5 class="pb-3">Biblioteca Medicea Laurenciana, Florencia, Italia. </h5>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/when.svg" height="28px" class="pr-2">
+            </div>
+            <div class="col-11 px-0">
+              <h6 style="margin-top: 9px;">Se realizó la obra entre 1558 y 1580.</h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-1">
+            <img src="work/models/memorica/recursos/img/500anos/pencil.svg" height="28px" class="pr-2">
+          </div>
+          <div class="col-11 px-0">
+            <p>En 1829 Carlos María de Bustamante realizó en México la edición de la obra, se imprimió en la imprenta de A. Valdés.</p>
+            <p>En 1880 Rémi Siméon publicó en París la obra en francés con el nombre Historie générale des choses de la Nouvelle Espane</p>
+            <p>Entre 1905 y 1908 se publicó la obra en México por Francisco del Paso y Troncoso con el nombre de Historia de las cosas de Nueva España.</p>
+            <p>En 1938 la obra fue publicada en la editorial Pedro Robredo bajo el nombre de Historia general de las cosas de Nueva España, con una introducción de Wigberto Jiménez Moreno.</p>
+            <p>En 1954 Arthur J. O. Anderson y Charles E. Dibble publicaron la obra en la editorial University of Utah Press con el nombre History of the Things of New Spain.</p>
+            <p>En 1964 Ángel María Garibay realizó una edición de la obra, misma que fue publicada por Porrúa con el nombre Historia general de las cosas de Nueva España.</p>
+            <p>En 1982 se publicó la obra con una introducción, glosario y notas de Alfredo López Austin y Josefina García Quintana con el nombre de Historia General de las Cosas de la Nueva España. Primera versión íntegra del texto castellano del manuscrito conocido como Códice Florentino en la editorial del Fondo de Cultura Banamex. <span class="glifo"></span> </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+
+    <div id="2nd-text" class="row py-5">
+      <div class="col1- col-lg-3"></div>
+      <div class="col-11 col-lg-7 px-5 py-5" style="background-color: #faf9f8; z-index: 1;">
+        <img src="work/models/memorica/recursos/img/500anos/diagonal.svg" style="float: right;" width="300px">
+        <h1 class="pb-0">Historia e las Indias de Nueva España e Islas de Tierra Firme </h1>
+
+        <div class="d-flex justify-content-start pb-3">
+          <h3>Fray Diego Durán</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2); width: 400px;"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/where.svg" height="28px" class="px-1">
+            </div>
+            <div class="col-11 px-0">
+              <h5 class="pb-3">Biblioteca Nacional de España.</h5>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/when.svg" height="28px" class="pr-2">
+            </div>
+            <div class="col-11 px-0">
+              <h6 style="margin-top: 9px;">1587</h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-1">
+            <img src="work/models/memorica/recursos/img/500anos/pencil.svg" height="28px" class="pr-2">
+          </div>
+          <div class="col-11 px-0">
+            <p>Entre 1867 y 1888, José Fernando Ramírez realizó la primera publicación de esta obra dividida por partes, y acompañada de un atlas de estampas con notas e ilustraciones con el nombre Historia de las Indias de Nueva España e islas de Tierra Firme.</p>
+            <p>En 1951 se hizo una reimpresión de la obra publicada en 1867 y 1888 por José Fernando Ramírez.</p>
+            <p>En 1967 Ángel María Garibay realizó una edición de la obra en editorial Porrúa con el nombre Historia de las Indias de Nueva España e islas de Tierra Firme.</p>
+            <p>En 1980 José Rubén Romero Galván y Rosa Camelo prepararon una nueva edición con el título Historia de las Indias de Nueva España e islas de Tierra Firme.<span class="glifo"></span> </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+
+    <div id="3rd-text" class="row py-5">
+      <div class="col-1 col-lg-3"></div>
+      <div class="col-11 col-lg-7 px-5 py-5" style="background-color: #faf9f8; z-index: 1;">
+        <img src="work/models/memorica/recursos/img/500anos/diagonal.svg" style="float: right;" width="300px">
+        <h1 class="pb-0">Monarquía Indiana. De los veinte y un libros rituales y monarquía indiana,</h1>
+        <h2 class="pb-3">con el origen y guerras de los indios occidentales, de sus poblazones, descubrimiento, conquista, conversión y otras cosas maravillosas de la mesma tierra</h2>
+
+        <div class="d-flex justify-content-start pb-3">
+          <h3>Fray Juan de Torquemada</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2); width: 420px;"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/where.svg" height="28px" class="px-1">
+            </div>
+            <div class="col-11 px-0">
+              <h5 class="pb-3">El manuscrito original se encuentra perdido. La obra se publicó completa en 1616. </h5>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/when.svg" height="28px" class="pr-2">
+            </div>
+            <div class="col-11 px-0">
+              <h6 style="margin-top: 9px;">Se escribió entre 1590 y 1613.</h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-1">
+            <img src="work/models/memorica/recursos/img/500anos/pencil.svg" height="28px" class="pr-2">
+          </div>
+          <div class="col-11 px-0">
+            <p>Se publicó en Sevilla en 1616 por el impresor Matías Clavijo.</p>
+            <p>En 1723 se publicó en Madrid a cargo de Nicolás Rodríguez Franco.</p>
+            <p>Entre 1943 y 1944 se realizó en México una nueva edición a cargo de Salvador Chávez-Hayhoe. </p>
+            <p>En 1969 se publicó una edición facsimilar por la editorial Porrúa.</p>
+            <p>Entre 1975 y 1944 Miguel León-Portilla realizó una edición de la obra publicada por la Universidad Nacional Autónoma de México.  <span class="glifo"></span> </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+
+    <div id="4th-text" class="row py-5">
+      <div class="col-1 col-lg-3"></div>
+      <div class="col-11 col-lg-7 px-5 py-5" style="background-color: #faf9f8; z-index: 1;">
+        <img src="work/models/memorica/recursos/img/500anos/diagonal.svg" style="float: right;" width="300px">
+        <h1 class="pb-0">Brevísima relación de la destrucción de las Indias</h1>
+
+        <div class="d-flex justify-content-start pb-3">
+          <h3>Fray Bartolomé de las Casas</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2); width: 280px;"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/where.svg" height="28px" class="px-1">
+            </div>
+            <div class="col-11 px-0">
+              <h5 class="pb-3">Archivo Histórico de la Provincia de los Dominicos de Aragón en Valencia.</h5>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/when.svg" height="28px" class="pr-2">
+            </div>
+            <div class="col-11 px-0">
+              <h6 style="margin-top: 9px;">1539-1550</h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-1">
+            <img src="work/models/memorica/recursos/img/500anos/pencil.svg" height="28px" class="pr-2">
+          </div>
+          <div class="col-11 px-0">
+            <p>Se publicó por primera vez en 1552 en Sevilla en la imprenta de Sebastián Trujillo.</p>
+            <p>En 1985 la editorial SARPE sacó a la luz una edición con el nombre Brevísima relación de la destrucción de las Indias.</p>
+            <p>En 2010 se realizó una edición de la obra por Alianza Editorial cuya edición estuvo a cargo de Trinidad Barrera bajo el nombre de Brevísima relación de la destrucción de las Indias.</p>
+            <p>En 2015 se publicó la obra con el nombre Brevísima relación de la destrucción de las Indias en la editorial del Consejo Nacional para la Cultura y las Artes, la edición estuvo a cargo de José Miguel Martínez Torrejón.<span class="glifo"></span> </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+
+  <script type="text/javascript">
+    //loader
+    $(window).on("load", function(e) {
+      $("#loader").animate({
+        opacity: 0,
+        zIndex: -1
+      })
+
+      console.log("done");
+    });
+
+    //nav menu
+    $('#toggle').click(function() {
+      $(this).toggleClass('active');
+      $('#overlay').toggleClass('open');
+    });
+
+    $('.go').click(function() {
+      $('#overlay').toggleClass('open');
+      $('.button_container').removeClass('active');
+    });
+
+    // smooth scroll
+    $("a").on('click', function(event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+        var hash = this.hash;
+
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function() {
+          window.location.hash = hash;
+        });
+      }
+    });
+
+  </script>
+</body>
+
+</html>

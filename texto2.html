@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <title><TOPIC METHOD="getDisplayName" LANGUAGE="{user@getLanguage}"/> - Memórica</title>
+
+  <link rel="icon" type="image/ico" href="work/models/memorica/recursos/img/favicon/favicon.ico"/>
+  <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- reserved for styles, don't forget to remove the / from the thing -->
+  <link href="expo_style.css" type="text/css" rel="stylesheet">
+  <style type="text/css">
+
+  </style>
+
+  <!-- <RESOURCE TYPE="JSPEditor" STYPE="OpenGraphTags" />
+  <meta property="og:image" content="work/models/memorica/recursos/img/miniatura_500anos.jpg">
+  <meta property="og:image:type" content="image/svg">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="1024">
+  <meta name="twitter:image:src" content="https://memoricamexico.gob.mxwork/models/memorica/recursos/img/miniatura_500anos.jpg"> -->
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar fixed-top" style="background-color: #faf9f8">
+      <a class="navbar-brand" href="https://memoricamexico.gob.mx/es/memorica/Exposiciones">
+        <img type="image/svg+xml" src="work/models/memorica/recursos/img/500anos/logui.svg" alt="" class="logo" width="50px" height="50px">
+      </a>
+      <img class="tit-textos d-none d-sm-block" src="work/models/memorica/recursos/img/500anos/tit-texto1.png" alt="">
+      <a href="" data-toggle="modal" data-target="#modalbotonescompartir" title="Compartir" class="share">
+        <img type="image/svg+xml" alt="Compartir en redes sociales" src="work/models/memorica/recursos/img/500anos/share.svg" title="Compartir en redes Sociales" width="35px" height="35px">
+      </a>
+      <a href="" class="down">
+        <img type="image/svg+xml" alt="Descargar guía didactica" src="work/models/memorica/recursos/img/500anos/down.svg" title="Descargar guía didactica" width="35px" height="100%">
+      </a>
+    </nav>
+  </header>
+  <div class="button_container" id="toggle">
+    <span class="top"></span>
+    <span class="middle"></span>
+    <span class="bottom"></span>
+  </div>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay">
+    <nav class="overlay-menu">
+      <ul>
+        <li><a class="go" href="/{user@getLanguage}/{topic@getWebSiteId}/500anos">Inicio</a></li>
+        <li><a class="go" href="textos.html">Textos</a></li>
+        <li><a class="go" href="/{user@getLanguage}/{topic@getWebSiteId}/500hechos">Hechos</a></li>
+        <li><a class="go" href="/{user@getLanguage}/{topic@getWebSiteId}/500imagenes">Imágenes</a></li>
+        <li><a class="go" href="/{user@getLanguage}/{topic@getWebSiteId}/500interpretes">Somos intérpretes</a></li>
+        <li><a class="go" href="/{user@getLanguage}/{topic@getWebSiteId}/500infos">Info</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="modal fade" id="modalbotonescompartir" tabindex="-1" role="dialog" aria-labelledby="modalbotonescompartir" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5>Compartir</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body d-flex justify-content-around">
+          <RESOURCE TYPE="JSPEditor" STYPE="FBShareButton" />
+          <RESOURCE TYPE="JSPEditor" STYPE="TWShareButton" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Inicia Contenido -->
+  <div data-spy="scroll" data-target="#sidenavbar" data-offset="0" class="texto container-fluid" style="position: relative; overflow-y: scroll;">
+
+    <div id="1st-text" class="row py-5">
+      <div class="col-1 col-lg-3 px-5 py-5">
+        <nav id="sidenavbar" class="nav nav-pills flex-column">
+          <a class="nav-link" href="#1st-text">•<span class="d-none d-sm-inline-block">Texto 1</span> </a>
+          <a class="nav-link" href="#2nd-text">•Texto 2</a>
+          <a class="nav-link" href="#3rd-text">•Texto 3</a>
+          <a class="nav-link" href="#4th-text">•Texto 4</a>
+          <a class="nav-link" href="#5th-text">•Texto 5</a>
+          <a class="nav-link" href="#6th-text">•Texto 6</a>
+          <a class="nav-link" href="#7th-text">•Texto 7</a>
+          <a class="nav-link" href="#8th-text">•Texto 8</a>
+        </nav>
+      </div>
+      <div class="col-11 col-lg-7 px-5 py-5" style="background-color: #faf9f8; z-index: 1;">
+        <img src="work/models/memorica/recursos/img/500anos/diagonal.svg" style="float: right;" width="300px">
+        <h1 class="pb-3">Historia de las Indias<br> y conquista de México</h1>
+
+        <div class="d-flex justify-content-start pb-3">
+          <h3>Francisco López de Gómara</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2); width: 270px;"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/where.svg" height="28px" class="px-1">
+            </div>
+            <div class="col-11 px-0">
+              <h5 class="pb-3">No existe un manuscrito original, la obra se publicó en Zaragoza en 1552 por el impresor Agustín Millán</h5>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/when.svg" height="28px" class="pr-2">
+            </div>
+            <div class="col-11 px-0">
+              <h6 style="margin-top: 9px;">1552</h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-1">
+            <img src="work/models/memorica/recursos/img/500anos/pencil.svg" height="28px" class="pr-2">
+          </div>
+          <div class="col-11 px-0">
+            <p>Se publicó en 1552 con el título Primera y segunda parte de la Historia General de las Indias con todo el descubrimiento y cosas notables que han acaecido dende que se ganaron hasta el año de 1551 en el taller de Agustín Millán.</p>
+            <p>En 1749 se publicó en Madrid en la obra Historiadores primitivos de las Indias Occidentales bajo la edición de Andrés González de Barcia. </p>
+            <p>En 1943 se publicó la obra en México en la editorial de Pedro Robredo con el título Historia de las Indias y Conquista de México. </p>
+            <p>En 1954 se publicó en Barcelona con el nombre de Historia General de las Indias (Hispania Victrix) en la editorial Iberia.</p>
+            <p>En 1988 se publicó en México en la editorial Porrúa con el título Historia de la conquista de México <span class="glifo"></span> </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+
+    <div id="2nd-text" class="row py-5">
+      <div class="col1- col-lg-3"></div>
+      <div class="col-11 col-lg-7 px-5 py-5" style="background-color: #faf9f8; z-index: 1;">
+        <img src="work/models/memorica/recursos/img/500anos/diagonal.svg" style="float: right;" width="300px">
+        <h1 class="pb-0">Décadas del<br> Nuevo Mundo</h1>
+
+        <div class="d-flex justify-content-start pb-3">
+          <h3>Pedro Mártir de Anglería</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2); width: 400px;"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/where.svg" height="28px" class="px-1">
+            </div>
+            <div class="col-11 px-0">
+              <h5 class="pb-3">No existe un manuscrito original, las ocho décadas fueron publicadas paulatinamente entre 1510 y 1525.</h5>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/when.svg" height="28px" class="pr-2">
+            </div>
+            <div class="col-11 px-0">
+              <h6 style="margin-top: 9px;">La obra fue escrita entre 1494 y 1526.</h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-1">
+            <img src="work/models/memorica/recursos/img/500anos/pencil.svg" height="28px" class="pr-2">
+          </div>
+          <div class="col-11 px-0">
+            <p>En 1530 se publicó la obra en Alcalá de Henares por Miguel de Eguía.</p>
+            <p>En 1966 la obra fue publicada en Alemania por la editorial Graz: Akademische Druck con el título De Orbe novo decades octo.</p>
+            <p>En 2012 se publicó en Buenos Aires bajo la editorial Bajel la obra con el nombre Décadas del Nuevo Mundo. <span class="glifo"></span> </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+
+    <div id="3rd-text" class="row py-5">
+      <div class="col-1 col-lg-3"></div>
+      <div class="col-11 col-lg-7 px-5 py-5" style="background-color: #faf9f8; z-index: 1;">
+        <img src="work/models/memorica/recursos/img/500anos/diagonal.svg" style="float: right;" width="300px">
+        <h1 class="pb-0">Historia general y<br> natural de las Indias</h1>
+
+        <div class="d-flex justify-content-start pb-3">
+          <h3>Gonzalo Fernández de Oviedo</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2); width: 420px;"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/where.svg" height="28px" class="px-1">
+            </div>
+            <div class="col-11 px-0">
+              <h5 class="pb-3">Biblioteca Nacional de España.</h5>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/when.svg" height="28px" class="pr-2">
+            </div>
+            <div class="col-11 px-0">
+              <h6 style="margin-top: 9px;">La obra fue redactada entre 1519 y 1548</h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-1">
+            <img src="work/models/memorica/recursos/img/500anos/pencil.svg" height="28px" class="pr-2">
+          </div>
+          <div class="col-11 px-0">
+            <p>En 1526 se publicó el Sumario de la Nutual Historia de las Indias.</p>
+            <p>En 1535 se publicó la primera parte de su obra.</p>
+            <p>Entre 1851 y 1855 se editó toda la obra por José Amador de los Ríos. <span class="glifo"></span> </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+
+    <div id="4th-text" class="row py-5">
+      <div class="col-1 col-lg-3"></div>
+      <div class="col-11 col-lg-7 px-5 py-5" style="background-color: #faf9f8; z-index: 1;">
+        <img src="work/models/memorica/recursos/img/500anos/diagonal.svg" style="float: right;" width="300px">
+        <h1 class="pb-0">Historia general <br>de los hechos de los <br></h1>
+        <h2 class="pb-3">castellanos en las islas y<br> tierra firme del mar océano en<br> las islas y tierra firme<br> del mar océano</h2>
+
+        <div class="d-flex justify-content-start pb-3">
+          <h3>Antonio de Herrera y Tordesillas</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2); width: 280px;"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/where.svg" height="28px" class="px-1">
+            </div>
+            <div class="col-11 px-0">
+              <h5 class="pb-3">Real Academia de la Historia de Madrid</h5>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/when.svg" height="28px" class="pr-2">
+            </div>
+            <div class="col-11 px-0">
+              <h6 style="margin-top: 9px;">1601-1615</h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-1">
+            <img src="work/models/memorica/recursos/img/500anos/pencil.svg" height="28px" class="pr-2">
+          </div>
+          <div class="col-11 px-0">
+            <p>Entre 1601 y 1615 se publicó en Madrid la obra por Juan Flamenco y Juan de la Cuesta.Entre 1601 y 1615 se publicó en Madrid la obra por Juan Flamenco y Juan de la Cuesta.</p>
+            <p>Entre 1934 y 1957 se publicó en Madrid por la Real Academia de la Historia con un prólogo de Antonio Ballesteros. </p>
+            <p>En 1944 se publicó en Buenos Aires con un prólogo de Natalicio González.</p>
+            <p>En 1991 se publicó la obra en Madrid por la Universidad Complutense de Madrid con un estudio de Mariano Cuesta. <span class="glifo"></span> </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+
+    <div id="5th-text" class="row py-5">
+      <div class="col-1 col-lg-3"></div>
+      <div class="col-11 col-lg-7 px-5 py-5" style="background-color: #faf9f8; z-index: 1;">
+        <img src="work/models/memorica/recursos/img/500anos/diagonal.svg" style="float: right;" width="300px">
+        <h1 class="pb-0">Crónica de Nueva España</h1>
+
+        <div class="d-flex justify-content-start pb-3">
+          <h3>Francisco Cervantes de Salazar </h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2); width:500px;"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/where.svg" height="28px" class="px-1">
+            </div>
+            <div class="col-11 px-0">
+              <h5 class="pb-3">Biblioteca Nacional de Madrid, Manuscrito 2011. </h5>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/when.svg" height="28px" class="pr-2">
+            </div>
+            <div class="col-11 px-0">
+              <h6 style="margin-top: 9px;">Cerca de 1575</h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-1">
+            <img src="work/models/memorica/recursos/img/500anos/pencil.svg" height="28px" class="pr-2">
+          </div>
+          <div class="col-11 px-0">
+            <p>En 1914 Francisco del Paso y Troncoso preparó una edición publicada en Madrid por la editorial Hauser y Menet con el título Crónica de la Nueva España escrita por el doctor y maestro Francisco Cervantes de Salazar, Cronista de la Ciudad de México. Manuscrito 2011 de la Biblioteca Nacional de Madrid letra de mitad del siglo XVI.</p>
+            <p>En 1914 Manuel Magallón realizó una edición publicada en Madrid con el nombre Crónica de la Nueva España que escribió el Dr. D. Francisco Cervantes de Salazar Cronista de la Imperial Ciudad de México. </p>
+            <p>En 1971 se reeditó la edición de Manuel Magallón por Ediciones Atlas con el título Crónica de la Nueva España.</p>
+            <p>En 1985 se realizó una edición en México a cargo de Juan Miralles Ostos en Biblioteca Porrúa con el título Crónica de la Nueva España. </p>
+            <p>En 2018 se publicó en Barcelona por Linkgua Ediciones con el nombre Crónica de la Nueva España. <span class="glifo"></span> </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+
+    <div id="6th-text" class="row py-5">
+      <div class="col-1 col-lg-3"></div>
+      <div class="col-11 col-lg-7 px-5 py-5" style="background-color: #faf9f8; z-index: 1;">
+        <img src="work/models/memorica/recursos/img/500anos/diagonal.svg" style="float: right;" width="300px">
+        <h1 class="pb-0">De rebus Hispanorum gestis <br> ad Novum Orbem Mexicunque</h1>
+
+        <div class="d-flex justify-content-start pb-3">
+          <h3>Juan Ginés de Sepúlveda</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2); width:500px;"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/where.svg" height="28px" class="px-1">
+            </div>
+            <div class="col-11 px-0">
+              <h5 class="pb-3">Biblioteca de la Academia de la Historia, Real Academia de la Historia.</h5>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/when.svg" height="28px" class="pr-2">
+            </div>
+            <div class="col-11 px-0">
+              <h6 style="margin-top: 9px;">Cerca de 1562</h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-1">
+            <img src="work/models/memorica/recursos/img/500anos/pencil.svg" height="28px" class="pr-2">
+          </div>
+          <div class="col-11 px-0">
+            <p>En 1973 se publicó en Valladolid por el Seminario Americanista de la Universidad de Valladolid y el Excelentísimo Ayuntamiento de Pozoblanco con el título De rebus Hispanorum gestis ad Novum Orbem Mexicumque <span class="glifo"></span> </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+
+    <div id="7th-text" class="row py-5">
+      <div class="col-1 col-lg-3"></div>
+      <div class="col-11 col-lg-7 px-5 py-5" style="background-color: #faf9f8; z-index: 1;">
+        <img src="work/models/memorica/recursos/img/500anos/diagonal.svg" style="float: right;" width="300px">
+        <h1 class="pb-0">Relación de algunas de las muchas cosas notables que hay en la Nueva España</h1>
+        <h2 class="pb-3">y de su conquista y pacificación y de la conversión de los naturales de ella</h2>
+
+        <div class="d-flex justify-content-start pb-3">
+          <h3>Alonso de Zorita</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2); width:500px;"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/where.svg" height="28px" class="px-1">
+            </div>
+            <div class="col-11 px-0">
+              <h5 class="pb-3">Biblioteca del Palacio Real, Madrid.</h5>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/when.svg" height="28px" class="pr-2">
+            </div>
+            <div class="col-11 px-0">
+              <h6 style="margin-top: 9px;">Siglo XVI</h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-1">
+            <img src="work/models/memorica/recursos/img/500anos/pencil.svg" height="28px" class="pr-2">
+          </div>
+          <div class="col-11 px-0">
+            <p>En 1908 se publicó en Madrid en la editorial Idamor Moreno Press.</p>
+            <p>En 1999 la obra se publicó en México en la colección Cien de México del Consejo Nacional para la Cultura y las Artes. La edición y el estudio preliminar fue realizado por Ethelia Ruiz Medrano, Wiebke Ahrndt y José Mariano Leyva. <span class="glifo"></span> </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+
+    <div id="8th-text" class="row py-5">
+      <div class="col-1 col-lg-3"></div>
+      <div class="col-11 col-lg-7 px-5 py-5" style="background-color: #faf9f8; z-index: 1;">
+        <img src="work/models/memorica/recursos/img/500anos/diagonal.svg" style="float: right;" width="300px">
+        <h1 class="pb-0">Historia Natural y moral de las Indias</h1>
+
+        <div class="d-flex justify-content-start pb-3">
+          <h3>José de Acosta</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2); width:500px;"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/where.svg" height="28px" class="px-1">
+            </div>
+            <div class="col-11 px-0">
+              <h5 class="pb-3">Biblioteca Nacional de España</h5>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/when.svg" height="28px" class="pr-2">
+            </div>
+            <div class="col-11 px-0">
+              <h6 style="margin-top: 9px;">Siglo XVI</h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-1">
+            <img src="work/models/memorica/recursos/img/500anos/pencil.svg" height="28px" class="pr-2">
+          </div>
+          <div class="col-11 px-0">
+            <p>Se publicó por primera vez en 1590 en Sevilla por la imprenta de Juan de León.</p>
+            <p>En 1591 se imprimió en Barcelona en la imprenta de Lelio Marino.</p>
+            <p>En 1608 la obra se publicó en Madrid.</p>
+            <p>En 1894 se reimprimió la primera edición castellana de la obra, la edición la realizó Ramón Anglés.</p>
+            <p>En 1940 Edmundo O´Gorman preparó una edición publicada por el Fondo de Cultura Económica. <span class="glifo"></span> </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+
+  <script type="text/javascript">
+    //loader
+    $(window).on("load", function(e) {
+      $("#loader").animate({
+        opacity: 0,
+        zIndex: -1
+      })
+
+      console.log("done");
+    });
+
+    //nav menu
+    $('#toggle').click(function() {
+      $(this).toggleClass('active');
+      $('#overlay').toggleClass('open');
+    });
+
+    $('.go').click(function() {
+      $('#overlay').toggleClass('open');
+      $('.button_container').removeClass('active');
+    });
+
+    // smooth scroll
+    $("a").on('click', function(event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+        var hash = this.hash;
+
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function() {
+          window.location.hash = hash;
+        });
+      }
+    });
+
+  </script>
+</body>
+
+</html>

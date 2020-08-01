@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <title><TOPIC METHOD="getDisplayName" LANGUAGE="{user@getLanguage}"/> - Memórica</title>
+
+  <link rel="icon" type="image/ico" href="work/models/memorica/recursos/img/favicon/favicon.ico"/>
+  <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- reserved for styles, don't forget to remove the / from the thing -->
+  <link href="expo_style.css" type="text/css" rel="stylesheet">
+  <style type="text/css">
+
+  </style>
+
+  <!-- <RESOURCE TYPE="JSPEditor" STYPE="OpenGraphTags" />
+  <meta property="og:image" content="work/models/memorica/recursos/img/miniatura_500anos.jpg">
+  <meta property="og:image:type" content="image/svg">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="1024">
+  <meta name="twitter:image:src" content="https://memoricamexico.gob.mxwork/models/memorica/recursos/img/miniatura_500anos.jpg"> -->
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar fixed-top" style="background-color: #faf9f8">
+      <a class="navbar-brand" href="https://memoricamexico.gob.mx/es/memorica/Exposiciones">
+        <img type="image/svg+xml" src="work/models/memorica/recursos/img/500anos/logui.svg" alt="" class="logo" width="50px" height="50px">
+      </a>
+      <img class="tit-textos d-none d-sm-block" src="work/models/memorica/recursos/img/500anos/tit-texto1.png" alt="">
+      <a href="" data-toggle="modal" data-target="#modalbotonescompartir" title="Compartir" class="share">
+        <img type="image/svg+xml" alt="Compartir en redes sociales" src="work/models/memorica/recursos/img/500anos/share.svg" title="Compartir en redes Sociales" width="35px" height="35px">
+      </a>
+      <a href="" class="down">
+        <img type="image/svg+xml" alt="Descargar guía didactica" src="work/models/memorica/recursos/img/500anos/down.svg" title="Descargar guía didactica" width="35px" height="100%">
+      </a>
+    </nav>
+  </header>
+  <div class="button_container" id="toggle">
+    <span class="top"></span>
+    <span class="middle"></span>
+    <span class="bottom"></span>
+  </div>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay">
+    <nav class="overlay-menu">
+      <ul>
+        <li><a class="go" href="/{user@getLanguage}/{topic@getWebSiteId}/500anos">Inicio</a></li>
+        <li><a class="go" href="textos.html">Textos</a></li>
+        <li><a class="go" href="/{user@getLanguage}/{topic@getWebSiteId}/500hechos">Hechos</a></li>
+        <li><a class="go" href="/{user@getLanguage}/{topic@getWebSiteId}/500imagenes">Imágenes</a></li>
+        <li><a class="go" href="/{user@getLanguage}/{topic@getWebSiteId}/500interpretes">Somos intérpretes</a></li>
+        <li><a class="go" href="/{user@getLanguage}/{topic@getWebSiteId}/500infos">Info</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="modal fade" id="modalbotonescompartir" tabindex="-1" role="dialog" aria-labelledby="modalbotonescompartir" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5>Compartir</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body d-flex justify-content-around">
+          <RESOURCE TYPE="JSPEditor" STYPE="FBShareButton" />
+          <RESOURCE TYPE="JSPEditor" STYPE="TWShareButton" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Inicia Contenido -->
+  <div data-spy="scroll" data-target="#sidenavbar" data-offset="0" class="texto container-fluid" style="position: relative; overflow-y: scroll;">
+
+    <div id="1st-text" class="row py-5">
+      <div class="col-1 col-lg-3 px-5 py-5">
+        <nav id="sidenavbar" class="nav nav-pills flex-column">
+          <a class="nav-link" href="#1st-text">•<span class="d-none d-sm-inline-block">Texto 1</span> </a>
+          <a class="nav-link" href="#2nd-text">•Texto 2</a>
+          <a class="nav-link" href="#3rd-text">•Texto 3</a>
+          <a class="nav-link" href="#4th-text">•Texto 4</a>
+          <a class="nav-link" href="#5th-text">•Texto 5</a>
+          <a class="nav-link" href="#6th-text">•Texto 6</a>
+          <a class="nav-link" href="#7th-text">•Texto 7</a>
+          <a class="nav-link" href="#8th-text">•Texto 8</a>
+          <a class="nav-link" href="#9th-text">•Texto 9</a>
+          <a class="nav-link" href="#10th-text">•Texto 10</a>
+          <a class="nav-link" href="#11th-text">•Texto 11</a>
+          <a class="nav-link" href="#12th-text">•Texto 12</a>
+          <a class="nav-link" href="#13th-text">•Texto 13</a>
+        </nav>
+      </div>
+      <div class="col-11 col-lg-7 px-5 py-5" style="background-color: #faf9f8; z-index: 1;">
+        <img src="work/models/memorica/recursos/img/500anos/diagonal.svg" style="float: right;" width="300px">
+        <h1 class="pb-3">Códice Aubin /Historia de la nación mexicana</h1>
+
+        <div class="d-flex justify-content-start pb-3">
+          <h3>Anónimo</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2); width: 270px;"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/where.svg" height="28px" class="px-1">
+            </div>
+            <div class="col-11 px-0">
+              <h5 class="pb-3">Departamento de Etnografía del Museo Británico de Londres con el número Add. MSS 31219.</h5>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/when.svg" height="28px" class="pr-2">
+            </div>
+            <div class="col-11 px-0">
+              <h6 style="margin-top: 9px;">Entre 1576 y 1607.</h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-1">
+            <img src="work/models/memorica/recursos/img/500anos/pencil.svg" height="28px" class="pr-2">
+          </div>
+          <div class="col-11 px-0">
+            <p>En 1902 se publicó la obra en la Oficina Tipográfica de la Secretaría de Fomento del Gobierno Mexicano, con el nombre de Códice Aubin: manuscrito Azteca de la Biblioteca Real de Berlín, anales en mexicano y geroglíficos [sic] desde la salida de tribus de Aztlán hasta la muerte de Cuauhtémoc.  <span class="glifo"></span> </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+
+    <div id="2nd-text" class="row py-5">
+      <div class="col1- col-lg-3"></div>
+      <div class="col-11 col-lg-7 px-5 py-5" style="background-color: #faf9f8; z-index: 1;">
+        <img src="work/models/memorica/recursos/img/500anos/diagonal.svg" style="float: right;" width="300px">
+        <h1 class="pb-0">Annales de Tlatelolco, unos anales históricos de la nación mexicana</h1>
+
+        <div class="d-flex justify-content-start pb-3">
+          <h3>Anónimo</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2); width: 400px;"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/where.svg" height="28px" class="px-1">
+            </div>
+            <div class="col-11 px-0">
+              <h5 class="pb-3">Fondo Mexicano de la Biblioteca Nacional de Francia con los números 22 y 22 bis.</h5>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/when.svg" height="28px" class="pr-2">
+            </div>
+            <div class="col-11 px-0">
+              <h6 style="margin-top: 9px;">Se escribió entre 1524 y 1528</h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-1">
+            <img src="work/models/memorica/recursos/img/500anos/pencil.svg" height="28px" class="pr-2">
+          </div>
+          <div class="col-11 px-0">
+            <p>En 1945 Ernst Mengin editó la obra y la publicó en Copenhage con el título Annales de Tlatelolco, unos annales históricos de la nación mexicana.</p>
+            <p>En 1948 se publicó en México en la Editorial Robledo con el título Annales de Tlatelolco, unos annales históricos de la nación mexicana y Códice Tlatelolco, la edición es de Heinrich Berlon y Robert Barlow.</p>
+            <p>En 2004 se publicó una edición en México por el Consejo Nacional para la Cultura y las Artes con el nombre Anales de Tlatelolco, la paleografía y traducción estuvo a cargo de Rafael Tena. <span class="glifo"></span> </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+
+    <div id="3rd-text" class="row py-5">
+      <div class="col-1 col-lg-3"></div>
+      <div class="col-11 col-lg-7 px-5 py-5" style="background-color: #faf9f8; z-index: 1;">
+        <img src="work/models/memorica/recursos/img/500anos/diagonal.svg" style="float: right;" width="300px">
+        <h1 class="pb-0">Cantares mexicanos</h1>
+
+        <div class="d-flex justify-content-start pb-3">
+          <h3>Anónimo</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2); width: 420px;"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/where.svg" height="28px" class="px-1">
+            </div>
+            <div class="col-11 px-0">
+              <h5 class="pb-3">Fondo Reservado Biblioteca Nacional de México, manuscrito con el número MS 1628 bis.</h5>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/when.svg" height="28px" class="pr-2">
+            </div>
+            <div class="col-11 px-0">
+              <h6 style="margin-top: 9px;">Entre 1550 y 1600.</h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-1">
+            <img src="work/models/memorica/recursos/img/500anos/pencil.svg" height="28px" class="pr-2">
+          </div>
+          <div class="col-11 px-0">
+            <p>Entre 1965 y 1966 Ángel María Garibay preparó una edición dentro de su obra Poesía Náhuatl con el nombre Cantares Mexicanos. Manuscrito de la Biblioteca Nacional de México, la cual fue publicada por la Universidad Nacional Autónoma de México.</p>
+            <p>En 1985 John Bierhorst realizó una edición publicada por la Stanford University Press con el nombre Cantares Mexicanos: Songs of the Aztecs.</p>
+            <p>En 2011 Miguel León-Portilla preparó una edición publicada por la Universidad Nacional Autónoma de México bajo el título Cantares Mexicanos.  <span class="glifo"></span> </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+
+    <div id="4th-text" class="row py-5">
+      <div class="col-1 col-lg-3"></div>
+      <div class="col-11 col-lg-7 px-5 py-5" style="background-color: #faf9f8; z-index: 1;">
+        <img src="work/models/memorica/recursos/img/500anos/diagonal.svg" style="float: right;" width="300px">
+        <h1 class="pb-0">Crónica Mexicana</h1>
+
+        <div class="d-flex justify-content-start pb-3">
+          <h3>Hernando Alvarado Tezozomoc</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2); width: 280px;"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/where.svg" height="28px" class="px-1">
+            </div>
+            <div class="col-11 px-0">
+              <h5 class="pb-3">Archivo General de la Nación, México.</h5>
+              <h5 class="pb-3">Biblioteca Nacional de Paris, Francia.</h5>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/when.svg" height="28px" class="pr-2">
+            </div>
+            <div class="col-11 px-0">
+              <h6 style="margin-top: 9px;">1598</h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-1">
+            <img src="work/models/memorica/recursos/img/500anos/pencil.svg" height="28px" class="pr-2">
+          </div>
+          <div class="col-11 px-0">
+            <p>Entre 1844 y 1849 se publicó en francés por Thenaux-Compans con el nombre Historie par Don Álvarado Tezozomoc dentro de la obra Nouvelles annales des voyages de la géoraphie et de l’historie.</p>
+            <p>En 1878 Manuel Orozco y Berra realizó una edición del códice junto con el Códice Ramírez.</p>
+            <p>En 1943 la se publicó por la Universidad Nacional Autónoma de México.</p>
+            <p>En 1944 la Secretaria de Educación Pública publicó la obra con una introducción de Mario Mariscal.</p>
+            <p>En 1987 se reeditó la obra publicada por Manuel Orozco y Berra en 1878 bajo la Editorial Porrúa. <span class="glifo"></span> </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+
+    <div id="5th-text" class="row py-5">
+      <div class="col-1 col-lg-3"></div>
+      <div class="col-11 col-lg-7 px-5 py-5" style="background-color: #faf9f8; z-index: 1;">
+        <img src="work/models/memorica/recursos/img/500anos/diagonal.svg" style="float: right;" width="300px">
+        <h1 class="pb-0">La conquista de México</h1>
+
+        <div class="d-flex justify-content-start pb-3">
+          <h3>Domingo Francisco de San Antón Muñón Chimalpahin Cuauhtlehuanitzin</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2); width:500px;"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/where.svg" height="28px" class="px-1">
+            </div>
+            <div class="col-11 px-0">
+              <h5 class="pb-3">Biblioteca Newberry, Chicago, Illinois.</h5>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/when.svg" height="28px" class="pr-2">
+            </div>
+            <div class="col-11 px-0">
+              <h6 style="margin-top: 9px;">Primera mitad del siglo XVII</h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-1">
+            <img src="work/models/memorica/recursos/img/500anos/pencil.svg" height="28px" class="pr-2">
+          </div>
+          <div class="col-11 px-0">
+            <p>Se menciona la obra por primera vez en 1746 en el Catálogo del Museo Histórico Indiano de Lorenzo Boturini.</p>
+            <p>La obra fue publicada en 2012 en México por la Universidad Nacional Autónoma de México con estudios de Susan Schroeder, David Tavárez Bermúdez y Cristián Roa-de-la-Carrera. <span class="glifo"></span> </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+
+    <div id="6th-text" class="row py-5">
+      <div class="col-1 col-lg-3"></div>
+      <div class="col-11 col-lg-7 px-5 py-5" style="background-color: #faf9f8; z-index: 1;">
+        <img src="work/models/memorica/recursos/img/500anos/diagonal.svg" style="float: right;" width="300px">
+        <h1 class="pb-0">Relación histórica de la nación tulteca y Historia Chichimeca</h1>
+
+        <div class="d-flex justify-content-start pb-3">
+          <h3>Fernando de Alva Ixtlilxóchitl</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2); width:500px;"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/where.svg" height="28px" class="px-1">
+            </div>
+            <div class="col-11 px-0">
+              <h5 class="pb-3">Biblioteca Nacional de Antropología</h5>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/when.svg" height="28px" class="pr-2">
+            </div>
+            <div class="col-11 px-0">
+              <h6 style="margin-top: 9px;">Primera mitad del siglo XVII</h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-1">
+            <img src="work/models/memorica/recursos/img/500anos/pencil.svg" height="28px" class="pr-2">
+          </div>
+          <div class="col-11 px-0">
+            <p>Entre 1975 y 1977 Edmundo O´Gorman realizó una edición de las obras con el nombre Obras históricas de Fernando de Alva Ixtlilxóchitl publicado por la Universidad Nacional Autónoma de México.</p>
+            <p>En 1985 Germán Vázquez Chamorro preparó una edición de la Historia de la nación Chichimeca publicada por la editorial Historia 16. <span class="glifo"></span> </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+
+    <div id="7th-text" class="row py-5">
+      <div class="col-1 col-lg-3"></div>
+      <div class="col-11 col-lg-7 px-5 py-5" style="background-color: #faf9f8; z-index: 1;">
+        <img src="work/models/memorica/recursos/img/500anos/diagonal.svg" style="float: right;" width="300px">
+        <h1 class="pb-0">Manuscrito Tovar</h1>
+
+        <div class="d-flex justify-content-start pb-3">
+          <h3>Juan de Tovar</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2); width:500px;"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/where.svg" height="28px" class="px-1">
+            </div>
+            <div class="col-11 px-0">
+              <h5 class="pb-3">Biblioteca John Carter Brown, Universidad Brown, Rhode Island</h5>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/when.svg" height="28px" class="pr-2">
+            </div>
+            <div class="col-11 px-0">
+              <h6 style="margin-top: 9px;">1587</h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-1">
+            <img src="work/models/memorica/recursos/img/500anos/pencil.svg" height="28px" class="pr-2">
+          </div>
+          <div class="col-11 px-0">
+            <p>En el 2000 se realizó una edición de un fragmento de la obra bajo el título Historia y creencias de los indios de México, publicada por Ediciones Miraguano.  <span class="glifo"></span> </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+
+    <div id="8th-text" class="row py-5">
+      <div class="col-1 col-lg-3"></div>
+      <div class="col-11 col-lg-7 px-5 py-5" style="background-color: #faf9f8; z-index: 1;">
+        <img src="work/models/memorica/recursos/img/500anos/diagonal.svg" style="float: right;" width="300px">
+        <h1 class="pb-0">Códice Ramírez. </h1>
+        <h2 class="pb-3">Relación del origen de los indios que habitan en la Nueva España según sus historias</h2>
+
+        <div class="d-flex justify-content-start pb-3">
+          <h3>Anónimo</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2); width:500px;"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/where.svg" height="28px" class="px-1">
+            </div>
+            <div class="col-11 px-0">
+              <h5 class="pb-3">Biblioteca Nacional de Antropología e Historia, México. </h5>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/when.svg" height="28px" class="pr-2">
+            </div>
+            <div class="col-11 px-0">
+              <h6 style="margin-top: 9px;">Finales del siglo XVI</h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-1">
+            <img src="work/models/memorica/recursos/img/500anos/pencil.svg" height="28px" class="pr-2">
+          </div>
+          <div class="col-11 px-0">
+            <p>En 1878 Manuel Orozco y Berra realizó una edición del códice junto con la Crónica Mexicana.</p>
+            <p>En 1975 se publicó por la Secretaria de Educación Pública dentro de la Colección de documento conmemorativos del DCL aniversario de la fundación de Tenochtitlan (Ciudad de México). </p>
+            <p>En 1979 se publicó la obra con el título Códice Ramírez en la Editorial Innovación, S. A., con él estudió realizó por Manuel Orozco y Berra.</p>
+            <p>En 1987 se reeditó la obra publicada por Manuel Orozco y Berra en 1878 bajo la Editorial Porrúa <span class="glifo"></span> </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+
+    <div id="9th-text" class="row py-5">
+      <div class="col-1 col-lg-3"></div>
+      <div class="col-11 col-lg-7 px-5 py-5" style="background-color: #faf9f8; z-index: 1;">
+        <img src="work/models/memorica/recursos/img/500anos/diagonal.svg" style="float: right;" width="300px">
+        <h1 class="pb-0">Códice Azcatitlan</h1>
+
+        <div class="d-flex justify-content-start pb-3">
+          <h3>Anónimo</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2); width:500px;"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/where.svg" height="28px" class="px-1">
+            </div>
+            <div class="col-11 px-0">
+              <h5 class="pb-3">Biblioteca Nacional de Francia. </h5>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/when.svg" height="28px" class="pr-2">
+            </div>
+            <div class="col-11 px-0">
+              <h6 style="margin-top: 9px;">Finales del siglo XVI y principios del siglo XVII.</h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-1">
+            <img src="work/models/memorica/recursos/img/500anos/pencil.svg" height="28px" class="pr-2">
+          </div>
+          <div class="col-11 px-0">
+            <p>En el siglo XVIII Antonio de León y Gama y el padre Pichard realizaron unas copias del códice, mismas que se conservan en la Biblioteca Nacional de Francia.</p>
+            <p>En 1949 Robert Barlow publicó el códice completo en el Journal de la Société des Américanistes.</p>
+            <p>En 1995 se realizó un facsímil del códice publicado la Biblioteca Nacional de Francia y la Société des Américanistes con el nombre de Codex Azcatitlan, la edición cuenta con una traducción de Michell Graulich y la traducción de Leonardo López Luján.</p>
+            <p>Una versión digital puede ser consultada en la Biblioteca Digital Mundial en https://www.wdl.org/es/item/15280/ <span class="glifo"></span> </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+
+    <div id="10th-text" class="row py-5">
+      <div class="col-1 col-lg-3"></div>
+      <div class="col-11 col-lg-7 px-5 py-5" style="background-color: #faf9f8; z-index: 1;">
+        <img src="work/models/memorica/recursos/img/500anos/diagonal.svg" style="float: right;" width="300px">
+        <h1 class="pb-0">Descripción de la ciudad y provincia de Tlaxcala</h1>
+
+        <div class="d-flex justify-content-start pb-3">
+          <h3>Diego Muñoz Camargo</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2); width:500px;"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/where.svg" height="28px" class="px-1">
+            </div>
+            <div class="col-11 px-0">
+              <h5 class="pb-3">Biblioteca Nacional de Paris, manuscrito 210.</h5>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/when.svg" height="28px" class="pr-2">
+            </div>
+            <div class="col-11 px-0">
+              <h6 style="margin-top: 9px;">Segunda mitad del siglo XVI</h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-1">
+            <img src="work/models/memorica/recursos/img/500anos/pencil.svg" height="28px" class="pr-2">
+          </div>
+          <div class="col-11 px-0">
+            <p>En 1892 Alfredo Chavero realizó la publicación de la obra. </p>
+            <p>En 1947 se publicó la obra bajo el nombre de Historia de Tlaxcala con un estudio del ingeniero Alberto Escalona Ramos e ilustrada y anotada por Lauro Rosell.</p>
+            <p>En 1978 la editorial innovación publicó la Historia de Tlaxcala que había sacó a la luz Alfredo Chavero en 1892. </p>
+            <p>En 1984 René Acuña realizó una edición facsimilar publicada por la Universidad Nacional Autónoma de México con el nombre Descripción de la ciudad y provincia de Tlaxcala. </p>
+            <p>En 2013 se publicó la Historia de Tlaxcala por la Universidad Autónoma de Tlaxcala con una introducción y notas de Luis Reyes García y Javier Lira Toledo <span class="glifo"></span> </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+
+    <div id="11th-text" class="row py-5">
+      <div class="col-1 col-lg-3"></div>
+      <div class="col-11 col-lg-7 px-5 py-5" style="background-color: #faf9f8; z-index: 1;">
+        <img src="work/models/memorica/recursos/img/500anos/diagonal.svg" style="float: right;" width="300px">
+        <h1 class="pb-0">Lienzo de Tlaxcala</h1>
+
+        <div class="d-flex justify-content-start pb-3">
+          <h3>Anónimo</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2); width:500px;"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/where.svg" height="28px" class="px-1">
+            </div>
+            <div class="col-11 px-0">
+              <h5 class="pb-3">Un fragmento se encuentra en la Casa de Colón de Sevilla. (Es posible que sea un fragmento del original)</h5>
+              <h5 class="pb-3">No se sabe la localización del códice original, no obstante, se conoce el documento por una serie de copias que se realizaron.</h5>
+              <h5 class="pb-3">Una copia se encuentra en la Relación Geográfica de Tlaxcala.</h5>
+              <h5 class="pb-3">Copia realizada por Manuel Yllañes en 1773, se localiza en la Biblioteca Nacional de Antropología. De esta última se realizaron tres copias más. La primera se encuentra en la Universidad de Tulane en Nueva Orleáns, E.U.A., la segunda en Paris y la última copia fue la realizada por Prospero Cahuantzin, quien fuera gobernador de Tlaxcala.</h5>
+              <h5 class="pb-3">Cuatro fragmentos de una copia se encuentran resguardados en la Universidad de Austin en Texas. </h5>
+              <h5 class="pb-3">Otra copia consta de seis fragmentos con el nombre de Códice entrada de los españoles a Tlaxcala. </h5>
+              <h5 class="pb-3">En la fiscalía de San Francisco Ocotelulco se encuentra un fragmento en tela del códice.</h5>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/when.svg" height="28px" class="pr-2">
+            </div>
+            <div class="col-11 px-0">
+              <h6 style="margin-top: 9px;">Segunda mitad del siglo XVI.</h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-1">
+            <img src="work/models/memorica/recursos/img/500anos/pencil.svg" height="28px" class="pr-2">
+          </div>
+          <div class="col-11 px-0">
+            <p>En 1939 se publicó una edición bajo el nombre de Lienzo de Tlaxcala a cargo de Próspero Cahuantzin por la Liberia Anticuaria G. m. Echaniz.</p>
+            <p>En 1983 Josefina García Quintana, Carlos Martínez Marín y Mario de la Torre publicaron un estudio con ilustraciones en la editorial Cartón y Papel de México bajo el nombre El Lienzo de Tlaxcala.  <span class="glifo"></span> </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+
+    <div id="12th-text" class="row py-5">
+      <div class="col-1 col-lg-3"></div>
+      <div class="col-11 col-lg-7 px-5 py-5" style="background-color: #faf9f8; z-index: 1;">
+        <img src="work/models/memorica/recursos/img/500anos/diagonal.svg" style="float: right;" width="300px">
+        <h1 class="pb-0">Códice Telleriano-Remensis</h1>
+
+        <div class="d-flex justify-content-start pb-3">
+          <h3>Anónimo</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2); width:500px;"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/where.svg" height="28px" class="px-1">
+            </div>
+            <div class="col-11 px-0">
+              <h5 class="pb-3">Biblioteca Nacional de Francia.</h5>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/when.svg" height="28px" class="pr-2">
+            </div>
+            <div class="col-11 px-0">
+              <h6 style="margin-top: 9px;">Entre 1550 y 1565</h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-1">
+            <img src="work/models/memorica/recursos/img/500anos/pencil.svg" height="28px" class="pr-2">
+          </div>
+          <div class="col-11 px-0">
+            <p>La primera reproducción del manuscrito se publicó en litografías entre 1831 y 1848 en la obra Antiquities of Mexico de Kinsborough.</p>
+            <p>En 1889 el duque de Loubat publicó una edición con una introducción en francés de E. T. Hamy bajo el título Codex Telleriano-Remensis: Manuscrit Mexicain du cabinet de Ch. M. Le. Tellier, archevêque de Reims à la Bibliothèque Nationale (Ms. Mexicain n° 385).</p>
+            <p>En 1995 Eloise Quiñones Keber publicó una edición facsimilar del códice en la University of Texas Prees con el título Codex Telleriano-Remensis: ritual, divination and history in a pictorial Aztec manuscript <span class="glifo"></span> </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+
+    <div id="13th-text" class="row py-5">
+      <div class="col-1 col-lg-3"></div>
+      <div class="col-11 col-lg-7 px-5 py-5" style="background-color: #faf9f8; z-index: 1;">
+        <img src="work/models/memorica/recursos/img/500anos/diagonal.svg" style="float: right;" width="300px">
+        <h1 class="pb-0">Códice Moctezuma</h1>
+
+        <div class="d-flex justify-content-start pb-3">
+          <h3>Anónimo</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2); width:500px;"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/where.svg" height="28px" class="px-1">
+            </div>
+            <div class="col-11 px-0">
+              <h5 class="pb-3">Biblioteca Nacional de Antropología e Historia, México.</h5>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-1">
+              <img src="work/models/memorica/recursos/img/500anos/when.svg" height="28px" class="pr-2">
+            </div>
+            <div class="col-11 px-0">
+              <h6 style="margin-top: 9px;">Siglo XVI</h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-1">
+            <img src="work/models/memorica/recursos/img/500anos/pencil.svg" height="28px" class="pr-2">
+          </div>
+          <div class="col-11 px-0">
+            <p>En 1964 Glass publicó una parte del documento.</p>
+            <p>En 1995 se publicó un escrito realizado por Robert Barlow y Mateos Higuera el cual fue escrito a mediados del siglo XX. <span class="glifo"></span> </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+
+  <script type="text/javascript">
+    //loader
+    $(window).on("load", function(e) {
+      $("#loader").animate({
+        opacity: 0,
+        zIndex: -1
+      })
+
+      console.log("done");
+    });
+
+    //nav menu
+    $('#toggle').click(function() {
+      $(this).toggleClass('active');
+      $('#overlay').toggleClass('open');
+    });
+
+    $('.go').click(function() {
+      $('#overlay').toggleClass('open');
+      $('.button_container').removeClass('active');
+    });
+
+    // smooth scroll
+    $("a").on('click', function(event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+        var hash = this.hash;
+
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function() {
+          window.location.hash = hash;
+        });
+      }
+    });
+
+  </script>
+</body>
+
+</html>
