@@ -247,6 +247,7 @@ h3.link-interpretes a {
 
 h3.link-textos a:hover, h3.link-hechos a:hover, h3.link-imagenes a:hover, h3.link-interpretes a:hover {
   font-size: 1.9rem;
+  opacity: 0.8;
   transition: all 0.5 ease;
 }
 
@@ -488,6 +489,7 @@ footer h2 {
 }
 
 .overlay ul li a:after {
+  content: "";
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -592,6 +594,7 @@ footer h2 {
   height: 8px;
   margin-top: 9px;
   position: absolute;
+  background-color: rgba(99, 40, 30, 0.21);
 }
 
 .inner img {
@@ -619,6 +622,12 @@ footer h2 {
 
 .outer:hover h4, .outer:hover li, .outer:hover span, .outer:hover a {
   color: #FAF9F8;
+  transition: all 0.8s;
+}
+
+.outer:hover .pleca {
+  background-color: #FAF9F8;
+  opacity: 0.3;
   transition: all 0.8s;
 }
 
@@ -711,6 +720,15 @@ footer h2 {
 }
 
 /* ----------------------- MEDIA QUERIES ----------------------- */
+@media only screen and (min-width: 1201px) {
+  .inner h4 {
+    font-size: 2rem;
+  }
+
+  .inner a {
+    font-size: 0.9rem;
+  }
+}
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media only screen and (max-width: 1200px) {
@@ -758,8 +776,6 @@ footer h2 {
   #section-interpretes .icon {
     height: 1.5rem;
   }
-
-
 }
 
 /* Large devices (desktops, 769px to 1024px) */
@@ -834,6 +850,17 @@ footer h2 {
 
   .credit-line {
     height: 0.3rem;
+  }
+
+  .inner h4 {
+    font-family: "IMFellEnglish_Regular";
+    font-size: 2.5rem;
+    color: #63281e;
+  }
+
+  .inner a {
+    font-family: "IMFellEnglish_Regular";
+    font-size: 0.9rem;
   }
 }
 
@@ -974,6 +1001,10 @@ footer h2 {
     font-size: 1rem;
   }
 
+  h3.goto a:hover {
+    font-size: 1rem;
+  }
+
   .pleca {
     width: 100px;
     height: 5px;
@@ -992,227 +1023,6 @@ footer h2 {
   .credit-line {
     height: 0.4rem;
   }
-}
 
-/* ----------------------- BERLIN ----------------------- */
-.contenido {
-  padding: 1.25rem;
-  overflow: hidden;
-  margin-bottom: 3rem;
-  max-width: 100%;
-}
 
-.galeria {
-  margin-left: -1.25rem;
-  margin-right: -1.25rem;
-  margin-bottom: 0;
-  position: relative;
-}
-
-.galeria_elemento {
-  min-height: 100vh;
-  margin-bottom: 150vh;
-  position: relative;
-}
-
-.galeria_elemento.fijo {
-  margin-bottom: 120vh;
-}
-
-.galeria_elemento.fijo .galeria_elemento_contenedor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: #F9F9F7;
-}
-
-.galeria_elemento.absoluta {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  margin-top: 100vh;
-}
-
-.galeria_elemento.absoluta .galeria_texto {
-  display: none;
-}
-
-.galeria_elemento_contenedor {
-  position: relative;
-  display: flex;
-  min-height: 100vh;
-  align-items: center;
-  justify-content: center;
-
-}
-
-.galeria_foto {
-  max-width: 61.25rem;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.galeria_foto.right {
-  margin-right: 0;
-}
-
-.galeria_foto.left {
-  margin-left: 0;
-}
-
-.galeria_elemento_izquierda .galeria_texto {
-  right: calc(50% + (30.625rem - 10.31rem));
-  left: auto;
-  transform: translateX(50%);
-  right: auto;
-  left: 0.25rem;
-}
-
-.galeria_elemento-expandido .galeria_foto {
-  max-width: 90rem;
-}
-
-.galeria_foto img {
-  max-height: calc(100vh - 3rem);
-  width: auto;
-  object-fit: contain;
-}
-
-.galeria_texto {
-  background: #F9F9F7;
-  padding: 1.25rem;
-  text-align: left;
-  height: 525px;
-  width: 530px;
-  position: absolute;
-  top: 100vh;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.bajar {
-  display: block;
-  width: 3rem;
-  height: 3rem;
-  text-indent: -6666rem;
-  overflow: hidden;
-  background: url(/especiales/2019/aniversario-caida-muro-de-berlin/img/bajar.svg) no-repeat center / contain;
-  opacity: 0;
-  visibility: hidden;
-  animation: mostrar 1s forwards 1s, bajar 2s infinite;
-  cursor: pointer;
-  position: absolute;
-  z-index: 130;
-  bottom: -70px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-@media (min-width:48rem){ /* 768PX */
-  .contenido {
-    padding-top: 4.5rem;
-  }
-
-  .galeria_texto {
-    /* max-width: 14.6rem; */
-  }
-
-}
-
-@media (min-width:64rem){ /* 1024PX */
-  .galeria {
-    margin-bottom: 0;
-  }
-
-  .galeria_elemento.fijo {
-    margin-bottom: 125vh;
-  }
-
-  .galeria_elemento-vertical .galeria_texto {
-    right: auto;
-    left: 0.25rem;
-  }
-
-  .galeria_texto {
-    left: calc(50% + (30.625rem - 10.3rem));
-    /* max-width: 20.6rem; */
-  }
-
-  .galeria_elemento-expandido .galeria_texto,
-  .galeria_elemento-vertical .galeria_texto {
-    /* max-width: 20rem; */
-  }
-
-  .galeria_elemento-expandido .galeria_texto {
-    right: auto;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .galeria_elemento-vertical .galeria_texto {
-    right: calc(50% + (30.625rem - 10.31rem));
-    left: auto;
-    transform: translateX(50%);
-  }
-
-  .galeria_elemento-vertical .galeria_foto {
-    padding-left: 20.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-end;
-  }
-
-  .galeria_elemento-vertical .galeria_foto img {
-    max-width: 40.6rem;
-    /*width: 100%;*/
-  }
-
-  .bajar {
-    bottom: -130px;
-  }
-}
-
-@media (min-width:90rem){ /* 1440PX */
-  .galeria figcaption {
-    text-align: left;
-  }
-}
-
-/* ANIMACIONES */
-
-@keyframes mostrar {
-  100% {
-    opacity: 1;
-    visibility: visible;
-  }
-}
-
-@keyframes bajar {
-  0%,
-  100%,
-  20%,
-  50%,
-  80% {
-    transform: translateX(-50%) translateY(0);
-  }
-  40% {
-    transform: translateX(-50%) translateY(-10px);
-  }
-  60% {
-    transform: translateX(-50%) translateY(-5px);
-  }
-}
-
-@keyframes aparecer {
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
