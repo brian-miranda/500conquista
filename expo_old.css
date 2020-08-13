@@ -67,6 +67,7 @@ html {
   height: 100%;
   font-size: 19px;
   background-color: #F9F9F7;
+  overflow: hidden;
 }
 
 body {
@@ -655,6 +656,7 @@ footer h2 {
 .texto {
   padding-top: 81px;
   background-color: #faf9f8;
+  position: relative;
 }
 
 .texto h1 {
@@ -689,8 +691,7 @@ img.diagonal {
 .texto img.img-fluid {
   height: auto;
   max-width: 100%;
-  margin: 120px 0;
-  float: right;
+  margin: 300px 0;
 }
 
 .texto .pleca {
@@ -731,6 +732,7 @@ img.diagonal {
 #sidenavbar {
   background-color: #faf9f8;
   position: fixed;
+  top: 200px;
   z-index: 1;
 }
 
@@ -776,28 +778,28 @@ a.nav-link:hover .dot, .navbar-light .nav-pills .nav-link.active .dot {
   opacity: 0.6;
 }
 
-#wrapper{
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 200px;
-}
-
-#content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 99%;
-  /* opacity: 0.5; */
-}
-
 #background {
-  position: absolute;
+  height:200vh;
+  box-sizing: border-box;
+  transform-style: preserve-3d;
+}
+
+#background::before {
+  content:"";
+  height: 200vh;
   top: 0;
   left: 0;
-  z-index: 0;
-  width: 100%;
+  position: absolute;
+  z-index: -1;
+  transform: translateZ(-1px) scale(2);
+}
+
+.wrapper {
+  background-color: #faf9f8;
+  top: 350vh;
+  z-index: 1;
+  position: absolute;
+  transform: translateZ(-1px) scale(2);
 }
 
 /* ----------------------- MEDIA QUERIES ----------------------- */
@@ -1018,10 +1020,6 @@ a.nav-link:hover .dot, .navbar-light .nav-pills .nav-link.active .dot {
   .inner a {
     font-family: "IMFellEnglish_Regular";
     font-size: 0.9rem;
-  }
-
-  .texto img.img-fluid {
-    margin: 150px 0;
   }
 }
 
@@ -1259,19 +1257,5 @@ a.nav-link:hover .dot, .navbar-light .nav-pills .nav-link.active .dot {
   .texto img {
     height: 20px;
     margin-bottom: 10px;
-  }
-
-  .texto img.img-fluid {
-    margin: 400px 0;
-  }
-
-  img.diagonal {
-    float: left;
-    padding-right: 50px;
-  }
-
-
-  #content {
-    width: 95%;
   }
 }
