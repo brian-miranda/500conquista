@@ -493,7 +493,7 @@ footer h2 {
 }
 
 .overlay ul li a:hover:after, .overlay ul li a:focus:after, .overlay ul li a:active:after {
-  width: 100%;
+  width: 25%; /*longitud de subrayado*/
 }
 
 .overlay ul li a:after {
@@ -769,7 +769,7 @@ a.nav-link:hover .dot, .navbar-light .nav-pills .nav-link.active .dot {
 #sidenavbar .pleca {
   width: 110px;
   margin-top: 33px;
-  background-color: rgba(99, 40, 30, 0.5);
+  background-color: rgba(99, 40, 30, 0.2);
 }
 
 #sidenavbar .goto a:hover {
@@ -874,6 +874,10 @@ a.nav-link:hover .dot, .navbar-light .nav-pills .nav-link.active .dot {
   .diagonal {
     width: 250px;
     float: right;
+  }
+
+  .tit-textos {
+    height: 27px;
   }
 
   .texto h1 {
@@ -1020,8 +1024,16 @@ a.nav-link:hover .dot, .navbar-light .nav-pills .nav-link.active .dot {
     font-size: 0.9rem;
   }
 
+  .tit-textos {
+    height: 25px;
+  }
+
   .texto img.img-fluid {
     margin: 150px 0;
+  }
+
+  .nav-pills a {
+    font-size: 0.6rem;
   }
 }
 
