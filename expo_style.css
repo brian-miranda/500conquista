@@ -724,6 +724,10 @@ img.diagonal {
   height: 28px;
 }
 
+#content .border {
+  border: 1px solid rgba(99, 40, 30, 0.2)!important;
+}
+
 .glifo {
   font-family: "IMFellEnglishSC_Regular";
 }
@@ -1282,8 +1286,11 @@ a.nav-link:hover .dot, .navbar-light .nav-pills .nav-link.active .dot {
     padding-right: 50px;
   }
 
-
   #content {
     width: 95%;
+  }
+
+  #content .border {
+    border: none!important;
   }
 }
