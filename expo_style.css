@@ -301,6 +301,7 @@ footer p {
 }
 
 footer h2 {
+  color: #08163b;
   font-size: 3.5rem;
   text-align: center;
 }
@@ -651,7 +652,7 @@ footer h2 {
   -moz-transition: all 0.8s;
 }
 
-/* ----------------------- TEXTO 1 ----------------------- */
+/* ----------------------- TEXTO INDIVIDUAL ----------------------- */
 .texto {
   padding-top: 81px;
   background-color: #faf9f8;
@@ -802,6 +803,103 @@ a.nav-link:hover .dot, .navbar-light .nav-pills .nav-link.active .dot {
   left: 0;
   z-index: 0;
   width: 100%;
+}
+
+/* ----------------------- SALA LOS HECHOS ----------------------- */
+.wrapper {
+  background-color: #FAF9F8;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-perspective: 1000;
+          perspective: 1000;
+}
+
+.section {
+  background-color: #FAF9F8;
+  height: 100%;
+  width: 100%;
+  width: calc( 100% / 13 ); /*cambiar número con número de secciones*/
+  float: left;
+  position: relative;
+  text-align:center;
+}
+/* .section:nth-child(1) {
+  background: #F64747;
+}
+.section:nth-child(2) {
+  background: #22A7F0;
+}
+.section:nth-child(3) {
+  background: #F9690E;
+}
+.section:nth-child(4) {
+  background: #9B59B6;
+}
+.section:nth-child(5) {
+  background: #03C9A9;
+}
+.section:nth-child(6) {
+  background: #22A7F0;
+}
+.section:nth-child(7) {
+  background: #F9690E;
+}
+.section:nth-child(8) {
+  background: #9B59B6;
+}
+.section:nth-child(9) {
+  background: #03C9A9;
+}
+.section:nth-child(10) {
+  background: black;
+}
+.section:nth-child(11) {
+  background: #03C9A9;
+}
+.section:nth-child(12) {
+  background: black;
+}
+.section:nth-child(13) {
+  background: red;
+} */
+
+.sections {
+  width: 1300%;
+  height: 100%;
+}
+
+#portadilla {
+  height: 100%;
+  width: 100%;
+}
+
+#portadilla h1 {
+  font-family: "IMFellEnglishSC_Regular";
+  font-size: 15rem;
+  text-align: center;
+  color: #715E51;
+}
+
+#portadilla img {
+  width: 250px;
+  height: 250px;
+}
+
+#portadilla .pleca {
+  width: 1050px;
+  height: 10px;
+}
+
+.section h2 {
+  font-size: 4.5rem;
+  color: #13182c;
+  text-align: left;
+}
+
+.pleca-vertical {
+  width: 7;
+  height: 450;
 }
 
 /* ----------------------- MEDIA QUERIES ----------------------- */
@@ -1199,6 +1297,10 @@ a.nav-link:hover .dot, .navbar-light .nav-pills .nav-link.active .dot {
 
   .credit-line {
     height: 0.4rem;
+  }
+
+  .overlay ul li a {
+    font-size: 2rem;
   }
 
   .inner h4 {

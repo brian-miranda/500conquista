@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, user-scalable=no">
+      <title>prueba index 2</title>
+
+      <link rel="icon" type="image/ico" href="work/models/memorica/recursos/img/favicon/favicon.ico"/>
+      <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+      <!-- reserved for styles, don't forget to remove the / from the thing -->
+      <link href="expo_style.css" type="text/css" rel="stylesheet">
+      <style media="screen">
+      .wrapper {
+        background-color: #FAF9F8;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        -webkit-perspective: 1000;
+                perspective: 1000;
+      }
+
+      .section {
+        background-color: #FAF9F8;
+        height: 100%;
+        width: 100%;
+        width: calc( 100% / 10 ); /*cambiar número con número de secciones*/
+        float: left;
+        position: relative;
+        text-align:center;
+      }
+      .section:nth-child(1) {
+        background: #F64747;
+      }
+      .section:nth-child(2) {
+        background: #22A7F0;
+      }
+      .section:nth-child(3) {
+        background: #F9690E;
+      }
+      .section:nth-child(4) {
+        background: #9B59B6;
+      }
+      .section:nth-child(5) {
+        background: #03C9A9;
+      }
+      .section:nth-child(6) {
+        background: #22A7F0;
+      }
+      .section:nth-child(7) {
+        background: #F9690E;
+      }
+      .section:nth-child(8) {
+        background: #9B59B6;
+      }
+      .section:nth-child(9) {
+        background: #03C9A9;
+      }
+      .section:nth-child(10) {
+        background: black;
+      }
+
+      .sections {
+        width: 1000%;
+        height: 100%;
+      }
+
+      #portadilla {
+        height: 100%;
+        width: 100%;
+      }
+
+      #portadilla h1 {
+        font-family: "IMFellEnglishSC_Regular";
+        font-size: 15rem;
+        text-align: center;
+        color: #715E51;
+      }
+
+      #portadilla img {
+        width: 250px;
+        height: 250px;
+      }
+
+      #portadilla .pleca {
+        width: 1050px;
+        height: 10px;
+      }
+
+      .section h2 {
+        font-size: 4.5rem;
+        color: #13182c;
+        text-align: left;
+      }
+
+      .pleca-vertical {
+        width: 7;
+        height: 450;
+      }
+      </style>
+
+      <!-- <RESOURCE TYPE="JSPEditor" STYPE="OpenGraphTags" />
+      <meta property="og:image" content="work/models/memorica/recursos/img/miniatura_500anos.jpg">
+      <meta property="og:image:type" content="image/svg">
+      <meta property="og:image:width" content="1024">
+      <meta property="og:image:height" content="1024">
+      <meta name="twitter:image:src" content="https://memoricamexico.gob.mxwork/models/memorica/recursos/img/miniatura_500anos.jpg"> -->
+    </head>
+  </head>
+
+  <body>
+    <!-- Loader
+    <div id="loader">
+    </div> -->
+
+    <!-- Header -->
+    <header>
+      <nav class="navbar fixed-top" style="background-color: #faf9f8; box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);">
+        <a class="navbar-brand" href="https://memoricamexico.gob.mx/es/memorica/Exposiciones">
+          <img type="image/svg+xml" src="work/models/memorica/recursos/img/500anos/logui.svg" alt="" class="logo" width="50px" height="50px">
+        </a>
+        <a href="" data-toggle="modal" data-target="#modalbotonescompartir" title="Compartir" class="share">
+          <img type="image/svg+xml" alt="Compartir en redes sociales" src="work/models/memorica/recursos/img/500anos/share.svg" title="Compartir en redes Sociales" width="35px" height="35px">
+        </a>
+        <a href="" class="down">
+          <img type="image/svg+xml" alt="Descargar guía didactica" src="work/models/memorica/recursos/img/500anos/down.svg" title="Descargar guía didactica" width="35px" height="100%">
+        </a>
+      </nav>
+    </header>
+    <div class="button_container" id="toggle">
+      <span class="top"></span>
+      <span class="middle"></span>
+      <span class="bottom"></span>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay">
+      <nav class="overlay-menu">
+        <ul>
+          <li><a class="go" href="/{user@getLanguage}/{topic@getWebSiteId}/500anos">Inicio</a></li>
+          <li><a class="go" href="textos.html">Textos</a></li>
+          <li><a class="go" href="/{user@getLanguage}/{topic@getWebSiteId}/500hechos">Hechos</a></li>
+          <li><a class="go" href="/{user@getLanguage}/{topic@getWebSiteId}/500imagenes">Imágenes</a></li>
+          <li><a class="go" href="/{user@getLanguage}/{topic@getWebSiteId}/500interpretes">Somos intérpretes</a></li>
+          <li><a class="go" href="/{user@getLanguage}/{topic@getWebSiteId}/500infos">Info</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="modal fade" id="modalbotonescompartir" tabindex="-1" role="dialog" aria-labelledby="modalbotonescompartir" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5>Compartir</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body d-flex justify-content-around">
+            <RESOURCE TYPE="JSPEditor" STYPE="FBShareButton" />
+            <RESOURCE TYPE="JSPEditor" STYPE="TWShareButton" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tablas comparativas -->
+
+    <div class="modal fade" id="tabla1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTENIDOS -->
+    <div class="wrapper" id="js-wrapper">
+      <div class="sections" id="js-slideContainer">
+        <!--Portadilla-->
+        <section class="section">
+          <div id="portadilla" class="container-fluid">
+            <div class="splash col-sm-12 d-flex flex-column align-items-center justify-content-center">
+              <div class="align-self-between">
+                <img class="icon" type="image/svg+xml" src="work/models/memorica/recursos/img/500anos/hechos-circ-cafe.svg" width="100%" height="100%">
+                <div class="d-flex justify-content-center align-items-center">
+                  <h1 class="">Hechos</h1>
+                  <div class="pleca" style="background-color: #13182c;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!--PRIMER HECHO-->
+        <section class="section">
+          <div class="splash row d-flex align-items-center">
+            <div class="col-12 col-sm-6 px-5 d-flex flex-column align-items-start">
+              <h2 class="">Los<br> conquistadores a Cozumel y alrededores</h2>
+              <a href="#" data-toggle="modal" data-target="#tabla1" class="show-table d-inline-flex" style="width: 100%;">
+                <img src="work/models/memorica/recursos/img/500anos/tableicon.svg" style="max-height: 30px;" alt="" class="mr-3">Ver tabla comparativa
+              </a>
+            </div>
+
+            <div class="col-12 col-sm-6 px-5">
+              <div class="row align-items-center">
+                <div class="col-1">
+                  <svg width="5" height="450" class="pleca-vertical">
+                    <rect width="5" height="450" style="fill:#715e50;" />
+                  </svg>
+                  <img src="work/models/memorica/recursos/img/500anos/sound-on.svg" alt="" class="mt-3">
+                </div>
+                <div class="col-11">
+                  <p>“En este medio tiempo supo el capitán que unos españoles estaban siete años había cautivos en el Yucatán, en poder de ciertos caciques, los cuales se habían perdido en una carabela que dio al través en los bajos de Jamaica, la cual venía de Tierra Firma, y que ellos se escaparon en una barca de aquella carabela saliendo a aquella tierra, y desde entonces los tenían allí cautivos y presos los indios; y también traía aviso de ello el dicho capitán Fernando Cortés, cuando partió de la dicha isla Fernandina para saber de estos Españoles y como aquí supo nuevas de ellos y la tierra donde estaba […]”</p>
+                  <p><small>Hernán Cortés, Cartas de Relación, Nota preliminar de Manuel Alcalá, México, <br>Editorial Porrúa, 2013, p. 14.</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="splash row d-flex align-items-center">
+            <div class="col-12 col-sm-6 px-5">
+              <div class="row align-items-start">
+                <div class="col-1">
+                  <svg width="5" height="450" class="pleca-vertical">
+                    <rect width="5" height="450" style="fill:#715e50;" />
+                  </svg>
+                  <img src="work/models/memorica/recursos/img/500anos/sound-on.svg" alt="" class="mt-3">
+                </div>
+                <div class="col-11">
+                  <p>“[…] saltamos en tierra en el pueblo de Cozumel, con todos los soldados; y no hallamos indios ningunos, que se habían ido huyendo; y mandó que luego fuésemos a otro pueblo que estaba de allí una legua, y también se amontaron y huyeron los naturales, y no pudieron llevar su hacienda y dejaron gallinas y otras cosas. Y de las gallinas mandó Pedro de Alvarado que tomasen hasta cuarenta de ellas. Y también en una casa de adoratorios de ídolos tenían unos paramentos de mantas viejas y unas arquillas donde estaban unas como diademas, e ídolos, y cuentas e pinjantillos de oro bajo; y también se les tomó dos indios y una india. Y volvímonos al pueblo donde desembárcamos.”</p>
+                  <p><small>Bernal Díaz del Castillo, Historia Verdadera de la conquista de la Nueva España,<br>Introducción y notas de Joaquín Ramírez Cabañas, México, Editorial Porrúa, 2017, p. 41. </small></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 px-5">
+              <div class="row align-items-end">
+                <div class="col-1">
+                  <svg width="5" height="350" class="pleca-vertical">
+                    <rect width="5" height="350" style="fill:#715e50;" />
+                  </svg>
+                  <img src="work/models/memorica/recursos/img/500anos/sound-on.svg" alt="" class="mt-3">
+                </div>
+                <div class="col-11">
+                  <p>“Navegando por la mar aportó el armada a la isla que se llama Cozumel que es en tierra firme y la costa en la mano. Pareció en la costa un hombre que venía corriendo y capeando con una manta y un bergantinejo, le tomó, y súpose como era cristiano que se llamaba Hernando de Aguilar, el cual y otro su compañero habían escapado en poder de indios de una armada que allí había dado al través.”</p>
+                  <p><small>Fray Francisco de Aguilar, Relación breve de la conquista de la Nueva España,<br> México, Universidad Nacional Autónoma de México,<br> Instituto de Investigaciones Históricas, 1980, p. 66.</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!--SEGUNDO HECHO-->
+        <section class="section">
+          <div class="splash row d-flex align-items-center">
+            <div class="col-12 col-sm-6 px-5">
+              <img src="work/models/memorica/recursos/img/500anos/hechos1.png" alt="" style="height: 700px;">
+            </div>
+
+            <div class="col-12 col-sm-6 px-5 d-flex flex-column align-items-start">
+              <h2 class="">Batalla<br> de Tlaxlcala</h2>
+              <a href="#" data-toggle="modal" data-target="#tabla1" class="show-table d-inline-flex" style="width: 100%;">
+                <img src="work/models/memorica/recursos/img/500anos/tableicon.svg" style="max-height: 30px;" alt="" class="mr-3">Ver tabla comparativa
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="splash row d-flex align-items-center">
+            <div class="col-12 col-sm-6 px-5">
+              <div class="row align-items-start">
+                <div class="col-1">
+                  <svg width="5" height="450" class="pleca-vertical">
+                    <rect width="5" height="450" style="fill:#715e50;" />
+                  </svg>
+                  <img src="work/models/memorica/recursos/img/500anos/sound-on.svg" alt="" class="mt-3">
+                </div>
+                <div class="col-11">
+                  <p>“Hay en esta ciudad un mercado en que casi cotidianamente todos los días hay en él de treinta mil ánimas arriba, vendiendo y comprando, sin otros muchos mercadillos que hay por la ciudad en partes. En este mercado hay todas cuantas cosas, así de mantenimiento como de vestido y calzado, que ellos tratan y puede haber. Hay joyerías de oro y playa y piedras y de otras joyas de plumaje, haber.”</p>
+                  <p><small>Hernán Cortés, Cartas de Relación, Nota preliminar de Manuel Alcalá, México,<br>Editorial Porrúa, 2013, p. 50.</small></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 px-5">
+              <div class="row align-items-end">
+                <div class="col-1">
+                  <svg width="5" height="350" class="pleca-vertical">
+                    <rect width="5" height="350" style="fill:#715e50;" />
+                  </svg>
+                  <img src="work/models/memorica/recursos/img/500anos/sound-on.svg" alt="" class="mt-3">
+                </div>
+                <div class="col-11">
+                  <p>“Y lo que les enviamos a decir era que íbamos a su pueblo, que lo tuviesen por bien; que no les íbamos a hacer enojo, sino tenerles por amigos; y esto fue porque en aquel poblezuelo nos certificaron que toda Tlaxcala estaba puesta en armas contra nosotros, porque, según pareció, ya tenían noticia de cómo íbamos […]”</p>
+                  <p><small>Bernal Díaz del Castillo, Historia Verdadera de la conquista de la Nueva España,<br>Introducción y notas de Joaquín Ramírez Cabañas, México, Editorial Porrúa, 2017, p. 105.</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+    <footer>
+      <nav class="navbar fixed-bottom" style="background-color: #faf9f8; height: 81px;">
+        <span class="mx-auto">AQUÍ VA A IR LA LÍNEA DEL TIEMPO</span>
+      </nav>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js'></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js'></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+
+    <script type="text/javascript">
+      //loader
+      $(window).on("load", function(e) {
+        // $("#loader").animate({
+        //   opacity: 0,
+        //   zIndex: -1
+        // })
+        $('#portadilla').fadeOut(1);
+        $('#portadilla').fadeIn(2000);
+        console.log("done");
+      });
+
+      function showTitle() {
+        $('#portadilla').fadeIn(5000);
+      };
+
+      //nav menu
+      $('#toggle').click(function() {
+        $(this).toggleClass('active');
+        $('#overlay').toggleClass('open');
+      });
+
+      $('.go').click(function() {
+        $('#overlay').toggleClass('open');
+        $('.button_container').removeClass('active');
+      });
+
+      // smooth scroll
+      $("a").on('click', function(event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          var hash = this.hash;
+
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function() {
+            window.location.hash = hash;
+          });
+        }
+      });
+
+      //scrollmagic?
+      var controller = new ScrollMagic.Controller();
+
+      var horizontalSlide = new TimelineMax()
+      // animate panels
+      .to("#js-slideContainer", 1,   {x: "-20%"})
+      .to("#js-slideContainer", 1,   {x: "-40%"})
+      .to("#js-slideContainer", 1,   {x: "-60%"})
+      .to("#js-slideContainer", 1,   {x: "-80%"})
+
+      // create scene to pin and link animation
+      new ScrollMagic.Scene({
+        triggerElement: "#js-wrapper",
+        triggerHook: "onLeave",
+        duration: "400%"
+      })
+        .setPin("#js-wrapper")
+        .setTween(horizontalSlide)
+        //.addIndicators() // add indicators (requires plugin)
+        .addTo(controller);
+
+    </script>
+  </body>
+</html>
