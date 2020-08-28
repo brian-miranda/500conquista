@@ -820,7 +820,6 @@ a.nav-link:hover .dot, .navbar-light .nav-pills .nav-link.active .dot {
 
 
   position: absolute;
-
 }
 #outer-wrapper {
   background-color: #FAF9F8;
@@ -887,6 +886,31 @@ a.nav-link:hover .dot, .navbar-light .nav-pills .nav-link.active .dot {
   margin: 0 auto;
   width: 7;
   height: 450;
+}
+
+img.imgone {
+  height: 700px;
+}
+
+img.imgtwo {
+  height: 700px;
+}
+
+img.imgthree {
+  height: 900px;
+}
+
+img.imgfour {
+  height: 700px;
+}
+
+.modal-xl {
+  width: 100%;
+  margin: auto;
+}
+
+.tabla-hechos {
+  font-size: 0.6rem;
 }
 
 /* ----------------------- MEDIA QUERIES ----------------------- */
@@ -1381,5 +1405,56 @@ a.nav-link:hover .dot, .navbar-light .nav-pills .nav-link.active .dot {
 
   #content .border {
     border: none!important;
+  }
+
+  #outer-wrapper .slide {
+    margin-right: 350px;
+  }
+
+  .slide.one {
+    margin-right: 0px;
+  }
+
+  #portadilla h1 {
+    font-size: 5rem;
+  }
+
+  #portadilla img {
+    width: 150px;
+    height: 150px;
+  }
+
+  #portadilla .pleca {
+    width: 350px;
+    height: 10px;
+    margin-top: 0;
+  }
+
+  .slide h2 {
+    font-size: 3rem;
+  }
+
+  .slide a {
+    font-size: 0.9rem;
+  }
+
+  .slide p {
+    font-size: 0.7rem;
+  }
+
+  img.imgone {
+    height: 300px;
+  }
+
+  img.imgtwo {
+    height: 300px;
+  }
+
+  img.imgthree {
+    height: 500px;
+  }
+
+  img.imgfour {
+    height: 300px;
   }
 }
