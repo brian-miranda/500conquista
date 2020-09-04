@@ -92,6 +92,10 @@ a {
   font-family: "Raleway-Regular";
 }
 
+a:focus {
+  outline: none;
+}
+
 .logo {
   max-height: 50px;
   max-width: 50px;
@@ -299,12 +303,21 @@ footer {
 footer p {
   color: #715f51;
   line-height: 1rem;
+  text-align: center;
 }
 
 footer h2 {
   color: #08163b;
   font-size: 3.5rem;
   text-align: center;
+}
+
+footer h6 {
+  font-family: "Raleway-SemiBold";
+  color: #13182c;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
 .credit-line {
@@ -808,6 +821,18 @@ a.nav-link:hover .dot, .navbar-light .nav-pills .nav-link.active .dot {
 
 /* ----------------------- SALA LOS HECHOS ----------------------- */
 /*-----------------------------NEW-----------------------------*/
+body#hechos {
+  position: relative;
+  width: 1300vw;
+}
+
+.slide { /* desactivar para que funcione el backup */
+  padding-top: 50px;
+  height: 100%;
+  width: 100vw;
+  float: left;
+}
+
 #outer-wrapper .slide {
   width: 100vw;
   height: 100vh;
@@ -815,12 +840,12 @@ a.nav-link:hover .dot, .navbar-light .nav-pills .nav-link.active .dot {
   position: relative;
   white-space: normal;
 }
+
 #outer-wrapper .slide > div {
   white-space: normal;
-
-
   position: absolute;
 }
+
 #outer-wrapper {
   background-color: #FAF9F8;
   overflow-y: scroll;
@@ -831,6 +856,7 @@ a.nav-link:hover .dot, .navbar-light .nav-pills .nav-link.active .dot {
   width: 100vh;
   height: 100vw;
 }
+
 #inner-wrapper {
   transform: rotate(90deg) translateY(-100vh);
   transform-origin: top left;
@@ -905,12 +931,84 @@ img.imgfour {
 }
 
 .modal-xl {
-  width: 100%;
-  margin: auto;
+  max-width: 80%;
 }
 
 .tabla-hechos {
   font-size: 0.6rem;
+}
+
+a.active {
+  color: red;
+}
+
+.slide .icon {
+  height: 90px !important;
+}
+
+h5.modal-title {
+  font-family: "Raleway-SemiBold";
+  color: #715f51;
+}
+
+.border-dark {
+  border-color: #13182c!important
+}
+
+th {
+  font-family: "Raleway-SemiBold";
+}
+
+td {
+  font-family: "Raleway-Medium";
+  color: #13182c;
+}
+
+.first-col {
+  font-family: "Raleway-Medium";
+  font-size: 14px;
+}
+
+.first-col strong {
+  font-family: "Raleway-SemiBold";
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.th-light {
+  background-color: #715f51;
+  color: #faf9f8;
+}
+
+.th-dark {
+  background-color: #13182c;
+  color: #faf9f8;
+}
+
+.modal-header .pleca {
+  background-color: #13182c;
+  z-index: 0;
+  margin-top: 35px;
+  width: 30%;
+  height: 5px;
+}
+
+.minipleca {
+  z-index: 0;
+  width: 50%;
+  height: 5px;
+  margin-top: -14.25px;
+  margin-left: -14.25px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.minipleca-light {
+  background-color: #715f51;
+}
+
+.minipleca-dark {
+  background-color: #13182c;
 }
 
 /* ----------------------- MEDIA QUERIES ----------------------- */
@@ -1303,7 +1401,7 @@ img.imgfour {
   }
 
   footer p {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 
   .credit-line {
@@ -1399,6 +1497,10 @@ img.imgfour {
     padding-right: 50px;
   }
 
+  body#hechos {
+    width: 2400vw;
+  }
+
   #content {
     width: 95%;
   }
@@ -1411,8 +1513,8 @@ img.imgfour {
     margin-right: 350px;
   }
 
-  .slide.one {
-    margin-right: 0px;
+  .slide {
+    margin-right: 370px;
   }
 
   #portadilla h1 {
@@ -1431,15 +1533,28 @@ img.imgfour {
   }
 
   .slide h2 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .slide a {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   .slide p {
     font-size: 0.7rem;
+  }
+
+  .slide .icon {
+    height: 40px !important;
+  }
+
+  .pleca-vertical {
+    margin: 0 auto;
+    height: 300px;
+  }
+
+  svg.pleca-vertical-sm {
+    height: 200px;
   }
 
   img.imgone {
@@ -1456,5 +1571,6 @@ img.imgfour {
 
   img.imgfour {
     height: 300px;
+    margin-right: 240px;
   }
 }
