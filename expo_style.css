@@ -316,7 +316,7 @@ footer h6 {
   font-family: "Raleway-SemiBold";
   color: #13182c;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 
@@ -826,6 +826,14 @@ body#hechos {
   width: 1300vw;
 }
 
+#hechos p {
+  color: #13182c;
+}
+
+#hechos small {
+  color: #715f51;
+}
+
 .slide { /* desactivar para que funcione el backup */
   padding-top: 50px;
   height: 100%;
@@ -935,6 +943,7 @@ img.imgfour {
 }
 
 .tabla-hechos {
+  width: 100%;
   font-size: 0.6rem;
 }
 
@@ -1009,6 +1018,12 @@ td {
 
 .minipleca-dark {
   background-color: #13182c;
+}
+
+#timeline a.nav-link:hover, .navbar-light .nav-pills .nav-link.active {
+  color: #c0764f;
+  font-family: "Raleway-Bold";
+  background: none;
 }
 
 /* ----------------------- MEDIA QUERIES ----------------------- */
@@ -1498,7 +1513,7 @@ td {
   }
 
   body#hechos {
-    width: 2400vw;
+    width: 2500vw;
   }
 
   #content {
@@ -1573,4 +1588,11 @@ td {
     height: 300px;
     margin-right: 240px;
   }
+   #timeline {
+     height: 60px !important;
+   }
+
+   p.special {
+     font-size: 11.2px !important;
+   }
 }
