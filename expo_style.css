@@ -960,6 +960,25 @@ h5.modal-title {
   color: #715f51;
 }
 
+.close {
+  color: #715E50;
+  opacity: 1;
+}
+
+.close:hover {
+  color: #0f1323;
+  opacity: 1;
+}
+
+.modal-backdrop {
+   background-color: #13182c;
+   opacity: 0.8 !important;
+}
+
+.modal-backdrop.in {
+  opacity: 0.8 !important;
+}
+
 .border-dark {
   border-color: #13182c!important
 }
@@ -1025,6 +1044,55 @@ td {
   font-family: "Raleway-Bold";
   background: none;
 }
+
+.audio-button {
+  cursor: pointer;
+  background-image: url(work/models/memorica/recursos/img/500anos/sound-on.svg);
+  background-repeat: no-repeat;
+}
+
+.audio-button:hover {
+  background-image: url(work/models/memorica/recursos/img/500anos/sound-off.svg);
+}
+
+.playpause {
+  cursor: pointer;
+}
+
+.playpause:hover p {
+  color: #715e50 !important;
+}
+
+.playpause:hover .bocina {
+  background-image: url(work/models/memorica/recursos/img/500anos/bocina-on.svg);
+}
+
+.playpause:hover .coso {
+  background-image: url(work/models/memorica/recursos/img/500anos/coso-on.svg);
+}
+
+.playpause p {
+  font-family: "Raleway-Bold";
+  margin: 10px 0;
+  color: #13182c;
+}
+
+.bocina {
+  cursor: pointer;
+  background-image: url(work/models/memorica/recursos/img/500anos/bocina-off.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.coso {
+  cursor: pointer;
+  background-image: url(work/models/memorica/recursos/img/500anos/coso-off.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
 
 /* ----------------------- MEDIA QUERIES ----------------------- */
 /* Extra, extra large devices */
@@ -1513,7 +1581,7 @@ td {
   }
 
   body#hechos {
-    width: 2500vw;
+    width: 2400vw;
   }
 
   #content {
@@ -1529,34 +1597,62 @@ td {
   }
 
   .slide {
-    margin-right: 370px;
+    margin-right: 220px;
+  }
+
+  .margen-1 {
+    margin-right: 280px;
+  }
+
+  .margen-2 {
+    margin-right: 180px;
+  }
+
+  .margen-3 {
+    margin-right: 280px;
+  }
+
+  .margen-4 {
+    margin-right: 310px;
+  }
+
+  .margen-5 {
+    margin-right: 310px;
+  }
+
+  .margen-6 {
+    margin-right: 310px;
+  }
+
+  .margen-7 {
+    margin-right: 350px;
   }
 
   #portadilla h1 {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 
   #portadilla img {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
   }
 
   #portadilla .pleca {
-    width: 350px;
-    height: 10px;
+    width: 280px;
+    height: 5px;
     margin-top: 0;
   }
 
   .slide h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .slide a {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 
   .slide p {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
 
   .slide .icon {
@@ -1573,7 +1669,8 @@ td {
   }
 
   img.imgone {
-    height: 300px;
+    height: 270px;
+    width: 270px;
   }
 
   img.imgtwo {
@@ -1593,6 +1690,6 @@ td {
    }
 
    p.special {
-     font-size: 10px !important;
+     font-size: 11.2px !important;
    }
 }

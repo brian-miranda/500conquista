@@ -470,14 +470,12 @@
                     <td class="col border-dark border-bottom"><div class="minipleca minipleca-dark"></div></td>
                   </tr>
                   <tr class="d-flex">
-                    <td class="col first-col border-dark border-right border-bottom"><div class="minipleca minipleca-light"></div><strong>Cartas de Relación</strong> <br> Hernán Cortés</th>
-                    <td class="col border-dark border-right border-bottom"><div class="minipleca minipleca-dark"></div></td>
-                    <td class="col border-dark border-right border-bottom"><div class="minipleca minipleca-light"></div></td>
-                    <td class="col border-dark border-right border-bottom"><div class="minipleca minipleca-dark"></div></td>
-                    <td class="col border-dark border-right border-bottom"><div class="minipleca minipleca-light"></div></td>
-                    <td class="col border-dark border-right border-bottom"><div class="minipleca minipleca-light"></div></td>
-                    <td class="col border-dark border-right border-bottom"><div class="minipleca minipleca-light"></div></td>
-                    <td class="col border-dark border-bottom"><div class="minipleca minipleca-dark"></div></td>
+                    <td class="col-2 first-col border-dark border-right"><div class="minipleca minipleca-light"></div><strong>Cartas de Relación</strong> <br> Hernán Cortés</th>
+                    <td class="col-2 border-dark border-right"><div class="minipleca minipleca-dark"></div>La empresa conquistadora avanza tierra adentro y, conforme ingresan al territorito tlaxcalteca, son atacados por los indígenas.</td>
+                    <td class="col-2 border-dark border-right"><div class="minipleca minipleca-light"></div>Las batallas son continuas y muy aguerridas, sin embargo, las cifras de tlaxcaltecas que menciona Cortés son exageradas. Las constantes batallas generan varios daños y pérdidas a ambos bandos.</td>
+                    <td class="col-2 border-dark border-right"><div class="minipleca minipleca-dark"></div>Cortés y sus huestes se refugian sobre en un cerro, en donde al parecer exista una estructura prehispánica, y ahí crean un pequeño emplazamiento estratégico para observar los ataques. Las batallas son contantes, tanto de día como de noche. Pasados unos días, un noble tlaxcalteca de nombre Xicotencatl se reúne con Cortés para entablar una unión, misma que, según Cortés, resulta fructífera ya que Xicotencatl le pide perdón y le solicitó ser vasallo del Rey.</td>
+                    <td class="col-2 border-dark border-right"><div class="minipleca minipleca-light"></div>Cortés y sus huestes entran a la ciudad de Tlaxcala, él queda asombrado por su tamaño y su arquitectura, realiza una descripción del mercado de Tlaxcala y de los objetos que se adquieren en él.</td>
+                    <td class="col-2"><div class="minipleca minipleca-dark"></div>Pese a que Marina era su principal traductora, el relato de Cortés la omite y se coloca a el mismo como el principal mediador y orador con los indígenas.</td>
                   </tr>
                 </tbody>
               </table>
@@ -543,6 +541,64 @@
       </div>
     </div>
 
+    <!-- Modales de audios -->
+
+    <div class="modal fade" id="audio1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body pt-0">
+            <div class="d-flex flex-wrap justify-content-around">
+              <a class="playpause" class="p-2 d-flex flex-column justify-content-center" onClick="document.getElementById('esp01').play()">
+                <audio id="esp01" src="work/models/memorica/recursos/img/500anos/audio/example.mp3"></audio>
+                <div class="coso" alt="">
+                  <br>
+                </div>
+                <p>Español</p>
+                <div class="bocina" alt="">
+                  <br>
+                </div>
+              </a>
+              <a class="playpause" class="p-2 d-flex flex-column justify-content-center" onClick="document.getElementById('esp02').play()">
+                <audio id="esp02" src="work/models/memorica/recursos/img/500anos/audio/example.mp3"></audio>
+                <div class="coso" alt="">
+                  <br>
+                </div>
+                <p>Náhuatl</p>
+                <div class="bocina" alt="">
+                  <br>
+                </div>
+              </a>
+              <a class="playpause" class="p-2 d-flex flex-column justify-content-center" onClick="document.getElementById('esp03').play()">
+                <audio id="esp03" src="work/models/memorica/recursos/img/500anos/audio/example.mp3"></audio>
+                <div class="coso" alt="">
+                  <br>
+                </div>
+                <p>Mixteco</p>
+                <div class="bocina" alt="">
+                  <br>
+                </div>
+              </a>
+              <a class="playpause" class="p-2 d-flex flex-column justify-content-center" onClick="document.getElementById('esp04').play()">
+                <audio id="esp04" src="work/models/memorica/recursos/img/500anos/audio/example.mp3"></audio>
+                <div class="coso" alt="">
+                  <br>
+                </div>
+                <p>Chontal</p>
+                <div class="bocina" alt="">
+                  <br>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!--PORTADILLA-->
     <div class="slide one" style="margin-right: 0px;">
       <div id="portadilla" class="container-fluid">
@@ -563,10 +619,13 @@
       <div class="container-fluid splash">
         <div class="splash d-flex flex-row align-items-center">
 
-          <div id="item-1" class="col-9 col-sm-6 px-1 px-sm-5">
-            <h2>Los<br> conquistadores<br> a Cozumel<br> y alrededores</h2>
-            <a href="#" data-toggle="modal" data-target="#tabla1" class="show-table d-inline-flex" style="width: 100%;">
+          <div class="col-9 col-sm-6 px-1 px-sm-5">
+            <h2 id="item-1">Los<br> conquistadores<br> a Cozumel<br> y alrededores</h2>
+            <a href="#" data-toggle="modal" data-target="#tabla1" class="show-table d-none d-sm-inline-flex" style="width: 100%;">
               <img src="work/models/memorica/recursos/img/500anos/tableicon.svg" style="max-height: 30px;" alt="" class="mr-3">Ver tabla comparativa
+            </a>
+            <a href="work/models/memorica/recursos/img/500anos/TABLA_HECHOS.pdf" class="show-table d-inline-flex d-sm-none" style="width: 100%;">
+              <img src="work/models/memorica/recursos/img/500anos/tableicon.svg" style="max-height: 30px;" alt="" class="mr-3">Descargar tabla comparativa (573kb)
             </a>
           </div>
 
@@ -576,7 +635,9 @@
                 <svg width="5" height="450" class="pleca-vertical">
                   <rect width="5" height="450" style="fill:#715e50;" />
                 </svg>
-                <img src="work/models/memorica/recursos/img/500anos/sound-on.svg" alt="" class="mt-3">
+                <a type="" class="audio-button mt-3" data-toggle="modal" data-target="#audio1">
+                  <br>
+                </a>
               </div>
               <div class="col-10 col-sm-11">
                 <p>“En este medio tiempo supo el capitán que unos españoles estaban siete años había cautivos en el Yucatán, en poder de ciertos caciques, los cuales se habían perdido en una carabela que dio al través en los bajos de Jamaica, la cual venía de Tierra Firma, y que ellos se escaparon en una barca de aquella carabela saliendo a aquella tierra, y desde entonces los tenían allí cautivos y presos los indios; y también traía aviso de ello el dicho capitán Fernando Cortés, cuando partió de la dicha isla Fernandina para saber de estos Españoles y como aquí supo nuevas de ellos y la tierra donde estaba […]”</p>
@@ -589,7 +650,7 @@
       </div>
     </div>
 
-    <div class="slide three">
+    <div class="slide three margen-1">
       <div class="container-fluid splash">
         <div class="splash d-flex flex-row align-items-center">
 
@@ -628,7 +689,7 @@
     </div>
 
     <!--SEGUNDO HECHO-->
-    <div class="slide four">
+    <div class="slide four margen-2">
       <div class="container-fluid splash">
         <div class="splash d-flex flex-row align-items-center">
 
@@ -636,8 +697,8 @@
             <img src="work/models/memorica/recursos/img/500anos/hechos1.png" alt="" class="imgone">
           </div>
 
-          <div id="item-2" class="col-9 col-sm-6 px-1 px-sm-5 d-flex flex-column align-items-start">
-            <h2>Batalla<br> de Tlaxcala</h2>
+          <div class="col-9 col-sm-6 px-1 px-sm-5 d-flex flex-column align-items-start">
+            <h2 id="item-2">Batalla<br> de Tlaxcala</h2>
             <a href="#" data-toggle="modal" data-target="#tabla2" class="show-table d-inline-flex" style="width: 100%;">
               <img src="work/models/memorica/recursos/img/500anos/tableicon.svg" style="max-height: 30px;" alt="" class="mr-3">Ver tabla comparativa
             </a>
@@ -648,7 +709,7 @@
       </div>
     </div>
 
-    <div class="slide one">
+    <div class="slide one margen-3">
       <div class="container-fluid splash">
         <div class="splash d-flex flex-row align-items-center">
 
@@ -686,7 +747,7 @@
       </div>
     </div>
 
-    <div class="slide two">
+    <div class="slide two margen-4">
       <div class="container-fluid splash">
         <div class="splash d-flex flex-row align-items-center">
 
@@ -718,10 +779,10 @@
       <div class="container-fluid splash">
         <div class="splash d-flex flex-row align-items-center">
 
-          <div id="item-3" class="col-10 col-sm-6 px-1 px-sm-5 d-flex flex-column align-items-start">
+          <div class="col-12 col-sm-6 px-1 px-sm-5 d-flex flex-column align-items-start">
             <img class="icon" type="image/svg+xml" src="work/models/memorica/recursos/img/500anos/hechos-circ-azul.svg" style="height: 100px; margin-bottom: 100px;">
-            <h2>Matanza de<br> Cholula</h2>
-            <a href="work/models/memorica/recursos/img/500anos/TABLA_HECHOS.pdf"  class="show-table d-inline-flex" style="width: 100%;">
+            <h2 id="item-3">Matanza de<br> Cholula</h2>
+            <a href="#" data-toggle="modal" data-target="#tabla3" class="show-table d-inline-flex" style="width: 100%;">
               <img src="work/models/memorica/recursos/img/500anos/tableicon.svg" style="max-height: 30px;" alt="" class="mr-3">Ver tabla comparativa
             </a>
           </div>
@@ -758,10 +819,9 @@
     </div>
 
     <!--TERCER HECHO MOVIL-->
-    <div class="slide three d-block d-sm-none" style="margin-right: 500px;">
+    <div class="slide three d-block d-sm-none" style="margin-right: 520px;">
       <div class="container-fluid splash">
         <div class="splash d-flex flex-row align-items-center flex-nowrap">
-
           <div id="item-3" class="col-10 col-sm-6 px-1 px-sm-5 d-flex flex-column align-items-start">
             <img class="icon" type="image/svg+xml" src="work/models/memorica/recursos/img/500anos/hechos-circ-azul.svg" style="height: 100px; margin-bottom: 100px;">
             <h2>Matanza de<br> Cholula</h2>
@@ -769,7 +829,6 @@
               <img src="work/models/memorica/recursos/img/500anos/tableicon.svg" style="max-height: 30px;" alt="" class="mr-3">Ver tabla comparativa
             </a>
           </div>
-
           <div class="col-12 col-sm-6 px-1 px-sm-5 d-flex flex-row flex-nowrap">
             <div class="row align-items-center py-0 py-sm-3">
               <div class="col-2 col-sm-1 d-flex flex-column">
@@ -779,12 +838,11 @@
                 <img src="work/models/memorica/recursos/img/500anos/sound-on.svg" alt="" class="mt-3">
               </div>
               <div class="col-10 col-sm-11">
-                <p class="special">“Esta ciudad es muy fértil de labranza porque tiene mucha tierra y se riega la más parte de ella, y aun es la ciudad más hermosa de fuera que hay en España, porque es muy torreada y llana, y certifico a vuestra alteza que yo conté desde una mezquita cuatrocientos treinta y tantas torres en la dicha ciudad, y todas son de mezquitas”</p>
+                <p class="special">"Esta ciudad es muy fértil de labranza porque tiene mucha tierra y se riega la más parte de ella, y aun es la ciudad más hermosa de fuera que hay en España, porque es muy torreada y llana, y certifico a vuestra alteza que yo conté desde una mezquita cuatrocientos treinta y tantas torres en la dicha ciudad, y todas son de mezquitas"</p>
                 <p class="special"><small>Hernán Cortés, Cartas de Relación, Nota preliminar de Manuel Alcalá, México,<br>Editorial Porrúa, 2013, p. 56. </small></p>
               </div>
             </div>
           </div>
-
           <div class="col-12 col-sm-6 px-1 px-sm-5 d-flex flex-row flex-nowrap">
             <div class="row align-items-center py-1 py-sm-3">
               <div class="col-2 col-sm-1 d-flex flex-column">
@@ -794,12 +852,11 @@
                 <img src="work/models/memorica/recursos/img/500anos/sound-on.svg" alt="" class="mt-3">
               </div>
               <div class="col-10 col-sm-11">
-                <p class="special">“Y una india vieja, mujer de un cacique, como sabía el concierto y trama que tenían ordenado, vino secretamente a doña Marina, nuestra lengua; como lo vio moza y de buen parecer y rica, le dijo y aconsejó que se fue con ella [a] su casa si quería escapar la vida, porque ciertamente aquella noche y otro día nos habían de matar a todos, porque ya estaba así mandado y concertado con Montezuma, para que entre los de aquella ciudad y los mexicanos se juntasen y no quedase ninguno de nosotros a vida, y nos llevasen atados […]”</p>
+                <p class="special">"Y una india vieja, mujer de un cacique, como sabía el concierto y trama que tenían ordenado, vino secretamente a doña Marina, nuestra lengua; como lo vio moza y de buen parecer y rica, le dijo y aconsejó que se fue con ella [a] su casa si quería escapar la vida, porque ciertamente aquella noche y otro día nos habían de matar a todos, porque ya estaba así mandado y concertado con Montezuma, para que entre los de aquella ciudad y los mexicanos se juntasen y no quedase ninguno de nosotros a vida, y nos llevasen atados […]"</p>
                 <p class="special"><small>Bernal Díaz del Castillo, Historia Verdadera de la conquista de la Nueva España, Introducción y notas de Joaquín Ramírez Cabañas, México, Editorial Porrúa, 2017, p. 41.</small></p>
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
@@ -833,12 +890,12 @@
     </div>
 
     <!--CUARTO HECHO-->
-    <div class="slide one">
+    <div class="slide one margen-5">
       <div class="container-fluid splash">
         <div class="splash d-flex flex-row align-items-center">
 
-          <div id="item-4" class="col-12 col-sm-6 px-1 px-sm-5 d-flex flex-column align-items-start">
-            <h2>Estancia de los<br> Castellanos en<br> Tenochtitlan</h2>
+          <div class="col-12 col-sm-6 px-1 px-sm-5 d-flex flex-column align-items-start">
+            <h2 id="item-4">Estancia de los<br> Castellanos en<br> Tenochtitlan</h2>
             <a href="#" data-toggle="modal" data-target="#tabla4" class="show-table d-inline-flex" style="width: 100%;">
               <img src="work/models/memorica/recursos/img/500anos/tableicon.svg" style="max-height: 30px;" alt="" class="mr-3">Ver tabla comparativa
             </a>
@@ -863,7 +920,7 @@
       </div>
     </div>
 
-    <div class="slide two">
+    <div class="slide two margen-6">
       <div class="container-fluid splash">
         <div class="splash d-flex flex-row align-items-center">
 
@@ -876,14 +933,14 @@
                 <img src="work/models/memorica/recursos/img/500anos/sound-on.svg" alt="" class="mt-3">
               </div>
               <div class="col-10 col-sm-11">
-                <p>“Desque se hubieron aposentado los españoles, y corcertado todo su repuesto, y repusado, comenzaron a preguntar a Motecuzoma por el tesoro real, para que dixese dónde estaba. Y él los llevó a una sala que se llama teucalco, donde tenían todos los plumajes ricos y otras joyas muchas de pluma, y de oro y de piedras. Y luego los sacaron delante dellos. Comenzaron los españoles a quitar el oro de los plumajes y de las rodelas y de los otros atavíos del areito que allí estaban, y por quitar el oro destruyeron todos los plumajes y joyas ricas. Y el oro fundiéronlo y hicieron barretas, Y las piedras que les parecieron bien, tomáronlas. Y las piedras baxas y plumajes, todo lo tomaron los indios de Tlaxcalla. Y escudriñaron los españoles toda la casa real. Y tomaron todo lo que les pareció bien”.</p>
-                <p><small>Bernardino de Sahagún, Historia General de las Cosas de Nueva España, vol.3, 3ª edición, estudio introductorio,<br>paleografía, glosario y notas de Alfredo López Austin y Josefina García Quintana, México,<br>Consejo Nacional para la Cultura y las Artes, 2000, p. 1191. (Cien de México)</small></p>
+                <p class="special">“Desque se hubieron aposentado los españoles, y corcertado todo su repuesto, y repusado, comenzaron a preguntar a Motecuzoma por el tesoro real, para que dixese dónde estaba. Y él los llevó a una sala que se llama teucalco, donde tenían todos los plumajes ricos y otras joyas muchas de pluma, y de oro y de piedras. Y luego los sacaron delante dellos. Comenzaron los españoles a quitar el oro de los plumajes y de las rodelas y de los otros atavíos del areito que allí estaban, y por quitar el oro destruyeron todos los plumajes y joyas ricas. Y el oro fundiéronlo y hicieron barretas, Y las piedras que les parecieron bien, tomáronlas. Y las piedras baxas y plumajes, todo lo tomaron los indios de Tlaxcalla. Y escudriñaron los españoles toda la casa real. Y tomaron todo lo que les pareció bien”.</p>
+                <p class="special"><small>Bernardino de Sahagún, Historia General de las Cosas de Nueva España, vol.3, 3ª edición, estudio introductorio, paleografía, glosario y notas de Alfredo López Austin y Josefina García Quintana, México, Consejo Nacional para la Cultura y las Artes, 2000, p. 1191. (Cien de México)</small></p>
               </div>
             </div>
           </div>
 
           <div class="col-12 col-sm-6 px-1 px-sm-5">
-            <img class="icon" type="image/svg+xml" src="work/models/memorica/recursos/img/500anos/hechos-circ-azul.svg" style="height: 100px; margin-bottom: 100px;">
+            <img class="icon d-none d-sm-inline" type="image/svg+xml" src="work/models/memorica/recursos/img/500anos/hechos-circ-azul.svg" style="height: 100px; margin-bottom: 100px;">
             <div class="row align-items-end">
               <div class="col-2 col-sm-1 d-flex flex-column">
                 <svg width="5" height="350" class="pleca-vertical">
@@ -903,7 +960,7 @@
     </div>
 
     <!--QUINTO HECHO-->
-    <div class="slide three" style="">
+    <div class="slide three margen-7" style="">
       <div class="container-fluid splash">
         <div class="splash d-flex flex-row align-items-center">
 
@@ -919,8 +976,8 @@
       <div class="container-fluid splash">
         <div class="splash d-flex flex-row align-items-center">
 
-          <div id="item-5" class="col-12 col-sm-5 px-1 px-sm-5 d-flex flex-column align-items-start">
-            <h2>La noche<br> triste</h2>
+          <div class="col-10 col-sm-5 px-1 px-sm-5 d-flex flex-column align-items-start">
+            <h2 id="item-5">La noche<br> triste</h2>
             <a href="#" data-toggle="modal" data-target="#tabla5" class="show-table d-inline-flex" style="width: 100%;">
               <img src="work/models/memorica/recursos/img/500anos/tableicon.svg" style="max-height: 30px;" alt="" class="mr-3">Ver tabla comparativa
             </a>
@@ -1061,21 +1118,20 @@
       });
 
       // smooth scroll
-      $("a").on('click', function(event) {
-        if (this.hash !== "") {
-          event.preventDefault();
-          var hash = this.hash;
-
-          $('html, body').animate({
-            scrollTop: $(hash).offset().top
-          }, 800, function() {
-            window.location.hash = hash;
-          });
-        }
-      });
+      // $("a").on('click', function(event) {
+      //   if (this.hash !== "") {
+      //     event.preventDefault();
+      //     var hash = this.hash;
+      //
+      //     $('html, body').animate({
+      //       scrollTop: $(hash).offset().top
+      //     }, 800, function() {
+      //       window.location.hash = hash;
+      //     });
+      //   }
+      // });
 
       // vertical scrollspy
-
       ! function($) {
 
         "use strict"
