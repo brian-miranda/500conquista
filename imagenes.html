@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>imagenesss</title>
+
+    <link rel="icon" type="image/ico" href="work/models/memorica/recursos/img/favicon/favicon.ico"/>
+    <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- reserved for styles, don't forget to remove the / from the thing -->
+    <link href="expo_style.css" type="text/css" rel="stylesheet">
+
+    <!-- <RESOURCE TYPE="JSPEditor" STYPE="OpenGraphTags" />
+    <meta property="og:image" content="work/models/memorica/recursos/img/miniatura_500anos.jpg">
+    <meta property="og:image:type" content="image/svg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="1024">
+    <meta name="twitter:image:src" content="https://memoricamexico.gob.mxwork/models/memorica/recursos/img/miniatura_500anos.jpg"> -->
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="dark">
+      <nav class="navbar fixed-top">
+        <a class="navbar-brand" href="https://memoricamexico.gob.mx/es/memorica/Exposiciones">
+          <img type="image/svg+xml" src="work/models/memorica/recursos/img/500anos/logui-dark.svg" alt="" class="logo" width="50px" height="50px">
+        </a>
+        <img class="tit-imagenes d-none d-sm-block" src="work/models/memorica/recursos/img/500anos/tit-imagenes.png" alt="">
+        <a href="" data-toggle="modal" data-target="#modalbotonescompartir" title="Compartir" class="share">
+          <img type="image/svg+xml" alt="Compartir en redes sociales" src="work/models/memorica/recursos/img/500anos/share-dark.svg" title="Compartir en redes Sociales" width="35px" height="35px">
+        </a>
+        <a href="" class="down">
+          <img type="image/svg+xml" alt="Descargar guía didactica" src="work/models/memorica/recursos/img/500anos/down-dark.svg" title="Descargar guía didactica" width="35px" height="100%">
+        </a>
+      </nav>
+    </header>
+    <div class="button_container" id="toggle">
+      <span class="top dark"></span>
+      <span class="middle dark"></span>
+      <span class="bottom dark"></span>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay">
+      <nav class="overlay-menu">
+        <ul>
+          <li><a class="go" href="index2.html">Inicio</a></li>
+          <li><a class="go" href="textos.html">Textos</a></li>
+          <li><a class="go" href="hechos.html">Hechos</a></li>
+          <li><a class="go" href="/{user@getLanguage}/{topic@getWebSiteId}/500imagenes">Imágenes</a></li>
+          <li><a class="go" href="/{user@getLanguage}/{topic@getWebSiteId}/500interpretes">Somos intérpretes</a></li>
+          <li><a class="go" href="/{user@getLanguage}/{topic@getWebSiteId}/500infos">Info</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="modal fade" id="modalbotonescompartir" tabindex="-1" role="dialog" aria-labelledby="modalbotonescompartir" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5>Compartir</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body d-flex justify-content-around">
+            <RESOURCE TYPE="JSPEditor" STYPE="FBShareButton" />
+            <RESOURCE TYPE="JSPEditor" STYPE="TWShareButton" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Inicia Contenido -->
+    <div id="cover-album" class="container-fluid">
+      <div class="splash col-sm-12 d-flex flex-column align-items-center justify-content-center">
+        <div class="album py-5 bg-light">
+          <div class="container">
+
+            <div class="row justify-content-center align-items-center" style=" height:100%;">
+              <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                  <div class="card-header">
+                    <h5 class="card-title">Batalla de Tlaxcala</h5>
+                  </div>
+                  <img src="work/models/memorica/recursos/img/500anos/album_01.jpg" alt="">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                  <div class="card-header">
+                    <h5 class="card-title">Matanza de Choula</h5>
+                  </div>
+                  <img src="work/models/memorica/recursos/img/500anos/album_02.jpg" alt="">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                  <div class="card-header">
+                    <h5 class="card-title">Estancia de los castellanos en Tenochtitlan</h5>
+                  </div>
+                  <img src="work/models/memorica/recursos/img/500anos/album_03.jpg" alt="">
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                  <div class="card-header">
+                    <h5 class="card-title">Noche Triste</h5>
+                  </div>
+                  <img src="work/models/memorica/recursos/img/500anos/album_04.jpg" alt="">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                  <div class="card-header">
+                    <h5 class="card-title">Obras de la Conquista</h5>
+                  </div>
+                  <img src="work/models/memorica/recursos/img/500anos/album_05.jpg" alt="">
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <a href="#start" class="scroll d-flex animated bounce">
+          <img src="work/models/memorica/recursos/img/500anos/scroll-down.svg" alt="" width="40px" height="40px" style="height: 40px;">
+        </a>
+      </div>
+    </div>
+
+    <!-- primer galeria -->
+    <div id="album01" class="album py-5 bg-light">
+      <div class="container">
+        <h1>plan de ayala plan de ayala</h1>
+        <h2>plan de ayala</h2>
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><rect width="100%" height="100%" fill="#55595c"></rect></svg>
+              <div class="card-body">
+                <h6 class="card-title">Titulo</h6>
+                <p class="card-text">subtitulo</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><rect width="100%" height="100%" fill="#55595c"></rect></svg>
+              <div class="card-body">
+                <h6 class="card-title">Titulo</h6>
+                <p class="card-text">subtitulo</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><rect width="100%" height="100%" fill="#55595c"></rect></svg>
+              <div class="card-body">
+                <h6 class="card-title">Titulo</h6>
+                <p class="card-text">subtitulo</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><rect width="100%" height="100%" fill="#55595c"></rect></svg>
+              <div class="card-body">
+                <h6 class="card-title">Titulo</h6>
+                <p class="card-text">subtitulo</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><rect width="100%" height="100%" fill="#55595c"></rect></svg>
+              <div class="card-body">
+                <h6 class="card-title">Titulo</h6>
+                <p class="card-text">subtitulo</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><rect width="100%" height="100%" fill="#55595c"></rect></svg>
+              <div class="card-body">
+                <h6 class="card-title">Titulo</h6>
+                <p class="card-text">subtitulo</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><rect width="100%" height="100%" fill="#55595c"></rect></svg>
+              <div class="card-body">
+                <h6 class="card-title">Titulo</h6>
+                <p class="card-text">subtitulo</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><rect width="100%" height="100%" fill="#55595c"></rect></svg>
+              <div class="card-body">
+                <h6 class="card-title">Titulo</h6>
+                <p class="card-text">subtitulo</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><rect width="100%" height="100%" fill="#55595c"></rect></svg>
+              <div class="card-body">
+                <h6 class="card-title">Titulo</h6>
+                <p class="card-text">subtitulo</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

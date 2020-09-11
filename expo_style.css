@@ -1091,8 +1091,24 @@ td {
   background-repeat: no-repeat;
 }
 
+/* ----------------------- SALA LOS IMAGENES ----------------------- */
+.tit-imagenes {
+  height: 45px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0)
+}
 
+#cover-album {
+  background-color: #faf9f8;
+  height: 100%;
+  width: 100%;
+}
 
+.album {
+  height: 100%;
+  margin-top: 81px;
+}
 
 /* ----------------------- MEDIA QUERIES ----------------------- */
 /* Extra, extra large devices */
