@@ -916,6 +916,13 @@ body#hechos {
   text-align: left;
 }
 
+.slide h3 {
+  font-family: "IMFellEnglishSC_Regular";
+  font-size: 2rem;
+  color: #715E51;
+  text-align: left;
+}
+
 .pleca-vertical {
   margin: 0 auto;
   width: 7;
@@ -1661,6 +1668,10 @@ td {
 
   .slide h2 {
     font-size: 1.5rem;
+  }
+
+  .slide h3 {
+    font-size: .9rem;
   }
 
   .slide a {
