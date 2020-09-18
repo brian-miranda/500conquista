@@ -17,6 +17,11 @@
     <meta property="og:image:width" content="1024">
     <meta property="og:image:height" content="1024">
     <meta name="twitter:image:src" content="https://memoricamexico.gob.mxwork/models/memorica/recursos/img/miniatura_500anos.jpg"> -->
+    <style type="text/css">
+    .modal-dialog {width:600px;}
+    .thumbnail {margin-bottom:6px;}
+    a {cursor: pointer;}
+    </style>
   </head>
 
   <body>
@@ -73,9 +78,28 @@
     </div>
 
     <!-- Inicia Contenido -->
-    <div id="cover-album" class="container-fluid">
-      <div class="splash col-sm-12 d-flex flex-column align-items-center justify-content-center">
-        <div class="album py-5 bg-light">
+    <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">Heading</h3>
+            <button type="button" class="close" data-dismiss="modal">×</button>
+          </div>
+          <div class="modal-body">
+
+          </div>
+          <div class="modal-footer">
+            <button id="prev-btn" class="btn btn-warning">Prev</button>
+            <button id="next-btn" class="btn btn-primary">Next</button>
+            <button class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="cover-album" class="album container-fluid">
+      <div class="splash col-sm-12 d-flex flex-column align-items-center justify-content-start">
+        <div class="py-5 bg-light">
           <div class="container">
 
             <div class="row justify-content-center align-items-center" style=" height:100%;">
@@ -86,6 +110,7 @@
                   </div>
                   <img src="work/models/memorica/recursos/img/500anos/album_01.jpg" alt="">
                 </div>
+                <a class="stretched-link" href="#album01"></a>
               </div>
               <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
@@ -94,6 +119,7 @@
                   </div>
                   <img src="work/models/memorica/recursos/img/500anos/album_02.jpg" alt="">
                 </div>
+                <a class="stretched-link" href="#album02"></a>
               </div>
               <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
@@ -124,14 +150,14 @@
             </div>
           </div>
         </div>
-        <a href="#start" class="scroll d-flex animated bounce">
+        <a href="#album01" class="scroll d-flex animated bounce">
           <img src="work/models/memorica/recursos/img/500anos/scroll-down.svg" alt="" width="40px" height="40px" style="height: 40px;">
         </a>
       </div>
     </div>
 
     <!-- primer galeria -->
-    <div id="album01" class="album py-5 bg-light">
+    <div id="album01" class="album my-5 bg-light">
       <div class="container">
         <h1>plan de ayala plan de ayala</h1>
         <h2>plan de ayala</h2>
@@ -139,91 +165,298 @@
         <div class="row">
           <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><rect width="100%" height="100%" fill="#55595c"></rect></svg>
+              <img src="//placehold.it/600x350" class="thumbnail img-fluid">
               <div class="card-body">
                 <h6 class="card-title">Titulo</h6>
                 <p class="card-text">subtitulo</p>
               </div>
             </div>
+            <a class="stretched-link thumbnail" title="Image 1"></a>
           </div>
           <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><rect width="100%" height="100%" fill="#55595c"></rect></svg>
+              <img src="//placehold.it/600x350/2255EE" class="thumbnail img-fluid">
               <div class="card-body">
                 <h6 class="card-title">Titulo</h6>
                 <p class="card-text">subtitulo</p>
               </div>
             </div>
+            <a class="stretched-link thumbnail" title="Image 2"></a>
           </div>
           <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><rect width="100%" height="100%" fill="#55595c"></rect></svg>
+              <img src="//placehold.it/600x350/449955/FFF" class="thumbnail img-fluid">
               <div class="card-body">
                 <h6 class="card-title">Titulo</h6>
                 <p class="card-text">subtitulo</p>
               </div>
             </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><rect width="100%" height="100%" fill="#55595c"></rect></svg>
-              <div class="card-body">
-                <h6 class="card-title">Titulo</h6>
-                <p class="card-text">subtitulo</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><rect width="100%" height="100%" fill="#55595c"></rect></svg>
-              <div class="card-body">
-                <h6 class="card-title">Titulo</h6>
-                <p class="card-text">subtitulo</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><rect width="100%" height="100%" fill="#55595c"></rect></svg>
-              <div class="card-body">
-                <h6 class="card-title">Titulo</h6>
-                <p class="card-text">subtitulo</p>
-              </div>
-            </div>
+            <a class="stretched-link thumbnail" title="Image 3"></a>
           </div>
 
           <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><rect width="100%" height="100%" fill="#55595c"></rect></svg>
+              <img src="//placehold.it/600x350/992233" class="thumbnail img-fluid">
               <div class="card-body">
                 <h6 class="card-title">Titulo</h6>
                 <p class="card-text">subtitulo</p>
               </div>
             </div>
+            <a class="stretched-link thumbnail" title="Image 4"></a>
           </div>
           <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><rect width="100%" height="100%" fill="#55595c"></rect></svg>
+              <img src="//placehold.it/600x350/2255EE" class="thumbnail img-fluid">
               <div class="card-body">
                 <h6 class="card-title">Titulo</h6>
                 <p class="card-text">subtitulo</p>
               </div>
             </div>
+            <a class="stretched-link thumbnail" title="Image 5"></a>
           </div>
           <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><rect width="100%" height="100%" fill="#55595c"></rect></svg>
+              <img src="//placehold.it/600x350/449955/FFF" class="thumbnail img-fluid">
               <div class="card-body">
                 <h6 class="card-title">Titulo</h6>
                 <p class="card-text">subtitulo</p>
               </div>
             </div>
+            <a class="stretched-link thumbnail" title="Image 6"></a>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img src="//placehold.it/600x350/777" class="thumbnail img-fluid">
+              <div class="card-body">
+                <h6 class="card-title">Titulo</h6>
+                <p class="card-text">subtitulo</p>
+              </div>
+            </div>
+            <a class="stretched-link thumbnail" title="Image 7"></a>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img src="//placehold.it/600x350/992233" class="thumbnail img-fluid">
+              <div class="card-body">
+                <h6 class="card-title">Titulo</h6>
+                <p class="card-text">subtitulo</p>
+              </div>
+            </div>
+            <a class="stretched-link thumbnail" title="Image 8"></a>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img src="//placehold.it/600x350/EEE" class="thumbnail img-fluid">
+              <div class="card-body">
+                <h6 class="card-title">Titulo</h6>
+                <p class="card-text">subtitulo</p>
+              </div>
+            </div>
+            <a class="stretched-link thumbnail" href="#" title="Image 9"></a>
           </div>
 
         </div>
       </div>
     </div>
 
+    <!-- ejemplo -->
+    <div id="album02" class="album my-5 bg-light">
+      <div class="container">
+        <div id="img-container" class="row">
+          <h1>holi holi</h1>
+          <div class="row">
+            <div class="col-sm-4 col-6">
+              <a title="Image 1">
+                <img src="//placehold.it/600x350" class="thumbnail img-fluid">
+              </a>
+            </div>
+            <div class="col-sm-4 col-6">
+              <a title="Image 2">
+                <img src="//placehold.it/600x350/2255EE" class="thumbnail img-fluid">
+              </a>
+            </div>
+            <div class="col-sm-4 col-6">
+              <a title="Image 3">
+                <img src="//placehold.it/600x350/449955/FFF" class="thumbnail img-fluid">
+              </a>
+            </div>
+            <div class="col-sm-4 col-6">
+              <a title="Image 4">
+                <img src="//placehold.it/600x350/992233" class="thumbnail img-fluid">
+              </a>
+            </div>
+            <div class="col-sm-4 col-6">
+              <a title="Image 5">
+                <img src="//placehold.it/600x350/2255EE" class="thumbnail img-fluid">
+              </a>
+            </div>
+            <div class="col-sm-4 col-6">
+              <a title="Image 6">
+                <img src="//placehold.it/600x350/449955/FFF" class="thumbnail img-fluid">
+              </a>
+            </div>
+            <div class="col-sm-4 col-6">
+              <a title="Image 7">
+                <img src="//placehold.it/600x350/777" class="thumbnail img-fluid">
+              </a>
+            </div>
+            <div class="col-sm-4 col-6">
+              <a title="Image 8">
+                <img src="//placehold.it/600x350/992233" class="thumbnail img-fluid">
+              </a>
+            </div>
+            <div class="col-sm-4 col-6">
+              <a title="Image 9">
+                <img src="//placehold.it/600x350/EEE" class="thumbnail img-fluid">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ejemplo 2 -->
+    <div class="container-fluid">
+      <div class="row" id="profile-grid">
+
+        <div class="col-sm-4 col-xs-12 profile">
+          <div class="panel panel-default">
+            <div class="panel-thumbnail">
+              <a title="Image 1" class="thumb">
+                <img src="//dummyimage.com/900x350.png/c0c0c0&amp;text=image0x201" class="img-responsive img-rounded" data-toggle="modal" data-target=".modal-profile-lg">
+              </a>
+            </div>
+            <div class="panel-body">
+              <p class="profile-name">Image 1</p>
+              <p>simple description of image 1</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4 col-xs-12 profile">
+          <div class="panel panel-default">
+            <div class="panel-thumbnail">
+              <a title="Image 2" class="thumb">
+                <img src="//dummyimage.com/900x350.png/c0c0c0&amp;text=image0x202" class="img-responsive img-rounded" data-toggle="modal" data-target=".modal-profile-lg">
+              </a>
+            </div>
+            <div class="panel-body">
+              <p class="profile-name">Image 2</p>
+              <p>simple description of image 2</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4 col-xs-12 profile">
+          <div class="panel panel-default">
+            <div class="panel-thumbnail">
+              <a title="Image 3" class="thumb">
+                <img src="//dummyimage.com/900x350.png/c0c0c0&amp;text=image0x203" class="img-responsive img-rounded" data-toggle="modal" data-target=".modal-profile-lg">
+              </a>
+            </div>
+            <div class="panel-body">
+              <p class="profile-name">Image 3</p>
+              <p>simple description of image 3</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4 col-xs-12 profile">
+          <div class="panel panel-default">
+            <div class="panel-thumbnail">
+              <a title="Image 4" class="thumb">
+                <img src="//dummyimage.com/900x350.png/c0c0c0&amp;text=image0x204" class="img-responsive img-rounded" data-toggle="modal" data-target=".modal-profile-lg">
+              </a>
+            </div>
+            <div class="panel-body">
+              <p class="profile-name">Image 4</p>
+              <p>simple description of image 4</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-sm-4 col-xs-12 profile">
+          <div class="panel panel-default">
+            <div class="panel-thumbnail">
+              <a title="Image 5" class="thumb">
+                <img src="//dummyimage.com/900x350.png/c0c0c0&amp;text=image0x205" class="img-responsive img-rounded" data-toggle="modal" data-target=".modal-profile-lg">
+              </a>
+            </div>
+            <div class="panel-body">
+              <p class="profile-name">Image 5</p>
+              <p>simple description of image 5</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-sm-4 col-xs-12 profile">
+          <div class="panel panel-default">
+            <div class="panel-thumbnail">
+              <a title="Image 6" class="thumb">
+                <img src="//dummyimage.com/900x350.png/c0c0c0&amp;text=image0x206" class="img-responsive img-rounded" data-toggle="modal" data-target=".modal-profile-lg">
+              </a>
+            </div>
+            <div class="panel-body">
+              <p class="profile-name">Image 6</p>
+              <p>simple description of image 6</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+      // smooth scroll
+      $("a").on('click', function(event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          var hash = this.hash;
+
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function() {
+            window.location.hash = hash;
+          });
+        }
+      });
+
+      // modal stuff
+      $('.thumbnail').click(function(){
+        $('.modal-body').empty();
+        var title = $(this).parent('a').attr("title");
+        $('.modal-title').html(title);
+        $($(this).parents('div').html()).appendTo('.modal-body');
+        $('#myModal').modal({show:true});
+      });
+
+      $('#next-btn').click(function() {
+        var link = $('.modal-body a');
+        var number = parseInt(link.attr('title').match(/\S+$/));
+        number++;
+        if(number === 10) {
+        number = 1;
+        }
+        $('.modal-body').html($('#img-container').find('a[title="Image ' + number + '"]').parent('div').html());
+        $('.modal-title').text('Image ' + number);
+      });
+      $('#prev-btn').click(function() {
+        var link = $('.modal-body a');
+        var number = parseInt(link.attr('title').match(/\S+$/));
+        number--;
+        if(number === 0) {
+        number = 9;
+        }
+        $('.modal-body').html($('#img-container').find('a[title="Image ' + number + '"]').parent('div').html());
+        $('.modal-title').text('Image ' + number);
+      });
+    </script>
   </body>
 </html>

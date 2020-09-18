@@ -724,55 +724,57 @@
     <!-- Modales de audios -->
 
     <div class="modal fade" id="audio1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header border-0">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body pt-0">
-            <div class="d-flex flex-wrap justify-content-around">
-              <a class="playpause" class="p-2 d-flex flex-column justify-content-center" onClick="document.getElementById('esp01').play()">
-                <audio id="esp01" src="work/models/memorica/recursos/img/500anos/audio/example.mp3"></audio>
-                <div class="coso" alt="">
-                  <br>
-                </div>
-                <p>Español</p>
-                <div class="bocina" alt="">
-                  <br>
-                </div>
-              </a>
-              <a class="playpause" class="p-2 d-flex flex-column justify-content-center" onClick="document.getElementById('esp02').play()">
-                <audio id="esp02" src="work/models/memorica/recursos/img/500anos/audio/example.mp3"></audio>
-                <div class="coso" alt="">
-                  <br>
-                </div>
-                <p>Náhuatl</p>
-                <div class="bocina" alt="">
-                  <br>
-                </div>
-              </a>
-              <a class="playpause" class="p-2 d-flex flex-column justify-content-center" onClick="document.getElementById('esp03').play()">
-                <audio id="esp03" src="work/models/memorica/recursos/img/500anos/audio/example.mp3"></audio>
-                <div class="coso" alt="">
-                  <br>
-                </div>
-                <p>Mixteco</p>
-                <div class="bocina" alt="">
-                  <br>
-                </div>
-              </a>
-              <a class="playpause" class="p-2 d-flex flex-column justify-content-center" onClick="document.getElementById('esp04').play()">
-                <audio id="esp04" src="work/models/memorica/recursos/img/500anos/audio/example.mp3"></audio>
-                <div class="coso" alt="">
-                  <br>
-                </div>
-                <p>Chontal</p>
-                <div class="bocina" alt="">
-                  <br>
-                </div>
-              </a>
+      <div class="vertical-alignment-helper">
+        <div class="modal-dialog vertical-align-center">
+          <div class="modal-content">
+            <div class="modal-header border-0">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body pt-0">
+              <div class="d-flex flex-wrap justify-content-around">
+                <a class="playpause" class="p-2 d-flex flex-column justify-content-center" onClick="document.getElementById('esp01').play()">
+                  <audio id="esp01" src="work/models/memorica/recursos/img/500anos/audio/example.mp3"></audio>
+                  <div class="coso" alt="">
+                    <br>
+                  </div>
+                  <p>Español</p>
+                  <div class="bocina" alt="">
+                    <br>
+                  </div>
+                </a>
+                <a class="playpause" class="p-2 d-flex flex-column justify-content-center" onClick="document.getElementById('esp02').play()">
+                  <audio id="esp02" src="work/models/memorica/recursos/img/500anos/audio/example.mp3"></audio>
+                  <div class="coso" alt="">
+                    <br>
+                  </div>
+                  <p>Náhuatl</p>
+                  <div class="bocina" alt="">
+                    <br>
+                  </div>
+                </a>
+                <a class="playpause" class="p-2 d-flex flex-column justify-content-center" onClick="document.getElementById('esp03').play()">
+                  <audio id="esp03" src="work/models/memorica/recursos/img/500anos/audio/example.mp3"></audio>
+                  <div class="coso" alt="">
+                    <br>
+                  </div>
+                  <p>Mixteco</p>
+                  <div class="bocina" alt="">
+                    <br>
+                  </div>
+                </a>
+                <a class="playpause" class="p-2 d-flex flex-column justify-content-center" onClick="document.getElementById('esp04').play()">
+                  <audio id="esp04" src="work/models/memorica/recursos/img/500anos/audio/example.mp3"></audio>
+                  <div class="coso" alt="">
+                    <br>
+                  </div>
+                  <p>Chontal</p>
+                  <div class="bocina" alt="">
+                    <br>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -1236,11 +1238,11 @@
       <nav id="timeline" class="navbar navbar-light bg-light fixed-bottom" style="background-color: #faf9f8; height: 81px;">
         <div class="container-fluid d-flex align-items-center justify-content-center">
           <ul class="nav nav-pills">
-            <li class="nav-item"><a class="nav-link" href="#item-1">1519 febrero-junio</a></li>
-            <li class="nav-item"><a class="nav-link" href="#item-2">1519 septiembre</a></li>
-            <li class="nav-item"><a class="nav-link" href="#item-3">1519 octubre</a></li>
-            <li class="nav-item"><a class="nav-link" href="#item-4">1519 noviembre-1520 mayo</a></li>
-            <li class="nav-item"><a class="nav-link" href="#item-5">1520 junio</a></li>
+            <li class="nav-item mx-3"><a class="nav-link" href="#item-1">1519 febrero-junio</a></li>
+            <li class="nav-item mx-3"><a class="nav-link" href="#item-2">1519 septiembre</a></li>
+            <li class="nav-item mx-3"><a class="nav-link" href="#item-3">1519 octubre</a></li>
+            <li class="nav-item mx-3"><a class="nav-link" href="#item-4">1519 noviembre-1520 mayo</a></li>
+            <li class="nav-item mx-3"><a class="nav-link" href="#item-5">1520 junio</a></li>
           </ul>
         </div>
       </nav>
@@ -1315,6 +1317,39 @@
         if (element) {
           const leftPosition = element.offsetLeft;
           scrollContainer.scrollLeft = leftPosition
+        }
+      });
+
+      // modal centering
+      function setModalMaxHeight(element) {
+        this.$element     = $(element);
+        this.$content     = this.$element.find('.modal-content');
+        var borderWidth   = this.$content.outerHeight() - this.$content.innerHeight();
+        var dialogMargin  = $(window).width() < 768 ? 20 : 60;
+        var contentHeight = $(window).height() - (dialogMargin + borderWidth);
+        var headerHeight  = this.$element.find('.modal-header').outerHeight() || 0;
+        var footerHeight  = this.$element.find('.modal-footer').outerHeight() || 0;
+        var maxHeight     = contentHeight - (headerHeight + footerHeight);
+
+        this.$content.css({
+            'overflow': 'hidden'
+        });
+
+        this.$element
+          .find('.modal-body').css({
+            'max-height': maxHeight,
+            'overflow-y': 'auto'
+        });
+      }
+
+      $('.modal').on('show.bs.modal', function() {
+        $(this).show();
+        setModalMaxHeight(this);
+      });
+
+      $(window).resize(function() {
+        if ($('.modal.in').length != 0) {
+          setModalMaxHeight($('.modal.in'));
         }
       });
 

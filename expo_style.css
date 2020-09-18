@@ -1052,6 +1052,28 @@ td {
   background: none;
 }
 
+.vertical-alignment-helper {
+    display:table;
+    height: 100%;
+    width: 100%;
+    pointer-events:none;
+}
+.vertical-align-center {
+    /* To center vertically */
+    display: table-cell;
+    vertical-align: middle;
+    pointer-events:none;
+}
+.modal-content {
+    /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+    width:inherit;
+ max-width:inherit; /* For Bootstrap 4 - to avoid the modal window stretching full width */
+    height:inherit;
+    /* To center horizontally */
+    margin: 0 auto;
+    pointer-events:all;
+}
+
 .audio-button {
   cursor: pointer;
   background-image: url(work/models/memorica/recursos/img/500anos/sound-on.svg);
@@ -1114,7 +1136,7 @@ td {
 
 .album {
   height: 100%;
-  margin-top: 81px;
+  padding-top: 81px;
 }
 
 /* ----------------------- MEDIA QUERIES ----------------------- */
