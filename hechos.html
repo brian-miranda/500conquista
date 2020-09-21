@@ -734,7 +734,7 @@
             </div>
             <div class="modal-body pt-0">
               <div class="d-flex flex-wrap justify-content-around">
-                <a class="playpause" class="p-2 d-flex flex-column justify-content-center" onClick="document.getElementById('esp01').play()">
+                <a class="playpause" class="p-2 d-flex flex-column justify-content-center" onClick="playAudio1()">
                   <audio id="esp01" src="work/models/memorica/recursos/img/500anos/audio/example.mp3"></audio>
                   <div class="coso" alt="">
                     <br>
@@ -744,32 +744,12 @@
                     <br>
                   </div>
                 </a>
-                <a class="playpause" class="p-2 d-flex flex-column justify-content-center" onClick="document.getElementById('esp02').play()">
+                <a class="playpause" class="p-2 d-flex flex-column justify-content-center" onClick="playAudio1()">
                   <audio id="esp02" src="work/models/memorica/recursos/img/500anos/audio/example.mp3"></audio>
                   <div class="coso" alt="">
                     <br>
                   </div>
                   <p>Náhuatl</p>
-                  <div class="bocina" alt="">
-                    <br>
-                  </div>
-                </a>
-                <a class="playpause" class="p-2 d-flex flex-column justify-content-center" onClick="document.getElementById('esp03').play()">
-                  <audio id="esp03" src="work/models/memorica/recursos/img/500anos/audio/example.mp3"></audio>
-                  <div class="coso" alt="">
-                    <br>
-                  </div>
-                  <p>Mixteco</p>
-                  <div class="bocina" alt="">
-                    <br>
-                  </div>
-                </a>
-                <a class="playpause" class="p-2 d-flex flex-column justify-content-center" onClick="document.getElementById('esp04').play()">
-                  <audio id="esp04" src="work/models/memorica/recursos/img/500anos/audio/example.mp3"></audio>
-                  <div class="coso" alt="">
-                    <br>
-                  </div>
-                  <p>Chontal</p>
                   <div class="bocina" alt="">
                     <br>
                   </div>
@@ -950,7 +930,7 @@
             </div>
           </div>
 
-          <div class="col-12 col-sm-6 px-1 px-sm-5">
+          <div class="col-12 col-sm-6 px-3 px-sm-5">
             <img src="work/models/memorica/recursos/img/500anos/hechos2.png" alt=""  class="imgtwo">
           </div>
 
@@ -1004,7 +984,7 @@
     </div>
 
     <!--TERCER HECHO MOVIL-->
-    <div class="slide three d-block d-sm-none" style="margin-right: 520px;">
+    <div class="slide three d-block d-sm-none" style="margin-right: 600px;">
       <div class="container-fluid splash">
         <div class="splash d-flex flex-row align-items-center flex-nowrap">
           <div id="" class="col-10 col-sm-6 px-1 px-sm-5 d-flex flex-column align-items-start">
@@ -1047,7 +1027,7 @@
       </div>
     </div>
 
-    <div class="slide four">
+    <div class="slide four margen-41">
       <div class="container-fluid splash">
         <div class="splash d-flex flex-row align-items-center">
 
@@ -1080,7 +1060,7 @@
       <div class="container-fluid splash">
         <div class="splash d-flex flex-row align-items-center">
 
-          <div id="item-4" class="col-12 col-sm-6 px-1 px-sm-5 d-flex flex-column align-items-start">
+          <div id="item-4" class="col-10 col-sm-6 px-1 px-sm-5 d-flex flex-column align-items-start">
             <h3>1519 noviembre-1520 mayo</h3>
             <h2>Estancia de los<br> Castellanos en<br> Tenochtitlan</h2>
             <a href="#" data-toggle="modal" data-target="#tabla4" class="show-table d-inline-flex" style="width: 100%;">
@@ -1159,11 +1139,11 @@
     </div>
 
     <!--QUINTO HECHO-->
-    <div class="slide four">
+    <div class="slide four margen-8">
       <div class="container-fluid splash">
         <div class="splash d-flex flex-row align-items-center">
 
-          <div id="item-5" class="col-10 col-sm-5 px-1 px-sm-5 d-flex flex-column align-items-start">
+          <div id="item-5" class="col-9 col-sm-5 px-1 px-sm-5 d-flex flex-column align-items-start">
             <h3>1520 junio</h3>
             <h2>La noche<br> triste</h2>
             <a href="#" data-toggle="modal" data-target="#tabla5" class="show-table d-inline-flex" style="width: 100%;">
@@ -1305,6 +1285,17 @@
         $('.button_container').removeClass('active');
       });
 
+      // audio stuff
+      function playAudio1() {
+        var audio = document.getElementById('esp01');
+        if (audio.paused) {
+          audio.play();
+          audio.currentTime=0;
+        } else {
+          audio.pause();
+        }
+      }
+
       // smooth scroll horizontal
       const myButton = document.querySelector(".nav-link");
       const scrollContainer = document.querySelector("#hechos");
@@ -1356,7 +1347,6 @@
 
       // vertical scrollspy
       ! function($) {
-
         "use strict"
 
         /* SCROLLSPY CLASS DEFINITION

@@ -74,3 +74,121 @@
       </div>
     </div>
   </div>
+
+  <script>
+        var audio = document.getElementById('audio');
+
+        audio.addEventListener('loadedmetadata', function() {
+            console.log("Playing " + audio.src + ", for: " + audio.duration + "seconds.");
+            document.getElementById('songTime').innerHTML = "0:00" + ' / ' + Math.floor(audio.duration / 60) + ":" + (Math.floor(audio.duration % 60) < 10 ? '0' : '') + Math.floor(audio.duration % 60);
+        });
+
+        function playAudio() {
+        	if (audio.paused) {
+        		audio.play();
+        		pButton.className = "";
+        		pButton.className = "pause";
+        	} else {
+        		audio.pause();
+        		pButton.className = "";
+        		pButton.className = "play";
+        	}
+        };
+
+        function muteAudio() {
+        	if (audio.muted) {
+        		document.getElementById('audio').muted = false;
+        		mButton.className = "";
+        		mButton.className = "unmute";
+        	} else {
+        		document.getElementById('audio').muted = true;
+        		mButton.className = "";
+        		mButton.className = "mute";
+        	}
+        };
+
+
+        var playhead = document.getElementById('playhead');
+
+        audio.addEventListener("timeupdate", timeUpdate, false);
+
+        function timeUpdate() {
+        	var playPercent = 100 * (audio.currentTime / duration);
+        	playhead.style.width = playPercent + "%";
+        	if (audio.currentTime == duration) {
+                pButton.className = "";
+                pButton.className = "play";
+            }
+        }
+
+        audio.addEventListener("canplaythrough", function () {
+        	duration = audio.duration;
+        }, false);
+
+        var timeline = document.getElementById('time-line');
+        var timelineWidth = timeline.offsetWidth - playhead.offsetWidth;
+
+        timeline.addEventListener("click", function (event) {
+        	moveplayhead(event);
+        	audio.currentTime = duration * clickPercent(event);
+        }, false);
+
+        function clickPercent(event) {
+            return (event.clientX - getPosition(timeline)) / timelineWidth;
+        }
+
+        function moveplayhead(event) {
+            var newMargLeft = event.clientX - getPosition(timeline);
+
+        	if (newMargLeft >= 0 && newMargLeft <= timelineWidth) {
+                playhead.style.width = newMargLeft + "%";
+            }
+            if (newMargLeft < 0) {
+                playhead.style.width = "%";
+            }
+            if (newMargLeft > timelineWidth) {
+                playhead.style.width = timelineWidth + "%";
+            }
+        }
+
+        function getPosition(el) {
+            return el.getBoundingClientRect().left;
+        }
+
+        function updateTime(){
+          var currentSeconds = (Math.floor(audio.currentTime % 60) < 10 ? '0' : '') + Math.floor(audio.currentTime % 60);
+          var currentMinutes = Math.floor(audio.currentTime / 60);
+
+          //Sets the current song location compared to the song duration.
+          document.getElementById('songTime').innerHTML = currentMinutes + ":" + currentSeconds + ' / ' + Math.floor(audio.duration / 60) + ":" + (Math.floor(audio.duration % 60) < 10 ? '0' : '') + Math.floor(audio.duration % 60);
+        }
+
+        $("#playlist tr").click(function() {
+            var selected = $(this).hasClass("table-active");
+            $("#playlist tr").removeClass("table-active");
+            if(!selected) {
+                $(this).addClass("table-active");
+            } else {
+                console.log("trans")
+                $(this).addClass("table-active");
+            };
+        });
+
+
+        $(".track-selector").click(function() {
+            $(".prepended").remove();
+            $(this).prepend('<span class="prepended unmute"></span>');
+
+            var url = $(this).attr('data-url');
+
+            mButton.className = "";
+        	mButton.className = "unmute";
+            pButton.className = "";
+        	pButton.className = "pause";
+
+            audio.src = url;
+            audio.load();
+            audio.muted = false;
+            audio.play();
+        });
+    </script>
