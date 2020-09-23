@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style media="screen">
+    #navPrev, #navNext {
+    color: #333;
+    font-size: 2em;
+    }
+
+    #navPrev:hover, #navNext:hover {
+    color: red;
+    }
+
+    #navPrev[disabled], #navNext[disabled] {
+    color: #cdcdcd;
+    cursor: default;
+    }
+  </style>
+</head>
+
+<body>
+  <!--thumbnail section-->
+  <div id="album01" class="album my-5 bg-light">
+    <div class="container">
+      <h1>plan de ayala plan de ayala</h1>
+      <h2>plan de ayala</h2>
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img src="//placehold.it/600x350" class="thumbnail img-fluid">
+            <div class="card-body">
+              <h6 class="card-title">Titulo 1</h6>
+              <p class="card-text">subtitulo</p>
+            </div>
+          </div>
+          <a onclick="openModal(0)" class="thumbnail stretched-link" data-toggle="modal" alt="Image 1"></a>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img src="//placehold.it/600x350/2255EE" class="thumbnail img-fluid">
+            <div class="card-body">
+              <h6 class="card-title">Titulo 2</h6>
+              <p class="card-text">subtitulo</p>
+            </div>
+          </div>
+          <a onclick="openModal(1)" class="thumbnail stretched-link" data-toggle="modal" alt="Image 2"></a>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img src="//placehold.it/600x350/449955/FFF" class="thumbnail img-fluid">
+            <div class="card-body">
+              <h6 class="card-title">Titulo 3</h6>
+              <p class="card-text">subtitulo</p>
+            </div>
+          </div>
+          <a onclick="openModal(2)" class="thumbnail stretched-link" data-toggle="modal" alt="Image 3"></a>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img src="//placehold.it/600x350/992233" class="thumbnail img-fluid">
+            <div class="card-body">
+              <h6 class="card-title">Titulo 4</h6>
+              <p class="card-text">subtitulo</p>
+            </div>
+          </div>
+          <a onclick="openModal(3)" class="thumbnail stretched-link" data-toggle="modal" alt="Image 4"></a>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img src="//placehold.it/600x350/2255EE" class="thumbnail img-fluid">
+            <div class="card-body">
+              <h6 class="card-title">Titulo 5</h6>
+              <p class="card-text">subtitulo</p>
+            </div>
+          </div>
+          <a onclick="openModal(4)" class="thumbnail stretched-link" data-toggle="modal" alt="Image 5"></a>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img src="//placehold.it/600x350/449955/FFF" class="thumbnail img-fluid">
+            <div class="card-body">
+              <h6 class="card-title">Titulo 6</h6>
+              <p class="card-text">subtitulo</p>
+            </div>
+          </div>
+          <a onclick="openModal(5)" class="thumbnail stretched-link" data-toggle="modal" alt="Image 6"></a>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img src="//placehold.it/600x350/777" class="thumbnail img-fluid">
+            <div class="card-body">
+              <h6 class="card-title">Titulo 7</h6>
+              <p class="card-text">subtitulo</p>
+            </div>
+          </div>
+          <a onclick="openModal(6)" class="thumbnail stretched-link" data-toggle="modal" alt="Image 7"></a>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img src="//placehold.it/600x350/992233" class="thumbnail img-fluid">
+            <div class="card-body">
+              <h6 class="card-title">Titulo 8</h6>
+              <p class="card-text">subtitulo</p>
+            </div>
+          </div>
+          <a onclick="openModal(7)" class="thumbnail stretched-link" data-toggle="modal" alt="Image 8"></a>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img src="//placehold.it/600x350/EEE" class="thumbnail img-fluid">
+            <div class="card-body">
+              <h6 class="card-title">Titulo 9</h6>
+              <p class="card-text">subtitulo</p>
+            </div>
+          </div>
+          <a onclick="openModal(8)" class="thumbnail stretched-link" data-toggle="modal" alt="Image 9"></a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <section class="container">
+    <div class="row add-bottom text-center">
+      <a href="#" onclick="openModal(0)" class="thumbnail" data-toggle="modal" alt="Image 1">
+        <img src="https://placehold.it/150x150?text=Image1" class="img-responsive center-block">
+      </a>
+      <a href="#" onclick="openModal(1)" class="thumbnail" data-toggle="modal" alt="Image 2">
+        <img src="https://placehold.it/150x150?text=Image2" class="img-responsive center-block">
+      </a>
+      <a href="#" onclick="openModal(2)" class="thumbnail" data-toggle="modal" alt="Image 3">
+        <img src="https://placehold.it/150x150?text=Image3" class="img-responsive center-block">
+      </a>
+      <a href="#" onclick="openModal(3)" class="thumbnail" data-toggle="modal" alt="Image 4">
+        <img src="https://placehold.it/150x150?text=Image4" class="img-responsive center-block">
+      </a>
+    </div>
+  </section>
+
+  <!--Modal Content-->
+  <div id="modal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 id="modalTitle" class="modal-title"></h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-1">
+              <a id="navPrev" href="#" onclick="prevImg()">
+                <img src="work/models/memorica/recursos/img/500anos/scroll-down.svg" alt="" width="40px" height="40px" style="height: 40px;">
+              </a>
+            </div>
+            <div class="col-10">
+              <img id="modalImg" src="" alt="" class="pull-right" />
+              <span id="modalText"></span>
+            </div>
+            <div class="col-1">
+              <a id="navNext" href="#" onclick="nextImg()">
+                <img src="work/models/memorica/recursos/img/500anos/scroll-down.svg" alt="" width="40px" height="40px" style="height: 40px;">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  <script type="text/javascript">
+    var data = [
+      { src: "//placehold.it/600x350", title: "Imagen 1", author: "Autor", tech: "Óleo", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a est mauris. Sed non sollicitudin lacus. Sed maximus facilisis purus, et blandit lectus vehicula in." },
+      { src: "//placehold.it/600x350/2255EE", title: "Imagen 2", author: "Autor", tech: "Óleo", description: "Aenean accumsan metus ipsum, id vehicula felis semper sed. Sed hendrerit pulvinar porttitor. Etiam id tortor leo. Integer ex dui, vulputate vel iaculis sit amet, laoreet eu sem." },
+      { src: "//placehold.it/600x350/449955/FFF", title: "Imagen 3", author: "Autor", tech: "Óleo", description: "Vivamus luctus est at sapien sollicitudin, nec mattis arcu condimentum. Vivamus sed varius diam. Nulla varius, tortor vel tempus feugiat, libero felis pellentesque mi, sit amet sagittis lacus massa et erat. " },
+      { src: "//placehold.it/600x350/992233", title: "Imagen 4", author: "Autor", tech: "Óleo", description: "Vestibulum eu ex ac nunc pretium hendrerit vel in quam. Morbi imperdiet imperdiet pharetra." },
+      { src: "//placehold.it/600x350/2255EE", title: "Imagen 5", author: "Autor", tech: "Óleo", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a est mauris. Sed non sollicitudin lacus. Sed maximus facilisis purus, et blandit lectus vehicula in." },
+      { src: "//placehold.it/600x350/449955/FFF", title: "Imagen 6", author: "Autor", tech: "Óleo", description: "Aenean accumsan metus ipsum, id vehicula felis semper sed. Sed hendrerit pulvinar porttitor. Etiam id tortor leo. Integer ex dui, vulputate vel iaculis sit amet, laoreet eu sem." },
+      { src: "//placehold.it/600x350/777", title: "Imagen 7", author: "Autor", tech: "Óleo", description: "Vivamus luctus est at sapien sollicitudin, nec mattis arcu condimentum. Vivamus sed varius diam. Nulla varius, tortor vel tempus feugiat, libero felis pellentesque mi, sit amet sagittis lacus massa et erat. " },
+      { src: "//placehold.it/600x350/992233", title: "Imagen 8", author: "Autor", tech: "Óleo", description: "Vestibulum eu ex ac nunc pretium hendrerit vel in quam. Morbi imperdiet imperdiet pharetra." },
+      { src: "//placehold.it/600x350/EEE", title: "Imagen 9", author: "Autor", tech: "Óleo", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a est mauris. Sed non sollicitudin lacus. Sed maximus facilisis purus, et blandit lectus vehicula in." }
+    ];
+
+    var currentItem = 0;
+
+    function prevImg() {
+      if (currentItem > 0) {
+        currentItem--;
+      }
+      loadData();
+    };
+
+    function nextImg() {
+      if (currentItem < data.length - 1) {
+        currentItem++;
+      }
+      loadData();
+    };
+
+    function loadData() {
+      $("#modalTitle").html(data[currentItem].title);
+      $("#modalImg").attr("src", data[currentItem].src).attr("alt", data[currentItem].title);
+      $("#modalText").html(data[currentItem].description);
+
+      // enable/disable nav buttons
+      $("#navPrev").removeAttr("disabled");
+      $("#navNext").removeAttr("disabled");
+
+      if (currentItem == 0) {
+        $("#navPrev").attr("disabled", "disabled");
+      }
+      else if (currentItem == data.length - 1) {
+        $("#navNext").attr("disabled", "disabled");
+      }
+    };
+
+    function openModal(idx) {
+      currentItem = idx;
+      loadData();
+      $("#modal").modal();
+    }
+  </script>
+</body>
+
+</html>

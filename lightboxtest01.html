@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<!--https://www.codeply.com/go/bp/71H5HWFEWP-->
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style type="text/css">
+      .modal-dialog {width:600px;}
+      .thumbnail {margin-bottom:6px;}
+    </style>
+
+  </head>
+  <body>
+    <div class="container">
+      <div id="img-container" class="row">
+        <h1>Bootstrap 3 Lightbox using Modal</h1>
+        <div class="row">
+          <div class="col-lg-3 col-sm-4 col-6"><a title="Image 1"><img src="//placehold.it/600x350" class="thumbnail img-fluid"></a></div>
+          <div class="col-lg-3 col-sm-4 col-6"><a title="Image 2"><img src="//placehold.it/600x350/2255EE" class="thumbnail img-fluid"></a></div>
+          <div class="col-lg-3 col-sm-4 col-6"><a title="Image 3"><img src="//placehold.it/600x350/449955/FFF" class="thumbnail img-fluid"></a></div>
+          <div class="col-lg-3 col-sm-4 col-6"><a title="Image 4"><img src="//placehold.it/600x350/992233" class="thumbnail img-fluid"></a></div>
+          <div class="col-lg-3 col-sm-4 col-6"><a title="Image 5"><img src="//placehold.it/600x350/2255EE" class="thumbnail img-fluid"></a></div>
+          <div class="col-lg-3 col-sm-4 col-6"><a title="Image 6"><img src="//placehold.it/600x350/449955/FFF" class="thumbnail img-fluid"></a></div>
+          <div class="col-lg-3 col-sm-4 col-6"><a title="Image 7"><img src="//placehold.it/600x350/777" class="thumbnail img-fluid"></a></div>
+          <div class="col-lg-3 col-sm-4 col-6"><a title="Image 8"><img src="//placehold.it/600x350/992233" class="thumbnail img-fluid"></a></div>
+          <div class="col-lg-3 col-sm-4 col-6"><a title="Image 9"><img src="//placehold.it/600x350/EEE" class="thumbnail img-fluid"></a></div>
+          <div class="col-lg-3 col-sm-4 col-6"><a title="Image 10"><img src="//placehold.it/600x350/449955/FFF" class="thumbnail img-fluid"></a></div>
+          <div class="col-lg-3 col-sm-4 col-6"><a title="Image 11"><img src="//placehold.it/600x350/DDD" class="thumbnail img-fluid"></a></div>
+          <div class="col-lg-3 col-sm-4 col-6"><a title="Image 12"><img src="//placehold.it/600x350/992233" class="thumbnail img-fluid"></a></div>
+        </div>
+        <hr>
+        <a href="http://bootply.com/71401">Edit on Bootply</a>
+        <hr>
+      </div>
+    </div>
+    <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+      <div class="modal-content">
+    	<div class="modal-header">
+    		<button type="button" class="close" data-dismiss="modal">×</button>
+    		<h3 class="modal-title">Heading</h3>
+    	</div>
+    	<div class="modal-body">
+
+    	</div>
+    	<div class="modal-footer">
+    		<button id="prev-btn" class="btn btn-warning">Prev</button>
+            <button id="next-btn" class="btn btn-primary">Next</button>
+    		<button class="btn btn-default" data-dismiss="modal">Close</button>
+    	</div>
+       </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+      $('.thumbnail').click(function(){
+        	$('.modal-body').empty();
+        	var title = $(this).parent('a').attr("title");
+        	$('.modal-title').html(title);
+        	$($(this).parents('div').html()).appendTo('.modal-body');
+        	$('#myModal').modal({show:true});
+      });
+
+      $('#next-btn').click(function() {
+       var link = $('.modal-body a');
+        var number = parseInt(link.attr('title').match(/\S+$/));
+        number++;
+        if(number === 13) {
+      	number = 1;
+        }
+        $('.modal-body').html($('#img-container').find('a[title="Image ' + number + '"]').parent('div').html());
+        $('.modal-title').text('Image ' + number);
+      });
+      $('#prev-btn').click(function() {
+       var link = $('.modal-body a');
+        var number = parseInt(link.attr('title').match(/\S+$/));
+        number--;
+        if(number === 0) {
+      	number = 12;
+        }
+        $('.modal-body').html($('#img-container').find('a[title="Image ' + number + '"]').parent('div').html());
+        $('.modal-title').text('Image ' + number);
+      });
+    </script>
+  </body>
+</html>
