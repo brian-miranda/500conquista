@@ -1178,8 +1178,8 @@ td {
   color: #13182c;
 }
 
-.album .card-body {
-  background-color: #faf9f8;
+.album .card, .album .card-body {
+  background-color: transparent;
 }
 
 .album .card-title {
@@ -1187,6 +1187,10 @@ td {
   font-size: 1.2rem;
   color: #194b54;
   margin-bottom: 3px;
+}
+
+.blue .card-title {
+  color: #faf9f8;
 }
 
 .album .card-text {
