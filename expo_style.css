@@ -1130,13 +1130,74 @@ td {
 
 #cover-album {
   background-color: #faf9f8;
-  height: 100%;
   width: 100%;
+  height: 100%;
+  padding-top: 81px;
+  padding-bottom: 0;
 }
 
 .album {
-  height: 100%;
   padding-top: 81px;
+  padding-bottom: 81px;
+}
+
+.white {
+  background-color: #faf9f8;
+}
+
+.blue {
+  background-color: #194b54;
+}
+
+#cover-album .card-header {
+  background-color: #194b54;
+}
+
+#cover-album .card-header h5 {
+  font-family: "IMFellEnglish_Regular";
+  color: #faf9f8;
+  text-align: center;
+  margin: 0;
+}
+
+.album h1 {
+  font-family: "Raleway-Bold";
+  font-size: 2.5rem;
+}
+
+.album h2 {
+  font-family: "Raleway-Bold";
+  font-size: 1.1rem;
+}
+
+.blue h1, .blue h2 {
+  color: #faf9f8;
+}
+
+.white h1, .white h2 {
+  color: #13182c;
+}
+
+.album .card-body {
+  background-color: #faf9f8;
+}
+
+.album .card-title {
+  font-family: "IMFellEnglish_Regular";
+  font-size: 1.2rem;
+  color: #194b54;
+  margin-bottom: 3px;
+}
+
+.album .card-text {
+  font-family: "Raleway-Bold";
+  font-size: 1rem;
+  color: #c0764f;
+}
+
+.modal-xxl {
+  max-width: 99%;
+  height: 98%;
 }
 
 /* ----------------------- MEDIA QUERIES ----------------------- */
@@ -1748,5 +1809,31 @@ td {
 
    p.special {
      font-size: 11.2px !important;
+   }
+
+   #cover-album .container {
+     height: auto;
+   }
+
+   #cover-album .splash {
+     height: auto;
+     padding: 0;
+   }
+
+   #cover-album .container {
+     height: auto;
+     padding: 0;
+   }
+
+   #cover-album .row {
+     margin: 0;
+     padding: 0;
+     width: 100%;
+   }
+
+   .album {
+     height: auto;
+     position: relative;
+     top: 1px;
    }
 }
