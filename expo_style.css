@@ -1200,8 +1200,44 @@ td {
 }
 
 .modal-xxl {
-  max-width: 99%;
-  height: 98%;
+  min-width: 1366px;
+  height: 90%;
+}
+
+.modal-title {
+  font-family: "IMFellEnglish_Regular";
+  font-size: 2rem;
+  color: #194b54;
+}
+
+.modal-author {
+  font-family: "Raleway-Bold";
+  font-size: 1rem;
+  color: #194b54;
+}
+
+.modal-tech {
+  font-family: "Raleway-SemiBold";
+  font-size: 1rem;
+  color: #194b54;
+}
+
+.modal-place {
+  font-family: "Raleway-Medium";
+  font-size: 1rem;
+  color: #194b54;
+}
+
+.modal-about {
+  font-family: "Raleway-Bold";
+  font-size: 1rem;
+  color: #c0764f;
+}
+
+.modal-text {
+  font-family: "Raleway-Regular";
+  font-size: 0.9rem;
+  color: #194b54;
 }
 
 /* ----------------------- MEDIA QUERIES ----------------------- */
