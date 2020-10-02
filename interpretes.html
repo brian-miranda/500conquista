@@ -665,7 +665,7 @@
         </div>
       </div>
 
-      <a href="#cover-album" class="scroll-down d-flex">
+      <a href="#cover-album" class="scroll-down d-flex justify-content-center">
         <img src="work/models/memorica/recursos/img/500anos/scroll-up.svg" alt="" width="40px" height="40px">
       </a>
     </div>
@@ -682,7 +682,7 @@
           </div>
           <div class="modal-body">
             <div class="row">
-              <div class="col-1 align-self-center">
+              <div class="col-1 align-self-center justify-content-center text-center">
                 <a id="navPrev" onclick="prevImg()">
                   <i class="fas fa-chevron-left"></i>
                 </a>
@@ -696,7 +696,7 @@
                 </div>
                 <div class="row">
                   <div class="col-6">
-                    <img id="modalImg" src="" alt="" class="img-fluid" />
+                    <iframe width="550" height="311" src="https://www.youtube.com/embed/8yqWKJX58bs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   </div>
                   <div class="col-6">
                     <h4 id="modalTitle" class="modal-title"></h4>
@@ -708,7 +708,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-1 align-self-center">
+              <div class="col-1 align-self-center justify-content-center text-center">
                 <a id="navNext" onclick="nextImg()">
                   <i class="fas fa-chevron-right"></i>
                 </a>
@@ -751,15 +751,15 @@
 
       // modal stuff
       var data = [
-        { src: "work/models/memorica/recursos/img/500anos/video.png", title: "Video 1", author: "Autor 1", tech: "Técnica 1", place: "Ubicación 1", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a est mauris. Sed non sollicitudin lacus. Sed maximus facilisis purus, et blandit lectus vehicula in. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a est mauris. Sed non sollicitudin lacus. Sed maximus facilisis purus, et blandit lectus vehicula in." },
-        { src: "work/models/memorica/recursos/img/500anos/video.png", title: "Video 2", author: "Autor 2", tech: "Técnica 2", place: "Ubicación 2", description: "Aenean accumsan metus ipsum, id vehicula felis semper sed. Sed hendrerit pulvinar porttitor. Etiam id tortor leo. Integer ex dui, vulputate vel iaculis sit amet, laoreet eu sem." },
-        { src: "work/models/memorica/recursos/img/500anos/video.png", title: "Video 3", author: "Autor 3", tech: "Técnica 3", place: "Ubicación 3", description: "Vivamus luctus est at sapien sollicitudin, nec mattis arcu condimentum. Vivamus sed varius diam. Nulla varius, tortor vel tempus feugiat, libero felis pellentesque mi, sit amet sagittis lacus massa et erat. " },
-        { src: "work/models/memorica/recursos/img/500anos/video.png", title: "Video 4", author: "Autor 4", tech: "Técnica 4", place: "Ubicación 4", description: "Vestibulum eu ex ac nunc pretium hendrerit vel in quam. Morbi imperdiet imperdiet pharetra." },
-        { src: "work/models/memorica/recursos/img/500anos/video.png", title: "Video 5", author: "Autor 5", tech: "Técnica 5", place: "Ubicación 5", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a est mauris. Sed non sollicitudin lacus. Sed maximus facilisis purus, et blandit lectus vehicula in." },
-        { src: "work/models/memorica/recursos/img/500anos/video.png", title: "Video 6", author: "Autor 6", tech: "Técnica 6", place: "Ubicación 6", description: "Aenean accumsan metus ipsum, id vehicula felis semper sed. Sed hendrerit pulvinar porttitor. Etiam id tortor leo. Integer ex dui, vulputate vel iaculis sit amet, laoreet eu sem." },
-        { src: "work/models/memorica/recursos/img/500anos/video.png", title: "Video 7", author: "Autor 7", tech: "Técnica 7", place: "Ubicación 7", description: "Vivamus luctus est at sapien sollicitudin, nec mattis arcu condimentum. Vivamus sed varius diam. Nulla varius, tortor vel tempus feugiat, libero felis pellentesque mi, sit amet sagittis lacus massa et erat. " },
-        { src: "work/models/memorica/recursos/img/500anos/video.png", title: "Video 8", author: "Autor 8", tech: "Técnica 8", place: "Ubicación 8", description: "Vestibulum eu ex ac nunc pretium hendrerit vel in quam. Morbi imperdiet imperdiet pharetra." },
-        { src: "work/models/memorica/recursos/img/500anos/video.png", title: "Video 9", author: "Autor 9", tech: "Técnica 9", place: "Ubicación 9", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a est mauris. Sed non sollicitudin lacus. Sed maximus facilisis purus, et blandit lectus vehicula in." }
+        { src: "https://www.youtube.com/embed/8yqWKJX58bs", title: "Video 1", author: "Autor 1", tech: "Técnica 1", place: "Ubicación 1", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a est mauris. Sed non sollicitudin lacus. Sed maximus facilisis purus, et blandit lectus vehicula in. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a est mauris. Sed non sollicitudin lacus. Sed maximus facilisis purus, et blandit lectus vehicula in." },
+        { src: "https://www.youtube.com/embed/8yqWKJX58bs", title: "Video 2", author: "Autor 2", tech: "Técnica 2", place: "Ubicación 2", description: "Aenean accumsan metus ipsum, id vehicula felis semper sed. Sed hendrerit pulvinar porttitor. Etiam id tortor leo. Integer ex dui, vulputate vel iaculis sit amet, laoreet eu sem." },
+        { src: "https://www.youtube.com/embed/8yqWKJX58bs", title: "Video 3", author: "Autor 3", tech: "Técnica 3", place: "Ubicación 3", description: "Vivamus luctus est at sapien sollicitudin, nec mattis arcu condimentum. Vivamus sed varius diam. Nulla varius, tortor vel tempus feugiat, libero felis pellentesque mi, sit amet sagittis lacus massa et erat. " },
+        { src: "https://www.youtube.com/embed/8yqWKJX58bs", title: "Video 4", author: "Autor 4", tech: "Técnica 4", place: "Ubicación 4", description: "Vestibulum eu ex ac nunc pretium hendrerit vel in quam. Morbi imperdiet imperdiet pharetra." },
+        { src: "https://www.youtube.com/embed/8yqWKJX58bs", title: "Video 5", author: "Autor 5", tech: "Técnica 5", place: "Ubicación 5", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a est mauris. Sed non sollicitudin lacus. Sed maximus facilisis purus, et blandit lectus vehicula in." },
+        { src: "https://www.youtube.com/embed/8yqWKJX58bs", title: "Video 6", author: "Autor 6", tech: "Técnica 6", place: "Ubicación 6", description: "Aenean accumsan metus ipsum, id vehicula felis semper sed. Sed hendrerit pulvinar porttitor. Etiam id tortor leo. Integer ex dui, vulputate vel iaculis sit amet, laoreet eu sem." },
+        { src: "https://www.youtube.com/embed/8yqWKJX58bs", title: "Video 7", author: "Autor 7", tech: "Técnica 7", place: "Ubicación 7", description: "Vivamus luctus est at sapien sollicitudin, nec mattis arcu condimentum. Vivamus sed varius diam. Nulla varius, tortor vel tempus feugiat, libero felis pellentesque mi, sit amet sagittis lacus massa et erat. " },
+        { src: "https://www.youtube.com/embed/8yqWKJX58bs", title: "Video 8", author: "Autor 8", tech: "Técnica 8", place: "Ubicación 8", description: "Vestibulum eu ex ac nunc pretium hendrerit vel in quam. Morbi imperdiet imperdiet pharetra." },
+        { src: "https://www.youtube.com/embed/8yqWKJX58bs", title: "Video 9", author: "Autor 9", tech: "Técnica 9", place: "Ubicación 9", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a est mauris. Sed non sollicitudin lacus. Sed maximus facilisis purus, et blandit lectus vehicula in." }
       ];
 
       var currentItem = 0;
