@@ -946,7 +946,7 @@ img.imgfour {
 }
 
 .modal-xl {
-  max-width: 80%;
+  max-width: 90%;
 }
 
 .tabla-hechos {
@@ -964,6 +964,7 @@ a.active {
 
 h5.modal-title {
   font-family: "Raleway-SemiBold";
+  font-size: 1.2rem;
   color: #715f51;
 }
 
@@ -1851,6 +1852,19 @@ td {
      font-size: 11.2px !important;
    }
 
+   .album h1 {
+     font-size: 1.5rem;
+   }
+
+   .album h2 {
+     font-size: 0.8rem;
+   }
+
+   #cover-album {
+     width: 100%;
+     height: auto;
+   }
+
    #cover-album .container {
      height: auto;
    }
@@ -1875,5 +1889,10 @@ td {
      height: auto;
      position: relative;
      top: 1px;
+   }
+
+   .modal-xxl {
+     min-width: auto;
+     height: auto
    }
 }
