@@ -1202,7 +1202,7 @@ td {
 
 .modal-xxl {
   min-width: 1366px;
-  height: 90%;
+  min-height: 90%;
 }
 
 .modal-title {
@@ -1892,7 +1892,8 @@ td {
    }
 
    .modal-xxl {
-     min-width: auto;
-     height: auto
+     min-width: 95%;
+     max-width: 95%;
+     max-height: 90%;
    }
 }
