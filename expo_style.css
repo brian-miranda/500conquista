@@ -954,8 +954,15 @@ img.imgfour {
   font-size: 0.6rem;
 }
 
-a.active {
-  color: red;
+a.show-table {
+  font-family: "Raleway-Bold";
+  color: #715f51;
+}
+
+a.show-table:hover {
+  font-family: "Raleway-Bold";
+  color: #13182c;
+  text-decoration: none;
 }
 
 .slide .icon {
@@ -1047,8 +1054,12 @@ td {
   background-color: #13182c;
 }
 
+#timeline a.nav-link {
+  color: #715f51;
+}
+
 #timeline a.nav-link:hover, .navbar-light .nav-pills .nav-link.active {
-  color: #c0764f;
+  color: #13182c;
   font-family: "Raleway-Bold";
   background: none;
 }
