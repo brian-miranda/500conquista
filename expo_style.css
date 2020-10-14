@@ -823,7 +823,7 @@ a.nav-link:hover .dot, .navbar-light .nav-pills .nav-link.active .dot {
 /*-----------------------------NEW-----------------------------*/
 body#hechos {
   position: relative;
-  width: 1300vw;
+  width: 1980vw;
 }
 
 #hechos p {
@@ -869,6 +869,14 @@ body#hechos {
   transform: rotate(90deg) translateY(-100vh);
   transform-origin: top left;
   white-space: nowrap;
+}
+
+.slide-half {
+  width: 50vw;
+  height: 100vh;
+  display: inline-block;
+  position: relative;
+  white-space: normal;
 }
 
 .slide {
@@ -943,6 +951,10 @@ img.imgthree {
 
 img.imgfour {
   height: 700px;
+}
+
+img.imgfive {
+  height: 450px;
 }
 
 .modal-xl {
@@ -1739,7 +1751,12 @@ td {
   }
 
   body#hechos {
-    width: 2550vw;
+    width: 3950vw;
+  }
+
+  .slide-half {
+    width: 100vw;
+
   }
 
   #content {
@@ -1791,7 +1808,11 @@ td {
   }
 
   .margen-8 {
-    margin-right: 260px;
+    margin-right: 280px;
+  }
+
+  .margen-9 {
+    margin-right: 290px;
   }
 
   #portadilla h1 {
@@ -1855,6 +1876,12 @@ td {
     height: 300px;
     margin-right: 240px;
   }
+
+  img.imgfive {
+    height: 200px;
+    margin-right: 240px;
+  }
+
    #timeline {
      height: 60px !important;
    }
