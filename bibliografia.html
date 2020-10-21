@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <title><TOPIC METHOD="getDisplayName" LANGUAGE="{user@getLanguage}"/> - Memórica</title>
+
+  <link rel="icon" type="image/ico" href="work/models/memorica/recursos/img/favicon/favicon.ico"/>
+  <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- reserved for styles, don't forget to remove the / from the thing -->
+  <link href="expo_style.css" type="text/css" rel="stylesheet">
+  <style type="text/css">
+
+  </style>
+
+  <!-- <RESOURCE TYPE="JSPEditor" STYPE="OpenGraphTags" />
+  <meta property="og:image" content="work/models/memorica/recursos/img/miniatura_500anos.jpg">
+  <meta property="og:image:type" content="image/svg">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="1024">
+  <meta name="twitter:image:src" content="https://memoricamexico.gob.mxwork/models/memorica/recursos/img/miniatura_500anos.jpg"> -->
+</head>
+
+<body data-spy="scroll" data-target="#sidenavbar" data-offset="200" style="position: relative; overflow-y: scroll; background-color: #faf9f8;">
+  <!-- Header -->
+  <header>
+    <nav class="navbar fixed-top" style="background-color: #faf9f8; box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);">
+      <a class="navbar-brand" href="https://memoricamexico.gob.mx/es/memorica/Exposiciones">
+        <img type="image/svg+xml" src="work/models/memorica/recursos/img/500anos/logui.svg" alt="" class="logo" width="50px" height="50px">
+      </a>
+      <img class="tit-textos d-none d-sm-block" src="work/models/memorica/recursos/img/500anos/tit-texto1.png" alt="">
+      <a href="" data-toggle="modal" data-target="#modalbotonescompartir" title="Compartir" class="share">
+        <img type="image/svg+xml" alt="Compartir en redes sociales" src="work/models/memorica/recursos/img/500anos/share.svg" title="Compartir en redes Sociales" width="35px" height="35px">
+      </a>
+      <a href="" class="down">
+        <img type="image/svg+xml" alt="Descargar guía didactica" src="work/models/memorica/recursos/img/500anos/down.svg" title="Descargar guía didactica" width="35px" height="100%">
+      </a>
+    </nav>
+  </header>
+  <div class="button_container" id="toggle">
+    <span class="top"></span>
+    <span class="middle"></span>
+    <span class="bottom"></span>
+  </div>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay">
+    <nav class="overlay-menu">
+      <ul>
+        <li><a class="go" href="index2.html">Inicio</a></li>
+        <li><a class="go" href="textos.html">Textos</a></li>
+        <li><a class="go" href="hechos.html">Hechos</a></li>
+        <li><a class="go" href="/{user@getLanguage}/{topic@getWebSiteId}/500imagenes">Imágenes</a></li>
+        <li><a class="go" href="/{user@getLanguage}/{topic@getWebSiteId}/500interpretes">Somos intérpretes</a></li>
+        <li><a class="go" href="/{user@getLanguage}/{topic@getWebSiteId}/500infos">Info</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="modal fade" id="modalbotonescompartir" tabindex="-1" role="dialog" aria-labelledby="modalbotonescompartir" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5>Compartir</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body d-flex justify-content-around">
+          <RESOURCE TYPE="JSPEditor" STYPE="FBShareButton" />
+          <RESOURCE TYPE="JSPEditor" STYPE="TWShareButton" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Inicia Contenido -->
+  <div class="texto container-fluid">
+
+    <div class="d-block d-sm-none fixed-top" style="margin-top: 81px; background-color: #faf9f8; box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.15); z-index: 2; border-top: 1px solid #c0764f;">
+      <div class="row my-1">
+        <div class="col-1">
+          <a href="textos.html" class="col-1 stretched-link">
+            <img class="mb-0" src="work/models/memorica/recursos/img/500anos/text-back.svg" alt="" height="40px" style="height: 40px; margin-bottom: 0px;">
+          </a>
+        </div>
+        <div class="col-10 d-flex justify-content-center align-items-center">
+          <img src="work/models/memorica/recursos/img/500anos/tit-sm-texto1.png" alt="" style="height: 19px; margin-bottom: 0px;">
+        </div>
+        <div class="col-1"></div>
+      </div>
+    </div>
+
+    <div id="item-1" class="row py-5">
+      <div class="col-lg-2 px-5 py-5 d-none d-sm-block"></div>
+      <div class="col-12 col-lg-8 px-5 pb-0 pb-sm-5 pt-sm-5 border" style="background-color: #faf9f8; z-index: 1;">
+        <img class="diagonal" src="work/models/memorica/recursos/img/500anos/diagonal.svg">
+        <h1 class="pb-3">Fuentes y lecturas complementarias</h1>
+
+        <!-- hernan cortez -->
+        <div class="d-inline-flex justify-content-start pb-3">
+          <h3>Hernán Cortés, Cartas de Relación</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2);"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1 px-0"></div>
+            <div class="col-11 px-0">
+              <p>Las cartas se han editado y publicado en varias presentaciones desde el siglo XVI. Actualmente, el original se preserva en la Biblioteca Nacional de España.</p>
+              <h5 class="pb-3">Para leer más…</h5>
+              <ul>
+                <li>Aracil Varón, Beatriz, <em>Yo, Don Hernando Cortés: reflexiones en torno a la escritura cortesiana</em>, Madrid, Editorial Vervuert, 2016, 190 p.</li>
+                <li>Arango L., Manuel Antonio, <em>Proceso histórico-social en la literatura de los primeros cronistas de la conquista de América</em>, Nueva York, Peter Lank, 2011, 213 p.</li>
+                <li>Cortés, Hernán, <em>Segunda carta de relación y otros textos</em>, edición, prólogo y notas de Valeria Añón, Buenos Aires, Corregidor, 2010, 345 p., ilustraciones.</li>
+                <li>Díez-Canedo Flores, Aurora, <em>Historiografía mexicana</em>, 4 v., coordinación del volumen por Rosa Camelo y Patricia Escandón, México, Universidad Nacional Autónoma de México-Instituto de Investigaciones Históricas, 2012, vol. 2, t. 1, p. 39-69.</li>
+                <li><em>Documentos Cortesianos</em>, edición de José Luis Martínez, 4 t., México, Universidad Nacional Autónoma de México-Fondo de Cultura Económica, 1990.</li>
+                <li>Guzmán, Eulalia, <em>Relaciones de Hernán Cortés a Carlos V sobre la invasión de Anahuac</em>, México, Libros Anáhuac, 1958, 995 p.</li>
+                <li>Martínez, José Luis, <em>Hernán Cortés</em>, México, Universidad Nacional Autónoma de México-Fondo de Cultura Económica, 1990, 1009 p.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- bernal dias -->
+        <div class="d-inline-flex justify-content-start pb-3">
+          <h3>Bernal Díaz del Castillo, Historia verdadera de la Conquista de la Nueva España.</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2);"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1 px-0"></div>
+            <div class="col-11 px-0">
+              <p>Existen numerosas ediciones, en varios idiomas, realizadas por diversas editoriales y universidades. El original se conserva en la Biblioteca Nacional de Madrid.</p>
+              <h5 class="pb-3">Para leer más…</h5>
+              <ul>
+                <li>Díez-Canedo Flores, Aurora, “Bernal Díaz del Castillo”, en Juan A. Ortega y Medina y Rosa Camelo (coords.), <em>Historiografía mexicana</em>, 4 v., coordinación del volumen por Rosa Camelo y Patricia Escandón, México, Universidad Nacional Autónoma de México-Instituto de Investigaciones Históricas, 2012, v. 2, t. 1, p. 323-344.</li>
+                <li>Gutiérrez Mueller, Beatriz, <em>La memoria artificial en la Historia verdadera de la conquista de la Nueva España de Bernal Díaz del Castillo</em>, México, Universidad Iberoamericana-Instituto Tecnológico y de Estudios Superiores de Occidente-Benemérita Universidad Autónoma de Puebla, 2018, 146 p.</li>
+                <li>Mendiola Mejía, Alfonso, <em>Bernal Díaz del Castillo: verdad romanesca y verdad historiográfica</em>, México, Universidad Iberoamericana, 1991, 146 p.</li>
+                <li>Millares Ostos, Juan, <em>Y Bernal mintió: el lado oscuro de su “Historia verdadera de la conquista de la Nueva España”</em>, México, Santillana, 2008, 377 p.</li>
+                <li>Turner, Guillermo, <em>La biblioteca del soldado Bernal Díaz del Castillo</em>, México, Ediciones el Tucán de Virginia-Instituto Nacional de Antropología e Historia, 2016, 199 p.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- fray francisco aguila -->
+        <div class="d-inline-flex justify-content-start pb-3">
+          <h3>Fray Francisco de Aguilar, Relación breve de la conquista de la Nueva España.</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2);"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1 px-0"></div>
+            <div class="col-11 px-0">
+              <p>Fue publicada en México, en 1866, por Joaquín García Icazbalceta; posteriormente se han realizado varias ediciones, incluyendo una de la UNAM. El original permanece en la Real Biblioteca de San Lorenzo de El Escorial.</p>
+              <h5 class="pb-3">Para leer más…</h5>
+              <ul>
+                <li>Camelo, Rosa, “Francisco de Aguilar”, en Juan A. Ortega y Medina y Rosa Camelo (coords.), <em>Historiografía mexicana</em>, 4 v., coordinación del volumen por Rosa Camelo y Patricia Escandón, México, Universidad Nacional Autónoma de México-Instituto de Investigaciones Históricas, 2012, v. 2, t 1, p. 71-86.</li>
+                <li>Gurría Lacroix, Jorge, “Estudio preliminar”, en Aguilar, Francisco de, <em>Relación breve de la conquista de la Nueva España</em>, edición, estudio, notas y apéndices de Jorge Gurría Lacroix, México, Universidad Nacional Autónoma de México-Instituto de Investigaciones Históricas, 1980, p. 7-217. (Serie Historiadores y Cronistas de Indias, 7).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- andres tapía -->
+        <div class="d-inline-flex justify-content-start pb-3">
+          <h3>Andrés de Tapia, Relación de algunas cosas de las que acaecieron al muy ilustre señor don Hernando Cortés</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2);"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1 px-0"></div>
+            <div class="col-11 px-0">
+              <p>El texto fue publicado, en 1858, en la obra de Joaquín García Icazbalceta: Colección de documentos para la historia de México. El original permanece en la Real Academia de la Historia de Madrid, en el tomo 115 “De los Papeles Varios de los Jesuitas”.</p>
+              <h5 class="pb-3">Para leer más…</h5>
+              <ul>
+                <li>Schmidt-Riese, Roland, <em>Relatando México. Cinco textos del periodo fundacional de la colonia en Tierra Firme</em>, Madrid, Editorial Vervuert, 2003, 209 p., mapas.</li>
+                <li>Soto Elizalde, Berenice Cristina, “Andrés de Tapia”, en Juan A. Ortega y Medina y Rosa Camelo (coords.), <em>Historiografía mexicana</em>, 4 v., coordinación del volumen por Rosa Camelo y Patricia Escandón, México, Universidad Nacional Autónoma de México-Instituto de Investigaciones Históricas, 2012, v. 2, t. 1, 87-102 p.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- bernardo vasquez tapia -->
+        <div class="d-inline-flex justify-content-start pb-3">
+          <h3>Bernardino Vázquez de Tapia, Relación de méritos y servicios del conquistador Bernardino Vázquez de Tapia. Vecino y regidor de esta gran Ciudad de Teustitlan, México</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2);"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1 px-0"></div>
+            <div class="col-11 px-0">
+              <p>La obra se publicó en México, por primera vez, en 1953 por Manuel Robledo. Existe una edición realizada por la UNAM, que estuvo a cargo de José Gurría Lacroix. El original se conserva en la Real Biblioteca de San Lorenzo de El Escorial.</p>
+              <h5 class="pb-3">Para leer más…</h5>
+              <ul>
+                <li>Gurría Lacroix, Jorge, “Estudio”, en Bernardino Vázquez de Tapia, <em>Relación de méritos y servicios del conquistador Bernardino Vázquez de Tapia. Vecino y regidor de esta gran Ciudad de Teustitlan, México</em>, estudio y notas de Jorge Gurría Lacroix, México, Universidad Nacional Autónoma de México, 1972, p. 9-19.</li>
+                <li>Soto Elizalde, Berenice Cristina, “Bernardino Vázquez de Tapia”, en Juan A. Ortega y Medina y Rosa Camelo (coords.), <em>Historiografía mexicana</em>, 4 v., coordinación del volumen por Rosa Camelo y Patricia Escandón, México, Universidad Nacional Autónoma de México-Instituto de Investigaciones Históricas, 2012, v. 2, t. 1, p. 105-118.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- conquistador anon -->
+        <div class="d-inline-flex justify-content-start pb-3">
+          <h3>Conquistador Anónimo, Relación de algunas cosas de la Nueva España y de la gran ciudad de Temistitlán México, escrita por un compañero de Cortés.</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2);"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1 px-0"></div>
+            <div class="col-11 px-0">
+              <p>En 1606 se publicó una edición en italiano, en Venecia; también se ha publicado en inglés y francés. En 1938 se publicó en México, edición a cargo de Edmundo O’Gorman y Justino Fernández. Se desconoce el paradero del manuscrito original.</p>
+              <h5 class="pb-3">Para leer más…</h5>
+              <ul>
+                <li><em>Relación de algunas cosas de la Nueva España y de la gran ciudad de Temistitlán México, escrita por un compañero de Cortés</em>, preámbulo de Edmundo O’Gorman, México, Alcancia, 1938, 45 p., ilustraciones.</li>
+                <li><em>Relación de algunas cosas de la Nueva España y de la gran ciudad de Temistitlán México, escrita por un compañero de Cortés</em>, prólogo y notas de León Díaz Cárdenas, México, Editorial América, 1941, 55 p.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- diego gordoy -->
+        <div class="d-inline-flex justify-content-start pb-3">
+          <h3>Diego Godoy, Relación hecha por Diego Godoy a Hernando Cortés, en que trata del descubrimiento de diversas ciudades y provincias, y guerra que tuvo con los indios, y su modo de pelear; de la provincia de Chamula, de los caminos difíciles y peligrosos, y repartimiento que hizo de los pueblos</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2);"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1 px-0"></div>
+            <div class="col-11 px-0">
+              <p>El original se encuentra en la Biblioteca Nacional de España</p>
+              <h5 class="pb-3">Para leer más…</h5>
+              <ul>
+                <li>Lenkersdorf, Gurdun, “Diego de Godoy”, en Juan A. Ortega y Medina y Rosa Camelo (coords.), en <em>Historiografía mexicana</em>, 4 v., coordinación del volumen por Rosa Camelo y Patricia Escandón, México, Universidad Nacional Autónoma de México-Instituto de Investigaciones Históricas, 2012, v. 2, t. 1, 155-162 p.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- balstazasr dorantes carranzza -->
+        <div class="d-inline-flex justify-content-start pb-3">
+          <h3>Baltazar Dorantes de Carranza, Sumaria relación de las cosas de la Nueva España con noticia individual de los descendientes legítimos de los conquistadores y primeros pobladores españoles.</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2);"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1 px-0"></div>
+            <div class="col-11 px-0">
+              <p>En 1902 se publicó la obra por primera vez en la imprenta del Museo Nacional de México. El original se conserva en la Universidad de Texas.</p>
+              <h5 class="pb-3">Para leer más…</h5>
+              <ul>
+                <li>Díez Canedo Flores, Aurora, “Baltazar Dorantes de Carranza”, en Juan A. Ortega y Medina y Rosa Camelo, <em>Historiografía mexicana</em>, 4 v., coordinación del volumen por Rosa Camelo y Patricia Escandón, México, Universidad Nacional Autónoma de México-Instituto de Investigaciones Históricas, 2012, v. 2, t. 1, p. 377-392.</li>
+                <li>Iglesia, Ramón (et. al.), <em>Estudios historiográficos de la Nueva España</em>, México, El Colegio de México, 1945, 329 p.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- francisco lopez -->
+        <div class="d-inline-flex justify-content-start pb-3">
+          <h3>Francisco López de Gómara, Historia de las Indias y conquista de México.</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2);"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1 px-0"></div>
+            <div class="col-11 px-0">
+              <p>Se ha publicado desde 1552. En 1943 fue editada en México por Pedro Robredo. No existe un manuscrito original, el texto más antiguo que se conoce fue el realizado por el impresor Agustín Millan en 1552 en Zaragoza.</p>
+              <h5 class="pb-3">Para leer más…</h5>
+              <ul>
+                <li>Jiménez, Nora Edith, <em>Francisco López de Gómara: escribir historias en tiempos de Carlos V</em>, Zamora, El colegio de Michoacán-Instituto Nacional de Antropología e Historia, 2001, 391 p., mapas.</li>
+                <li>León Cázares, María del Carmen, “Francisco López de Gómara”, en Juan A. Ortega y Medina y Rosa Camelo (coords.), <em>Historiografía mexicana</em>, 4 v., coordinación del volumen por Rosa Camelo y Patricia Escandón, México, Universidad Nacional Autónoma de México-Instituto de Investigaciones Históricas, 2012, p. 235-266.</li>
+                <li>Miralles Ostos, Juan, “Estudio preliminar”, en Francisco López de Gómara, <em>Historia de la conquista de México</em>, México, Porrúa, 1988, 409 p. (Sepan Cuántos, 566).</li>
+                <li>Vedia, Enrique de, <em>Historiadores primitivos de Indias</em>, 2 v., Madrid, Rivadeneyra, 1852-1853. (Biblioteca de Autores Españoles, 22 y 26).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- pedro martin -->
+        <div class="d-inline-flex justify-content-start pb-3">
+          <h3>Pedro Mártir de Anglería, Décadas del Nuevo Mundo</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2);"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1 px-0"></div>
+            <div class="col-11 px-0">
+              <p>Las ocho décadas fueron publicadas paulatinamente entre 1510 y 1525.</p>
+              <h5 class="pb-3">Para leer más…</h5>
+              <ul>
+                <li>León Cázares, María del Carmen, “Pedro Mártir de Anglería”, en Juan A. Ortega y Medina y Rosa Camelo (coords.), <em>Historiografía mexicana</em>, 4 v., coordinación del volumen por Rosa Camelo y Patricia Escandón, México, Universidad Nacional Autónoma de México-Instituto de Investigaciones Históricas, 2012, v. 2, t. 1, p. 164-196.</li>
+                <li>O’Gorman, Edmundo, <em>Cuatro historiadores de Indias: siglo XVI: Pedro Mártir de Anglería, Gonzalo Fernández de Oviedo y Valdés, Fray Bartolomé de las Casas, Joseph de Acosta</em>, México, Alianza Editorial Mexicana-Consejo Nacional para la Cultura y las Artes, 1989, 181 p.</li>
+                <li>________________, “Pedro Mártir y el proceso de América”, en Pedro Mártir de Anglería, <em>Décadas del Nuevo Mundo</em>, 2 v., México, José Porrúa e Hijos, 1964. (Biblioteca José Porrúa Estrada de Historia Mexicana, Primera Serie, La Conquista, VI).</li>
+                <li>Ramos Pérez, Demetrio, <em>as variaciones ideológicas en torno al descubrimiento de América: Pedro Mártir de Anglería y su mentalidad</em>, Valladolid, Casa Museo de Colón-Seminario Americanista de la Universidad de Valladolid, 1982, 84 p.</li>
+                <li>Salas, Alberto M., <em>Tres cronistas de Indias</em>, 2ª ed., México, Fondo de Cultura Económica, 1986.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- fernando gonzales -->
+        <div class="d-inline-flex justify-content-start pb-3">
+          <h3>Gonzalo Fernández de Oviedo, Historia general y natural de las Indias</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2);"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1 px-0"></div>
+            <div class="col-11 px-0">
+              <p>Su obra se publicó, fragmentadamente, desde 1526. Entre 1851 y 1855 se editó toda la obra por José Amador de los Ríos. El original se conserva en la Biblioteca Nacional de España.</p>
+              <h5 class="pb-3">Para leer más…</h5>
+              <ul>
+                <li>Carrillo Castillo, Jesús, <em>Naturaleza e imperio: la representación del mundo natural en la “Historia general y natural de las Indias” de Gonzalo Fernández de Oviedo</em>, Madrid, Fundación Carolina-Doce Calles, 2004, 366 p.</li>
+                <li>Coello de la Rosa, Alexandre, <em>, De la naturaleza y el nuevo mundo: maravilla y exoticismo de Gonzalo Fernández de Oviedo y Valdés</em>, Madrid, Fundación Universitaria Española, 2002, 225 p.</li>
+                <li>_______________________, <em>Historia y fricción: la escritura de la Historia general y natural de las Indias de Gonzalo de Oviedo y Valdés (1478-1557)</em>, Valencia, Universidad de Valencia, 2012, 170 p., ilustraciones.</li>
+                <li>León Cázares, María del Carmen, “Gonzalo Fernández de Oviedo y Valdés”, en Juan A. Ortega y Medina y Rosa Camelo (coords.),<em>Historiografía mexicana</em>, 4 v., coordinación del volumen por Rosa Camelo y Patricia Escandón, México, Universidad Nacional Autónoma de México-Instituto de Investigaciones Históricas, 2012, v. 2, t. 1, p. 197-234.</li>
+                <li>Pérez Tudela y Bueso, Juan, “Vida y escritos de Gonzalo Fernández de Oviedo”, en Gonzalo Fernández de Oviedo, <em>Historia general y natural de las Indias</em>, 5 v., Madrid, Ediciones Atlas, 1959.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- hantonio herrera torbe sillas -->
+        <div class="d-inline-flex justify-content-start pb-3">
+          <h3>Antonio de Herrera y Tordesillas, Historia general de los hechos de los castellanos en las islas y tierra firme del mar océano</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2);"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1 px-0"></div>
+            <div class="col-11 px-0">
+              <p>La obra se ha publicado en España desde 1601, en 1994 se hizo una edición en Buenos Aires con un prólogo de Natalicio González. El original se conserva en la Real Academia de Historia en Madrid.</p>
+              <h5 class="pb-3">Para leer más…</h5>
+              <ul>
+                <li>Cuesta Domingo, Mariano, “Biografía”, en Antonio de Herrera y Tordesillas, <em>Historia general de los hechos de los castellanos en las islas y tierra firme del mar océano</em>, 4 t., Madrid, Universidad Complutense de Madrid, 1991.</li>
+                <li>Escandón, Patricia, “Antonio de Herrera y Tordesillas”, en Juan A. Ortega y Medina y Rosa Camelo (coords.), <em>Historiografía mexicana</em>, 4 v., coordinación del volumen por Rosa Camelo y Patricia Escandón, México, Universidad Nacional Autónoma de México-Instituto de Investigaciones Históricas, v. 2, t. 1, p. 305-322.</li>
+                <li>Iglesia, Ramón, <em>Estudios de historiografía de la Nueva España</em>, México, El Colegio de México, 1945, 329 p.</li>
+                <li>Natalicio González, Juan, “Prólogo”, en Antonio de Herrera y Tordesillas, <em>Historia general de los hechos de los castellanos en las islas y tierra firme del mar océano</em>, 10 v., Asunción, Editorial Guaranía, 1944-1946.</li>
+                <li>Torre Revello, José, <em>La expedición de don Pedro de Mendoza y las fuentes informativas del cronista mayor de las Indias Antonio de Herrera y Tordesillas</em>, Buenos Aires, Talleres S. A. Casa Jacobo Peuser, 1941, p. 605-629.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- francisco dervantes salazsar -->
+        <div class="d-inline-flex justify-content-start pb-3">
+          <h3>Francisco Cervantes de Salazar, Crónica de Nueva España</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2);"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1 px-0"></div>
+            <div class="col-11 px-0">
+              <p>La obra tiene numerosas ediciones en España. En México se ha publicado por la editorial Porrúa, edición a cargo de Juan Miralles Ostos. Se conserva un manuscrito en la Biblioteca Nacional de Madrid.</p>
+              <h5 class="pb-3">Para leer más…</h5>
+              <ul>
+                <li>Díez-Canedo, Aurora, “Francisco Cervantes de Salazar desglosado. El humanismo español del siglo XVI, la sociedad novohispana y la crónica de la conquista”, en Luis Barjau y Clementina Battcock (coords.), <em>Lo múltiple y lo singular. Diversidad de perspectivas en las crónicas de la Nueva España</em>, México, Secretaría de Cultura-Instituto Nacional de Antropología e Historia, p. 103-130.</li>
+                <li>_________________, “Francisco Cervantes de Salazar”, en Juan A. Ortega y Medina y Rosa Camelo (coords.), <em>Historiografía mexicana</em>, 4 v., coordinación del volumen por Rosa Camelo y Patricia Escandón, México, Universidad Nacional Autónoma de México-Instituto de Investigaciones Históricas, 2012, v. 2, t. 1, p. 345-364.</li>
+                <li>Méndez Plancarte, Gabriel, <em>Humanistas del s. XVI</em>, México, Universidad Nacional Autónoma de México, 1946, (Biblioteca del Estudiante Universitario, 24).</li>
+                <li>Millares Carlo, Agustín, <em>Cuatro estudios biobibliográficos mexicanos: Francisco Cervantes de Salazar, fray Agustín Dávila Padilla, Juan José de Eguiara y Eguren, José Mariano Beristain de Souza</em>, México, Fondo de Cultura Económica, 1986, 462 p.</li>
+                <li>Miralles Ostos, Juan, “Prólogo”, en Francisco Cervantes de Salazar, <em>Crónica de la Nueva España</em>, México, Porrúa, 1985, 860 p. (Biblioteca Porrúa de Historia, 84).</li>
+                <li>Nutall, Zelia, “Francisco Cervantes de Salazar. Noticia biográfica”, traducción de Manuel Romero de Terreros, <em>Anales del Museo Nacional de Arqueología, Historia y Etnografía</em>, época IV, t. IV, 1926.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- juan gines -->
+        <div class="d-inline-flex justify-content-start pb-3">
+          <h3>Juan Ginés de Sepúlveda, Des rebus Hispanorum gestis ad Novum Orbem Mexicunque</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2);"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1 px-0"></div>
+            <div class="col-11 px-0">
+              <p>En 1973 se publicó en Valladolid por Seminario Americanista de la Universidad de Valladolid y el Excelentísimo Ayuntamiento de Pozoblanco. El original está en la Biblioteca de la Historia.</p>
+              <h5 class="pb-3">Para leer más…</h5>
+              <ul>
+                <li>Castilla Urbano, Francisco, <em>Juan Ginés de Sepúlveda, 1490-1573</em>, Madrid, Orto, 2000, 94 p. (Biblioteca Filosófica, 106).</li>
+                <li>Patiño Palafox, Luis, <em>Juan Ginés de Sepúlveda y su pensamiento imperialista</em>, México, Los Libros de Homero, 2007, 296 p.</li>
+                <li>Rivero García, Luis, <em>El latín de del orbe novo de Juan Ginés de Sepúlveda</em>, Salamanca, Universidad de Sevilla, 1993, 496 p.</li>
+                <li>Santiago, Teresa, <em>Bárbaros contra cristianos: la polémica Bartolomé de las Casas-Juan Ginés de Sepúlveda</em>, México, Universidad Autónoma Metropolitana, 2018, 103 p.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- alonso zorrita -->
+        <div class="d-inline-flex justify-content-start pb-3">
+          <h3>Alonso de Zorita, Relación de algunas de las muchas cosas notables que hay en la Nueva España y de su conquista y pacificación y de la conversión de los naturales de ella</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2);"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1 px-0"></div>
+            <div class="col-11 px-0">
+              <p>En 1908 se publicó en Madrid en la editorial Idamor Moreno Press. En 1999 la obra se publicó en México en la colección Cien de México del Consejo Nacional para la Cultura y las Artes. La edición y el estudio preliminar fue realizado por Ethelia Ruiz Medrano, Wiebke Ahrndt y José Mariano Leyva. El original se conserva en la Biblioteca del Palacio Real, Madrid.</p>
+              <h5 class="pb-3">Para leer más…</h5>
+              <ul>
+                <li>Ahrdnt, Wiebke, “Alonso de Zorita: un funcionario colonial de la Corona española”, en Alonso de Zorita, <em>Relación de la Nueva España</em>, 2ª ed., 2 v., México, Consejo Nacional para la Cultura y las Artes, 2011, v. 1, p. 17-58. (Cien de México) </li>
+                <li>____________, <em>Edición crítica de la Relación de la Nueva España y de la Breve y sumaria relación escritas por Alonso de Zorita, traducción de Luis Felipe Segura</em>, México, Instituto Nacional de Antropología e Historia, 2001, 357 p.</li>
+                <li>Ramírez Cabañas, Joaquín, “Prologo”, en Alonso de Zorita, <em>Los señores de la Nueva España</em>, México, Universidad Nacional Autónoma de México, 1993, p. V-XX.</li>
+                <li>Rodríguez Salas, María Luisa, <em>Alonso de Zorita, Vasco de Puga y Tomás López Medel, sus trayectorias y obras como integrantes del estamento de los oidores de la Nueva España: 1552-1565</em>, México, Universidad Nacional Autónoma de México-Instituto de Investigaciones Históricas, 2019, 192 p., ilustraciones.</li>
+                <li>Ruiz Medrano, Ethelia, “Proyecto político de Alonso de Zorita, oidor en México”, en Alonso de Zorita, <em>Relación de la Nueva España</em>, 2ª ed., 2 v., México, Consejo Nacional para la Cultura y las Artes, 2011, v. 1, p. 59-92. (Cien de México).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- jose acosta -->
+        <div class="d-inline-flex justify-content-start pb-3">
+          <h3>José de Acosta, Historia natural y moral de las Indias</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2);"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1 px-0"></div>
+            <div class="col-11 px-0">
+              <p>Se publicó por primera vez en 1590, en Sevilla, por la imprenta de Juan de León. En 1940, Edmundo O’Gorman preparó una edición publicada por el Fondo de Cultura Económica. También se ha publicado en inglés. El original permanece en la Biblioteca Nacional de España.</p>
+              <h5 class="pb-3">Para leer más…</h5>
+              <ul>
+                <li>Delgado López, Enrique, “José de Acosta”, en Juan A. Ortega y Medina y Rosa Camelo, <em>Historiografía mexicana</em>, 4 v., coordinación del volumen por Rosa Camelo y Patricia Escandón, México, Universidad Nacional Autónoma de México-Instituto de Investigaciones Históricas, 2012, v. 2, t. 1, p. 281-304.</li>
+                <li>O’Gorman Edmundo, <em>Cuatro historiadores de indias, siglo XVI: Pedro Mártir de Anglería, Gonzalo Fernández de Oviedo y Valdés, fray Bartolomé de las Casas, Joseph de Acosta</em>, México, Alianza Editorial Mexicana-Consejo Nacional para la Cultura y las Artes, 1989, 181 p.</li>
+                <li>________________, “Prólogo”, en José de Acosta, <em>Historia natural y moral de las Indias. En que se tratan de las cosas notables del cielo, elementos, metales, plantas y animales dellas y los ritos y ceremonias, leyes y gobierno de los indios</em>, 3ª ed., México, Fondo de Cultura Económica, 2006, p. XVII-LXXVII. (Colec. Conmemorativa 70 aniversario, 38).</li>
+                <li>Rivara de Tuesta, María Luisa, <em>José de Acosta. Un humanista reformista</em>, Lima, Universo, 1970, 147 p.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- fray bernardino sahagun -->
+        <div class="d-inline-flex justify-content-start pb-3">
+          <h3>Fray Bernardino de Sahagún, Historia general de las cosas de la Nueva España</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2);"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1 px-0"></div>
+            <div class="col-11 px-0">
+              <p>La obra se ha editado en diferentes idiomas. En México, se ha publicado desde 1829. El original está en la Biblioteca Medicea Laurenciana de Florencia, Italia.</p>
+              <h5 class="pb-3">Para leer más…</h5>
+              <ul>
+                <li>Battcock, Clementina, “Fray Bernardino de Sahagún y su Historia General: notas histórico-filológicas”, en <em>La conquista de México según fray Bernardino de Sahagún</em>, edición, prólogo y notas de Valeria Añón, Buenos Aires, Corregidor, 2016, p. 29-35.</li>
+                <li>García Quintana, Josefina, “Fray Bernardino de Sahagún”, en Juan A. Ortega y Medina y Rosa Camelo (coords.), <em>Historiografía Mexicana</em>, 4 v., coordinación del volumen por José Rubén Romero Galván, México, Universidad Nacional Autónoma de México-Instituto de Investigaciones Históricas, 2011, v. 1, 197-228.</li>
+                <li>Magaloni Kerpel, Diana, <em>Albores de la conquista. La historia pintada del Códice Florentino</em>, México, Artes de México-Secretaría de Cultura, 2016, 304 p., ilustraciones, mapa.</li>
+                <li>_____________, <em>Los colores del Nuevo Mundo. Artistas, materiales y la creación del Códice Florentino</em>, raducción de Emma Julieta Barriento Isabel, México, Universidad Nacional Autónoma de México-Dirección General de Publicaciones y Fomento Editorial-Getty Research Institute, 2014, XI+68 p., ilustraciones.</li>
+                <li>Romero Galván, José Rubén y Pilar Máynez, <em>El universo de Sahagún, pasado y presente: coloquio 2005</em>, México, Universidad Nacional Autónoma de México-Instituto de Investigaciones Históricas, 2007, 154 p., láminas, ilustraciones.</li>
+                <li>________________, <em>El universo de Sahagún, pasado y presente: coloquio 2008</em>, México, Universidad Nacional Autónoma de México-Instituto de Investigaciones Históricas, 2011, p. 282, ilustraciones.</li>
+                <li>________________, <em>El universo de Sahagún pasado y presente 2011</em>, México, Universidad Nacional Autónoma de México-Instituto de Investigaciones Históricas, 2014, 236 p., láminas, ilustraciones.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- fray diego duran -->
+        <div class="d-inline-flex justify-content-start pb-3">
+          <h3>Fray Diego Durán, Historia de las Indias de Nueva España e Islas de Tierra Firme</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2);"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1 px-0"></div>
+            <div class="col-11 px-0">
+              <p>En México, la obra ha sido editada, recientemente, por la editorial Porrúa y la Universidad Nacional Autónoma de México. El original se encuentra en la Biblioteca Nacional de España.</p>
+              <h5 class="pb-3">Para leer más…</h5>
+              <ul>
+                <li>Garibay K., Ángel M., “Diego Durán y su obra”, en Diego Durán, <em>Historia de las Indias de Nueva España e Islas de la Tierra Firme</em>, 3ª ed., 2 v., México, Editorial Porrúa, 2006, v. 1, p. XI-XLVII.</li>
+                <li>Heyden, Doris, <em>El templo mayor de Tenochtitlan en la obra de Fray Diego Durán</em>, México, Instituto Nacional de Antropología e Historia, 2000, 138 p.</li>
+                <li>Obregón, Gonzalo, <em>Los tlacuilos de fray Diego Durán</em>, México, Cartón y Papel de México, 1975, 30 p., ilustraciones.</li>
+                <li>Romero Galván, José Rubén y Rosa Camelo, “Fray Diego Durán”, en Juan A. Ortega y Medina y Rosa Camelo (coords.), <em>Historiografía Mexicana</em>, 4 v., coordinación del volumen por José Rubén Romero Galván, México, Universidad Nacional Autónoma de México-Instituto de Investigaciones Históricas, 2011, v. 1, p. 229-258.</li>
+                <li>Sandoval, Fernando B., “La relación de la conquista de México en la Historia de Fray Diego Durán”, en <em>Estudios de Historiografía de la Nueva España</em>, México, El Colegio de México, 1945.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- fray juan quemada -->
+        <div class="d-inline-flex justify-content-start pb-3">
+          <h3>Fray Juan de Torquemada, Monarquía Indiana. De los veinte y un libros rituales y monarquía indiana, con el origen y guerras de los indios occidentales, de sus poblazones, descubrimiento, conquista, conversión y otras cosas maravillosas de la mesma tierra.</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2);"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1 px-0"></div>
+            <div class="col-11 px-0">
+              <p>Se publicó en Sevilla en 1616 por el impresor Matías Clavijo. En México se ha editado por Porrúa, en 1969 y por la UNAM, entre 1975 y 1983, edición a cargo de Miguel León-Portilla.</p>
+              <h5 class="pb-3">Para leer más…</h5>
+              <ul>
+                <li>Ibarra Herrerías, María de Lourdes, “Juan de Torquemada”, en Juan A. Ortega y Medina y Rosa Camelo (coords.), <em>Historiografía mexicana</em>, 4 v., coordinación del volumen por Rosa Camelo y Patricia Escandón, México, Universidad Nacional Autónoma de México, v. 2, t. 2, p. 827-852.</li>
+                <li>Moreno Toscano, Alejandra, <em>Fray Juan de Torquemada y su Monarquía Indiana</em>, Xalapa, Universidad Veracruzana, 1963, 100 p.</li>
+                <li>Torquemada, Juan de, <em>De los veinte y un libros rituales y monarquía indiana, con el origen y guerras de los indios occidentales, de sus poblazones, descubrimiento, conquista, conversión y otras cosas maravillosas de la mesma tierra</em>, 3ª ed., edición, introducción, estudio y notas de Miguel León-Portilla, 7 v., México, Universidad Nacional Autónoma de México-Instituto de Investigaciones Históricas, 1975-1983. (Serie de historiadores y cronistas de Indias, 5).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- fray bartolome de casa -->
+        <div class="d-inline-flex justify-content-start pb-3">
+          <h3>Fray Bartolomé de las Casas, Brevísima relación de la destrucción de las indias.</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2);"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1 px-0"></div>
+            <div class="col-11 px-0">
+              <p>Se publicó por primera vez en 1552, en Sevilla. Actualmente existen varias ediciones en México. El original se encuentra en el Archivo Histórico de la Provincia de los Dominicos de Aragón en Valencia.</p>
+              <h5 class="pb-3">Para leer más…</h5>
+              <ul>
+                <li>Beuchot, Mauricio, “Bartolomé de las Casas”, en Juan A. Ortega y Medina y Rosa Camelo (coords.), <em>Historiografía mexicana</em>, 4 v. coordinación del volumen por Rosa Camelo y Patricia Escandón, México, Universidad Nacional Autónoma de México-Instituto de Investigaciones Históricas, 2012, p. 267-280.</li>
+                <li>______________, <em>Filosofía y política en Bartolomé de las Casas</em>, Salamanca, Editorial San Esteban, 2013, 217 p.</li>
+                <li>Cárdenas Bunsen, José Alejandro, <em>Escritura y derecho canónico en la obra de fray Bartolomé de las Casas</em>, Madrid, Vervuert, 2011, 431 p.</li>
+                <li>Duran Luzio, Juan, <em>Bartolomé de las Casas ante la conquista de América: las voces del historiador</em>, 2ª ed., Costa Rica, EUNA, 2014, 460 p.</li>
+                <li>Menéndez Pidal, Ramón, <em>El padre las Casas, su doble personalidad</em>, Madrid, Real Academia de la Historia, 2012, XLVI+410 p., ilustraciones, mapas.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- codice aubin -->
+        <div class="d-inline-flex justify-content-start pb-3">
+          <h3>Códice Aubin/Historia de la nación mexicana</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2);"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1 px-0"></div>
+            <div class="col-11 px-0">
+              <p>Fue publicada en 1902 por la Oficina Tipográfica de la Secretaría de Fomento del gobierno de México. El original permanece en el departamento de etnografía del Museo Británico, en Londres.</p>
+              <h5 class="pb-3">Para leer más…</h5>
+              <ul>
+                <li><em>Códice Aubin. Historia de la nación mexicana</em>, introducción, notas, índices, versión paleográfica y traducción por Charles E. Dibble, Madirid, Ediciones José Porrúa Turanzas, 1936. (Colección Chimalistac de libros y documentos de la Nueva España)</li>
+                <li>Limón Olvera, Silvia y Miguel Pastrana Flores, “Códices transcritos con pictogramas”, en Juan A. Ortega y Medina y Rosa Camelo (coords.), <em>Historiografía mexicana</em>, 4 v., coordinación del volumen por José Rubén Romero Galván, México, Universidad Nacional Autónoma de México, 2011, v. 1, p. 115-132.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- anal de tlatelolco -->
+        <div class="d-inline-flex justify-content-start pb-3">
+          <h3>Anales de Tlatelolco, unos anales históricos de la nación mexicana</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2);"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1 px-0"></div>
+            <div class="col-11 px-0">
+              <p>En 1948 se publicó en México en la Editorial Robledo. En 2004, la obra fue editada por CONACULTA, con traducción y pelografía de Rafael Tena.</p>
+              <h5 class="pb-3">Para leer más…</h5>
+              <ul>
+                <li><em>Anales de Tlatelolco</em>, paleografía y traducción de Rafael Tena, México, Consejo Nacional para la Cultura y las Artes, 2004, 207 p.</li>
+                <li><em>Anales de Tlatelolco, unos anales históricos de la nació mexicana; y códice de Tlatelolco</em>, edición y notas de Heinrich Berlin, resumen e interpretación de Robert H. Barlow, México, Porrúa, 1980, 127 p.</li>
+                <li>Martínez Baracs, Rodrigo, “Rafael Tena, Anales de Tlatelolco”, en <em>Dimensión Antropológica</em>, México, v. 36, enero-abril, 2006, p. 174-181.</li>
+                <li>Prem, Hans J. y Ursula Dyckerhoff, “Los Anales de Tlatelolco. Una colección heterogénea”, en <em>Estudios de Cultura Náhuatl</em>, México, v. 27, 1997, p. 181-206.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- cantores mexicanos -->
+        <div class="d-inline-flex justify-content-start pb-3">
+          <h3>Cantares Mexicanos</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2);"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1 px-0"></div>
+            <div class="col-11 px-0">
+              <p>Entre 1965 y 1966, Ángel María Garibay preparó una edición dentro de su obra Poesía Náhuatl. En 2011, Miguel León Portilla preparó una edición publicada por la UNAM.</p>
+              <h5 class="pb-3">Para leer más…</h5>
+              <ul>
+                <li>Hernández de León-Portilla, Ascensión y Liborio Villagómez, “Estudio codicológico del manuscrito”, en <em>Cantares Mexicanos</em>, edición, paleografía, traducción y notas de Miguel León-Portilla, 3 v, México, Universidad Nacional Autónoma de México-Coordinación de Humanidades-Instituto de Investigaciones Bibliográficas-Instituto de Investigaciones Filológicas-Instituto de Investigaciones Históricas, 2011, v. 1, p. 27-150.</li>
+                <li>León-Portilla, Miguel, “Estudio introductorio a los Cantares”, en <em>Cantares Mexicanos</em>, edición, paleografía, traducción y notas de Miguel León-Portilla, 3 v, México, Universidad Nacional Autónoma de México-Coordinación de Humanidades-Instituto de Investigaciones Bibliográficas-Instituto de Investigaciones Filológicas-Instituto de Investigaciones Históricas, 2011, v. 1, p. 151-295.</li>
+                <li>Martínez Baracs, Rodrigo, “Cantares mexicanos, 2 v., edición de Miguel León-Portilla, en <em>Estudios de Cultura Náhuatl</em>, México, v. 45, enero-junio 2013, p. 311-319.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- hernando alvarando -->
+        <div class="d-inline-flex justify-content-start pb-3">
+          <h3>Hernando Alvarado Tezozómoc, Crónica mexicana</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2);"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1 px-0"></div>
+            <div class="col-11 px-0">
+              <p>En 1878, Manuel Orozco y Berra realizó una edición de la obra junto con el Códice Ramírez. En 1987 fue publicada por la SEP y en 1987, Porrúa reeditó la versión de Orozco y Berra.</p>
+              <h5 class="pb-3">Para leer más…</h5>
+              <ul>
+                <li>Battcock, Clementina y Jhonnatan Zavala, “La Crónica Mexicana de Hernando Alvarado Tezozomoc. El desafío de la memoria”, en Berta Gilabert (coord.), <em>Diálogo con el pasado a través de las fuentes. Manual de comentario de textos históricos</em>, México, Editorial Maramargo, 2017, 295 p.</li>
+                <li>Costilla Martínez, Héctor Alejandro, <em>Historia adoptada, historia adaptada. La crónica mestiza del México colonial</em>, Madrid, Vervuert, 2019, 129 p., ilustraciones.</li>
+                <li>Romero Galván, José Rubén, “Hernando Alvarado Tezozómoc”, en Juan A. Ortega y Medina y Rosa Camelo, (coords.), <em>Historiografía mexicana</em>, 4 v., coordinación del volumen por José Rubén Romero Galván, México, Universidad Nacional Autónoma de México, 2011, v. 1, p. 313-330.</li>
+                <li>_______________________, <em>Los privilegios perdidos. Hernando Alvarado Tezozómoc, su tiempo, su nobleza y su Crónica Mexicana</em>, México, Universidad Nacional Autónoma de México-Instituto de Investigaciones Históricas, 2003, 170 p. (Serie Teoría e Historia de la Historiografía, 1).</li>
+                <li>Velazco, Salvador, <em>Visiones de Anáhuac. Reconstrucciones historiográficas y etnicidades emergentes del México colonial</em>, México, Universidad de Guadalajara, 2003, 308 p.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- domingo francisco san antonio -->
+        <div class="d-inline-flex justify-content-start pb-3">
+          <h3>Domingo Francisco de San Antón Muñón Chimalpahin Cuauhtlehuanitzin, La conquista de México.</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2);"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1 px-0"></div>
+            <div class="col-11 px-0">
+              <p>Se menciona la obra por primera vez en 1746 en el Catálogo del Museo Histórico Indiano de Lorenzo Boturini. La obra fue publicada en 2012 en México por la Universidad Nacional Autónoma de México con estudios de Susan Schroeder, David Tavárez Bermúdez y Cristián Roa-de-la-Carrera. El original está en la Biblioteca Newberry, Chicago, Illinois.</p>
+              <h5 class="pb-3">Para leer más…</h5>
+              <ul>
+                <li><em>Chimalpahin y la conquista de México. La crónica de Francisco López de Gómara comentada por el historiador nahua</em>, edición de Susan Schroeder, David Tavárez Bermúdez y Cristián Roa de la Carrera, prólogo de José Rubén Romero Galván, México, Universidad Nacional Autónoma de México-Instituto de Investigaciones Históricas, 2012, 539 p.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- fernando de alva ixlsdioxchosetchil -->
+        <div class="d-inline-flex justify-content-start pb-3">
+          <h3>Fernando de Alva Ixlilxóchitl, Relación histórica de la nación tulteca y Historia Chichimeca.</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2);"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1 px-0"></div>
+            <div class="col-11 px-0">
+              <p>Edmundo O’gorman preparó una edición, entre 1975 y 1977, que fue publicada por la UNAM.</p>
+              <h5 class="pb-3">Para leer más…</h5>
+              <ul>
+                <li>Alva Ixtlilxóchitl, Fernando, <em>Obras históricas</em>, 3ª ed., 2 v., edición, estudio introductorio y apéndice documental de Edmundo O’Gorman, México, Instituto Mexiquense de Cultura, Universidad Nacional Autónoma de México-Instituto de Investigaciones Históricas, 1997.</li>
+                <li>Costilla Martínez, Héctor Alejandro, <em>Historia adoptada, historia adaptada. La crónica mestiza del México colonial</em>, Madrid, Vervuert, 2019, 127 p., ilustraciones.</li>
+                <li>Lesbre, Patrick, <em>La construcción del pasado indígena de Tetzcoco. De Nezahualcóyotl a Alva Ixlilxóchitl</em>, Michoacán, El Colegio de Michoacán-Instituto Nacional de Antropología e Historia-Centro de Estudios Mesoamericanos y Centroamericanos, 2016, 537 p., ilustraciones.</li>
+                <li>Romero Galván, José Rubén, “Fernando de Alva Ixlilxóchitl”, en Juan A. Ortega y Medina y Rosa Camelo, (coords.), <em>Historiografía mexicana</em>, 4 v., coordinación del volumen por José Rubén Romero Galván, México, Universidad Nacional Autónoma de México, 2011, v. 1, p. 351-366.</li>
+                <li>Velazco, Salvador, <em>Visiones de Anáhuac. Reconstrucciones historiográficas y etnicidades emergentes en el México colonial</em>, Guadalajara, Universidad de Guadalajara, 2003, 308 p.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- juan de rigo tovar -->
+        <div class="d-inline-flex justify-content-start pb-3">
+          <h3>Juan de Tovar, Manuscrito Tovar.</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2);"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1 px-0"></div>
+            <div class="col-11 px-0">
+              <p>En el 2000 se realizó una edición de un fragmento de la obra bajo el título Historia y creencias de los indios de Biblioteca John Carter Brown, Universidad Brown, Rhode Island 22 México, publicada por Ediciones Miraguano.</p>
+              <h5 class="pb-3">Para leer más…</h5>
+              <ul>
+                <li>Battcock, Clementina y Alejandra Dávila Montoya, “Las láminas de las guerras tenochcas en Tovar y Durán. Variantes y equívocos”, en <em>Revista de Indias</em>, España, v. LXXVII, no. 271, 2017, p. 691-725.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- codice ramirez -->
+        <div class="d-inline-flex justify-content-start pb-3">
+          <h3>Códice Ramírez</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2);"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1 px-0"></div>
+            <div class="col-11 px-0">
+              <p>En 1878 Manuel Orozco y Berra realizó una edición del códice junto con la Crónica Mexicana. En 1975 se publicó por la Secretaría de Educación Pública dentro de la Colección de documentos conmemorativos del DCL aniversario de la fundación de Tenochtitlan (Ciudad de México). En 1979 se publicó la obra con el título Códice Ramírez en la Editorial Innovación, S. A., con él estudió realizó por Manuel Orozco y Berra. En 1987 se reeditó la obra publicada por Manuel Orozco y Berra en 1878 bajo la Editorial Porrúa. El original está en la Biblioteca Nacional de Antropología e Historia, México.</p>
+              <h5 class="pb-3">Para leer más…</h5>
+              <ul>
+                <li>Battcock, Clementina y Alejandra Dávila Montoya, “Las láminas de las guerras tenochcas en Tovar y Durán. Variantes y equívocos”, en <em>Revista de Indias</em>, España, v. LXXVII, no. 271, 2017, p. 691-725.</li>
+                <li><em>Códice Ramírez. Manuscrito del s. XVI intitulado: Relación del orige de los indios que habitan eta Nueva España, según sus historias</em>, examen de la obra y anexos por Manuel Orozco y Berra, México, Editorial Innovación, 1979, 294 p.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- codice azcatitlan -->
+        <div class="d-inline-flex justify-content-start pb-3">
+          <h3>Códice Azcatitlan</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2);"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1 px-0"></div>
+            <div class="col-11 px-0">
+              <p>En el siglo XVIII Antonio de León y Gama y el padre Pichard realizaron unas copias del códice, mismas que se conservan en la Biblioteca Nacional de Francia. En 1949 Robert Barlow publicó el códice completo en el Journal de la Société des Américanistes. En 1995 se realizó un facsímil del códice, publicado por la Biblioteca Nacional de Francia y la Société des Américanistes con el nombre de Codex Azcatitlan, la edición cuenta con una traducción de Michel Graulich y de Leonardo López Luján</p>
+              <h5 class="pb-3">Para leer más…</h5>
+              <ul>
+                <li><em>Códice Azcatitlan</em>, edición de Robert H. Barlow, Paris, Societe des americanistes, 1949, 35 p., facsímil.</li>
+                <li><em>Códice Azcatitlan</em>, introducción de Michel Graulich, comentario de Robert H. Barlow, traducción de Leonardo López Luján, Paris, Bibliotèca Nationale de France-Societe des Americanistes, 1995, 159 p., ilustraciones, facsímil.</li>
+                <li>Pastrana Flores, Miguel, “Códices anotados de tradición náhuatl”, en Juan A. Ortega y Medina y Rosa Camelo (coords.), <em>Historiografía mexicana</em>, 4 v., coordinación del volumen por José Rubén Romero Galván, México, Universidad Nacional Autónoma de México-Instituto de Investigaciones Históricas, 2011, v. 1, p. 51-84.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- diego munoz amargo -->
+        <div class="d-inline-flex justify-content-start pb-3">
+          <h3>Diego Muñoz Camargo, Descripción de la ciudad y provincia de Tlaxcala</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2);"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1 px-0"></div>
+            <div class="col-11 px-0">
+              <p>En 1892 Alfredo Chavero realizó la publicación de la obra. En 1947 se publicó la obra bajo el nombre de Historia de Tlaxcala con un estudio del ingeniero Alberto Escalona Ramos e ilustrada y anotada por Lauro Rosell. En 1978 la editorial innovación publicó la Historia de Tlaxcala que había sacó a la luz Alfredo Chavero en 1892. En 1984 René Acuña realizó una edición facsimilar publicada por la Universidad Nacional Autónoma de México con el nombre Descripción de la ciudad y provincia de Tlaxcala. En 2013 se publicó la Historia de Tlaxcala por la Universidad Autónoma de Tlaxcala con una introducción y notas de Luis Reyes García y Javier Lira Toledo. El original está resguardado en la Biblioteca Nacional de París.</p>
+              <h5 class="pb-3">Para leer más…</h5>
+              <ul>
+                <li>Carrera Stampa, Manuel, <em>Historiadores indígenas y mestizos novohispanos, siglos XVI-XVII</em>, Madrid, 1971, 244 p.</li>
+                <li>Costilla Martínez, Héctor Alejandro, <em>Historia adoptada, historia adaptada: la crónica mestiza del México colonial</em>, Madrid, Vervuert, 2019, 127 p., ilustraciones.</li>
+                <li>Hernández R., Rosaura, “Diego Muñoz Camargo”, en Juan A. Ortega y Medina y Rosa Camelo (coords.), <em>Historiografía mexicana</em>, 4 v., coordinación del volumen por José Rubén Romero Galván, México, Universidad Nacional Autónoma de México-Instituto de Investigaciones Históricas, 2011, v. 1, p. 301-312.</li>
+                <li>Muñoz Camargo, Diego, <em>Descripción de la ciudad y provincia de Tlaxcala</em>, edición y estudio introductorio de René Acuña, México, Universidad Nacional Autónoma de México, 1981, 47 p., 234 f., ilustraciones.</li>
+                <li>___________________, <em>Historia de Tlaxcala</em>, peleografía, introducción, notas, apéndices e índices analíticos de Luis Reyes García, Tlaxcala, Gobierno del Estado de Tlaxcala, 1998, 435 p.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- lienzo de tlaxcala -->
+        <div class="d-inline-flex justify-content-start pb-3">
+          <h3>Lienzo de Tlaxcala</h3>
+          <div class="pleca" style="background-color: rgba(99, 40, 30, 0.2);"></div>
+        </div>
+
+        <div class="pb-4">
+          <div class="row">
+            <div class="col-1 px-0"></div>
+            <div class="col-11 px-0">
+              <p>En 1939 se publicó una edición bajo el nombre de Lienzo de Tlaxcala a cargo de Próspero Cahuantzin por la Liberia Anticuaria G. m. Echaniz. En 1983 Josefina García Quintana, Carlos Martínez Marín y Mario de la Torre publicaron un estudio con ilustraciones en la editorial Cartón y Papel de México bajo el nombre El Lienzo de Tlaxcala. Se desconoce el paradero del original.</p>
+              <h5 class="pb-3">Para leer más…</h5>
+              <ul>
+                <li>Brotherston, Gordon y Ana Gallegos, “El Lienzo de Tlaxcala y el Manuscrito Glasgow”, en <em>Estudios de Cultura Náhuatl</em>, México, Universidad Nacional Autónoma de México-Instituto de Investigaciones Históricas, v. 20, 1990, p. 117-140.</li>
+                <li>Chavero, Alfredo, <em>Explicación del Lienzo de Tlaxcala</em>, México, Universidad Nacional Autónoma de México-Facultad de Arquitectura, 1979, 80 p., láminas.</li>
+                <li><em>Lienzo de Tlaxcala. Códice histórico colonial del siglo XVI, copia de Juan Manuel Yllanes del Huerto, su contesto y su historia</em>, edición de Mariano González Zarur y Guadalupe Alemán Ramírez, asesoría de Baltazar Brito, prólogo de Miguel León-Portilla, México, Gobierno del Estado de Tlaxcala-Secretaría de Educación Pública, 2016, 209 p., láminas, ilustraciones.</li>
+                <li>Martínez, Andrea, “Las pinturas del Manuscrito Glasgow y el Lienzo de Tlaxcala”, en <em>Estudios de Cultura Náhuatl</em>, México, Universidad Nacional Autónoma de México-Instituto de Investigaciones Históricas, v. 20, 1990, p. 141-162.</li>
+                <li>Pastrana Flores, Miguel, “Códice anotados de tradición náhuatl”, en Jun A. Ortega y Medina y Rosa Camelo (coords.), en <em>Historiografía mexicana</em>, 4 v., coordinación del volumen por José Rubén Romero Galván, México, Universidad Nacional Autónoma de México-Instituto de Investigaciones Históricas, 2011, v. 1, p. 51-84.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+<!-- aqui -->
+      </div>
+      <div class="col-lg-2 px-5 py-5 d-none d-sm-block"></div>
+    </div>
+
+
+
+    <div id="updog" class="row d-none d-sm-flex mt-5">
+      <div class="col-12 d-flex justify-content-center" style="z-index: 1;">
+        <a href="#downboy" class="scroll-up animated bounce">
+          <img src="work/models/memorica/recursos/img/500anos/scroll-up.svg" alt="" width="40px" height="40px" style="height: 40px;">
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  <script type="text/javascript">
+    //loader
+    $(window).on("load", function(e) {
+      $("#loader").animate({
+        opacity: 0,
+        zIndex: -1
+      })
+
+    });
+
+    //nav menu
+    $('#toggle').click(function() {
+      $(this).toggleClass('active');
+      $('#overlay').toggleClass('open');
+    });
+
+    $('.go').click(function() {
+      $('#overlay').toggleClass('open');
+      $('.button_container').removeClass('active');
+    });
+
+    // smooth scroll
+    $("a").on('click', function(event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+        var hash = this.hash;
+
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function() {
+          window.location.hash = hash;
+        });
+      }
+    });
+
+  </script>
+</body>
+
+</html>
