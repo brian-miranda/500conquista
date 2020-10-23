@@ -320,6 +320,10 @@ footer h6 {
   margin-bottom: 20px;
 }
 
+.bios {
+  
+}
+
 .credit-line {
   height: 10px;
 }
@@ -465,6 +469,10 @@ footer h6 {
 
 .overlay.open li:nth-of-type(6) {
   animation-delay: .6s;
+}
+
+.overlay.open li:nth-of-type(7) {
+  animation-delay: .65s;
 }
 
 .overlay nav {
@@ -1144,7 +1152,7 @@ td {
   background-repeat: no-repeat;
 }
 
-/* ----------------------- SALA LOS IMAGENES ----------------------- */
+/* ----------------------- SALA IMAGENES / INTERPRETES ----------------------- */
 .tit-imagenes {
   height: 45px;
   position: absolute;
@@ -1262,6 +1270,11 @@ td {
   font-family: "Raleway-Regular";
   font-size: 0.9rem;
   color: #194b54;
+}
+
+#modalVid {
+  height: 100%;
+  width: 100%;
 }
 
 /* ----------------------- MEDIA QUERIES ----------------------- */
