@@ -320,8 +320,24 @@ footer h6 {
   margin-bottom: 20px;
 }
 
-.bios {
-  
+
+.bios:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+
+
+.bios h2 {
+  color: #08163b;
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+.bios h2:hover {
+  opacity: 0.6;
+  font-size: 3.65rem;
+  text-align: center;
 }
 
 .credit-line {
@@ -1631,6 +1647,14 @@ td {
     text-align: center;
   }
 
+  .bios h2 {
+    font-size: 3.5rem;
+  }
+
+  .bios h2:hover {
+    font-size: 3.65rem;
+  }
+
   .caja img {
     height: 10px;
   }
@@ -1664,6 +1688,14 @@ td {
   footer h2 {
     font-size: 1.8rem;
     text-align: center;
+  }
+
+  .bios h2 {
+    font-size: 1.8rem;
+  }
+
+  .bios h2:hover {
+    font-size: 1.8rem;
   }
 
   footer p {
@@ -1946,5 +1978,24 @@ td {
      min-width: 95%;
      max-width: 95%;
      max-height: 90%;
+   }
+
+   #biblio h1 {
+     font-size: 1.7rem;
+     line-height: 1.3rem;
+   }
+
+   #biblio .diagonal {
+     max-width: 100%;
+     height: auto;
+     margin: 0;
+   }
+
+   #biblio ul {
+     padding-inline-start: 0;
+   }
+
+   #biblio li {
+     font-size: 0.6rem;
    }
 }
