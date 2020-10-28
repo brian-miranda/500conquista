@@ -4928,8 +4928,8 @@
             </div>
             <div class="modal-body pt-0">
               <div class="d-flex flex-wrap justify-content-around">
-                <a class="playpause" class="p-2 d-flex flex-column justify-content-center" onClick="playAudio1()">
-                  <audio id="esp01" src="work/models/memorica/recursos/img/500anos/audio/01_Llegada de los conquistadores a Cozumel. Espanol.m4a"></audio>
+                <a class="playpause" class="p-2 d-flex flex-column justify-content-center" onClick="playAudio0()">
+                  <audio id="esp00" src="work/models/memorica/recursos/img/500anos/audio/01_Llegada de los conquistadores a Cozumel. Espanol.m4a"></audio>
                   <div class="coso" alt="">
                     <br>
                   </div>
@@ -5719,6 +5719,16 @@
       });
 
       // audio stuff
+      function playAudio0() {
+        var audio = document.getElementById('esp00');
+        if (audio.paused) {
+          audio.play();
+          audio.currentTime=0;
+        } else {
+          audio.pause();
+        }
+      }
+
       function playAudio1() {
         var audio = document.getElementById('esp01');
         if (audio.paused) {
